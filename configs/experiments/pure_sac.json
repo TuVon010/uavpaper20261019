@@ -1,0 +1,10 @@
+{
+  "id": "pure_sac",
+  "label": "Pure SAC",
+  "kind": "train",
+  "control": "pure",
+  "training": {
+    "algorithm": "sac",
+    "control": "pure"
+  }
+}

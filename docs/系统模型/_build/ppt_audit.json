@@ -1,0 +1,1394 @@
+{
+  "source": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\系统模型图_论文完善版.pptx",
+  "media": {
+    "image32.emf": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image32.emf",
+      "bytes": 5016,
+      "size": [
+        40,
+        40
+      ],
+      "mode": "RGB"
+    },
+    "image33.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image33.png",
+      "bytes": 416903,
+      "size": [
+        2003,
+        2400
+      ],
+      "mode": "RGBA"
+    },
+    "image34.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image34.png",
+      "bytes": 1468255,
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    "image35.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image35.png",
+      "bytes": 1740,
+      "size": [
+        72,
+        48
+      ],
+      "mode": "P"
+    },
+    "image36.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image36.png",
+      "bytes": 11467,
+      "size": [
+        121,
+        181
+      ],
+      "mode": "RGBA"
+    },
+    "image37.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image37.png",
+      "bytes": 24474,
+      "size": [
+        342,
+        163
+      ],
+      "mode": "RGBA"
+    },
+    "image1.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image1.png",
+      "bytes": 2346,
+      "size": [
+        94,
+        63
+      ],
+      "mode": "RGBA"
+    },
+    "image17.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image17.png",
+      "bytes": 14403,
+      "size": [
+        182,
+        111
+      ],
+      "mode": "RGBA"
+    },
+    "image2.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image2.png",
+      "bytes": 1535554,
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    "image23.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image23.png",
+      "bytes": 4985,
+      "size": [
+        92,
+        92
+      ],
+      "mode": "RGBA"
+    },
+    "image4.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image4.png",
+      "bytes": 10265,
+      "size": [
+        231,
+        154
+      ],
+      "mode": "RGBA"
+    },
+    "image6.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image6.png",
+      "bytes": 3403,
+      "size": [
+        118,
+        78
+      ],
+      "mode": "RGBA"
+    },
+    "image7.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image7.png",
+      "bytes": 2243,
+      "size": [
+        90,
+        60
+      ],
+      "mode": "RGBA"
+    },
+    "image8.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image8.png",
+      "bytes": 5171,
+      "size": [
+        152,
+        101
+      ],
+      "mode": "RGBA"
+    },
+    "image9.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image9.png",
+      "bytes": 22108,
+      "size": [
+        206,
+        137
+      ],
+      "mode": "RGBA"
+    },
+    "image10.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image10.png",
+      "bytes": 12222,
+      "size": [
+        107,
+        161
+      ],
+      "mode": "RGBA"
+    },
+    "image11.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image11.png",
+      "bytes": 9394,
+      "size": [
+        80,
+        120
+      ],
+      "mode": "RGBA"
+    },
+    "image12.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image12.png",
+      "bytes": 15900,
+      "size": [
+        152,
+        129
+      ],
+      "mode": "RGBA"
+    },
+    "image13.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image13.png",
+      "bytes": 10059,
+      "size": [
+        150,
+        91
+      ],
+      "mode": "RGBA"
+    },
+    "image14.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image14.png",
+      "bytes": 9566,
+      "size": [
+        88,
+        111
+      ],
+      "mode": "RGBA"
+    },
+    "image15.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image15.png",
+      "bytes": 5722,
+      "size": [
+        67,
+        58
+      ],
+      "mode": "RGBA"
+    },
+    "image16.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image16.png",
+      "bytes": 7928,
+      "size": [
+        98,
+        147
+      ],
+      "mode": "RGBA"
+    },
+    "image18.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image18.png",
+      "bytes": 16257,
+      "size": [
+        188,
+        107
+      ],
+      "mode": "RGBA"
+    },
+    "image19.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image19.png",
+      "bytes": 9374,
+      "size": [
+        83,
+        115
+      ],
+      "mode": "RGBA"
+    },
+    "image20.emf": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image20.emf",
+      "bytes": 2184,
+      "size": [
+        21,
+        37
+      ],
+      "mode": "RGB"
+    },
+    "image21.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image21.png",
+      "bytes": 7018,
+      "size": [
+        89,
+        134
+      ],
+      "mode": "RGBA"
+    },
+    "image22.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image22.png",
+      "bytes": 9778,
+      "size": [
+        95,
+        142
+      ],
+      "mode": "RGBA"
+    },
+    "image24.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image24.png",
+      "bytes": 26369,
+      "size": [
+        262,
+        262
+      ],
+      "mode": "RGBA"
+    },
+    "image25.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image25.png",
+      "bytes": 7000,
+      "size": [
+        121,
+        81
+      ],
+      "mode": "RGBA"
+    },
+    "image26.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image26.png",
+      "bytes": 7254,
+      "size": [
+        87,
+        141
+      ],
+      "mode": "RGBA"
+    },
+    "image27.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image27.png",
+      "bytes": 24382,
+      "size": [
+        286,
+        191
+      ],
+      "mode": "RGBA"
+    },
+    "image28.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image28.png",
+      "bytes": 1906,
+      "size": [
+        73,
+        60
+      ],
+      "mode": "RGBA"
+    },
+    "image5.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image5.png",
+      "bytes": 4353,
+      "size": [
+        138,
+        92
+      ],
+      "mode": "RGBA"
+    },
+    "image29.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image29.png",
+      "bytes": 29911,
+      "size": [
+        381,
+        182
+      ],
+      "mode": "RGBA"
+    },
+    "image30.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image30.png",
+      "bytes": 347629,
+      "size": [
+        850,
+        459
+      ],
+      "mode": "RGBA"
+    },
+    "image3.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image3.png",
+      "bytes": 14261,
+      "size": [
+        108,
+        108
+      ],
+      "mode": "RGBA"
+    },
+    "image31.png": {
+      "path": "E:\\postgraduateLife\\paper_code\\uav_mec_priority\\系统模型\\_build\\assets\\image31.png",
+      "bytes": 8696,
+      "size": [
+        144,
+        144
+      ],
+      "mode": "RGBA"
+    }
+  },
+  "slides": [
+    {
+      "file": "ppt/slides/slide1.xml",
+      "texts": [],
+      "images": [
+        {
+          "name": "图片 10",
+          "media": "../media/image1.png",
+          "position": {
+            "off": {
+              "x": "3912032",
+              "y": "3768749"
+            },
+            "ext": {
+              "cx": "391676",
+              "cy": "261117"
+            }
+          }
+        },
+        {
+          "name": "图片 8",
+          "media": "../media/image2.png",
+          "position": {
+            "off": {
+              "x": "285480",
+              "y": "3500335"
+            },
+            "ext": {
+              "cx": "9117882",
+              "cy": "3476971"
+            }
+          }
+        },
+        {
+          "name": "图片 12",
+          "media": "../media/image3.png",
+          "position": {
+            "off": {
+              "x": "5595275",
+              "y": "5435261"
+            },
+            "ext": {
+              "cx": "447176",
+              "cy": "447176"
+            }
+          }
+        },
+        {
+          "name": "图片 14",
+          "media": "../media/image4.png",
+          "position": {
+            "off": {
+              "x": "5189788",
+              "y": "5820515"
+            },
+            "ext": {
+              "cx": "958577",
+              "cy": "639051"
+            }
+          }
+        },
+        {
+          "name": "图片 16",
+          "media": "../media/image5.png",
+          "position": {
+            "off": {
+              "x": "3995386",
+              "y": "3882046"
+            },
+            "ext": {
+              "cx": "573683",
+              "cy": "382455"
+            }
+          }
+        },
+        {
+          "name": "图片 18",
+          "media": "../media/image6.png",
+          "position": {
+            "off": {
+              "x": "3333379",
+              "y": "5165298"
+            },
+            "ext": {
+              "cx": "488955",
+              "cy": "325970"
+            }
+          }
+        },
+        {
+          "name": "图片 20",
+          "media": "../media/image7.png",
+          "position": {
+            "off": {
+              "x": "809167",
+              "y": "4835297"
+            },
+            "ext": {
+              "cx": "372744",
+              "cy": "248496"
+            }
+          }
+        },
+        {
+          "name": "图片 22",
+          "media": "../media/image8.png",
+          "position": {
+            "off": {
+              "x": "3951064",
+              "y": "5508845"
+            },
+            "ext": {
+              "cx": "631419",
+              "cy": "420946"
+            }
+          }
+        },
+        {
+          "name": "图片 24",
+          "media": "../media/image9.png",
+          "position": {
+            "off": {
+              "x": "4844421",
+              "y": "5296427"
+            },
+            "ext": {
+              "cx": "854941",
+              "cy": "569960"
+            }
+          }
+        },
+        {
+          "name": "图片 26",
+          "media": "../media/image10.png",
+          "position": {
+            "off": {
+              "x": "5940408",
+              "y": "5296427"
+            },
+            "ext": {
+              "cx": "445746",
+              "cy": "668620"
+            }
+          }
+        },
+        {
+          "name": "图片 28",
+          "media": "../media/image11.png",
+          "position": {
+            "off": {
+              "x": "1036061",
+              "y": "4999476"
+            },
+            "ext": {
+              "cx": "331995",
+              "cy": "497993"
+            }
+          }
+        },
+        {
+          "name": "图片 34",
+          "media": "../media/image12.png",
+          "position": {
+            "off": {
+              "x": "3036422",
+              "y": "4704782"
+            },
+            "ext": {
+              "cx": "631057",
+              "cy": "536998"
+            }
+          }
+        },
+        {
+          "name": "图片 36",
+          "media": "../media/image13.png",
+          "position": {
+            "off": {
+              "x": "5908719",
+              "y": "4778463"
+            },
+            "ext": {
+              "cx": "621528",
+              "cy": "378735"
+            }
+          }
+        },
+        {
+          "name": "图片 38",
+          "media": "../media/image14.png",
+          "position": {
+            "off": {
+              "x": "7634475",
+              "y": "5128903"
+            },
+            "ext": {
+              "cx": "363765",
+              "cy": "461775"
+            }
+          }
+        },
+        {
+          "name": "图片 40",
+          "media": "../media/image15.png",
+          "position": {
+            "off": {
+              "x": "4322030",
+              "y": "4953653"
+            },
+            "ext": {
+              "cx": "276816",
+              "cy": "242361"
+            }
+          }
+        },
+        {
+          "name": "图片 42",
+          "media": "../media/image16.png",
+          "position": {
+            "off": {
+              "x": "4214950",
+              "y": "5495287"
+            },
+            "ext": {
+              "cx": "407903",
+              "cy": "611853"
+            }
+          }
+        },
+        {
+          "name": "图片 44",
+          "media": "../media/image17.png",
+          "position": {
+            "off": {
+              "x": "7121822",
+              "y": "4882597"
+            },
+            "ext": {
+              "cx": "757802",
+              "cy": "461775"
+            }
+          }
+        },
+        {
+          "name": "图片 48",
+          "media": "../media/image18.png",
+          "position": {
+            "off": {
+              "x": "3730031",
+              "y": "5004798"
+            },
+            "ext": {
+              "cx": "781409",
+              "cy": "446226"
+            }
+          }
+        },
+        {
+          "name": "图片 50",
+          "media": "../media/image19.png",
+          "position": {
+            "off": {
+              "x": "2862369",
+              "y": "3137543"
+            },
+            "ext": {
+              "cx": "343545",
+              "cy": "476508"
+            }
+          }
+        },
+        {
+          "name": "图片 52",
+          "media": "../media/image20.emf",
+          "position": {
+            "off": {
+              "x": "6408062",
+              "y": "5590678"
+            },
+            "ext": {
+              "cx": "192974",
+              "cy": "305542"
+            }
+          }
+        },
+        {
+          "name": "图片 54",
+          "media": "../media/image21.png",
+          "position": {
+            "off": {
+              "x": "1486451",
+              "y": "4879379"
+            },
+            "ext": {
+              "cx": "370425",
+              "cy": "555638"
+            }
+          }
+        },
+        {
+          "name": "图片 56",
+          "media": "../media/image22.png",
+          "position": {
+            "off": {
+              "x": "1962022",
+              "y": "4550313"
+            },
+            "ext": {
+              "cx": "394550",
+              "cy": "591825"
+            }
+          }
+        },
+        {
+          "name": "图片 58",
+          "media": "../media/image23.png",
+          "position": {
+            "off": {
+              "x": "6790938",
+              "y": "4913142"
+            },
+            "ext": {
+              "cx": "383285",
+              "cy": "383285"
+            }
+          }
+        },
+        {
+          "name": "图片 60",
+          "media": "../media/image24.png",
+          "position": {
+            "off": {
+              "x": "4429296",
+              "y": "5370750"
+            },
+            "ext": {
+              "cx": "1088816",
+              "cy": "1088816"
+            }
+          }
+        },
+        {
+          "name": "图片 62",
+          "media": "../media/image25.png",
+          "position": {
+            "off": {
+              "x": "4290801",
+              "y": "5233176"
+            },
+            "ext": {
+              "cx": "502532",
+              "cy": "335021"
+            }
+          }
+        },
+        {
+          "name": "图片 64",
+          "media": "../media/image26.png",
+          "position": {
+            "off": {
+              "x": "3561298",
+              "y": "3159527"
+            },
+            "ext": {
+              "cx": "362483",
+              "cy": "585419"
+            }
+          }
+        },
+        {
+          "name": "图片 76",
+          "media": "../media/image27.png",
+          "position": {
+            "off": {
+              "x": "1631048",
+              "y": "2491572"
+            },
+            "ext": {
+              "cx": "1188666",
+              "cy": "792445"
+            }
+          }
+        },
+        {
+          "name": "图片 78",
+          "media": "../media/image28.png",
+          "position": {
+            "off": {
+              "x": "4227242",
+              "y": "3631692"
+            },
+            "ext": {
+              "cx": "302207",
+              "cy": "248496"
+            }
+          }
+        },
+        {
+          "name": "图片 80",
+          "media": "../media/image29.png",
+          "position": {
+            "off": {
+              "x": "5608562",
+              "y": "2494879"
+            },
+            "ext": {
+              "cx": "1581573",
+              "cy": "755472"
+            }
+          }
+        },
+        {
+          "name": "图片 82",
+          "media": "../media/image30.png",
+          "position": {
+            "off": {
+              "x": "4049481",
+              "y": "1025222"
+            },
+            "ext": {
+              "cx": "2067244",
+              "cy": "1115882"
+            }
+          }
+        },
+        {
+          "name": "图片 96",
+          "media": "../media/image31.png",
+          "position": {
+            "off": {
+              "x": "2675636",
+              "y": "4504608"
+            },
+            "ext": {
+              "cx": "596467",
+              "cy": "596467"
+            }
+          }
+        },
+        {
+          "name": "图片 165",
+          "media": "../media/image32.emf",
+          "position": {
+            "off": {
+              "x": "5699362",
+              "y": "1542278"
+            },
+            "ext": {
+              "cx": "504825",
+              "cy": "504825"
+            }
+          }
+        },
+        {
+          "name": "图片 171",
+          "media": "../media/image33.png",
+          "position": {
+            "off": {
+              "x": "6112603",
+              "y": "1578979"
+            },
+            "ext": {
+              "cx": "295459",
+              "cy": "354305"
+            }
+          }
+        },
+        {
+          "name": "图片 173",
+          "media": "../media/image33.png",
+          "position": {
+            "off": {
+              "x": "2543023",
+              "y": "2857031"
+            },
+            "ext": {
+              "cx": "295459",
+              "cy": "354305"
+            }
+          }
+        },
+        {
+          "name": "图片 175",
+          "media": "../media/image33.png",
+          "position": {
+            "off": {
+              "x": "6740050",
+              "y": "2825072"
+            },
+            "ext": {
+              "cx": "295459",
+              "cy": "354305"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "ppt/slides/slide2.xml",
+      "texts": [
+        "SUAV",
+        "-",
+        "LUAV link",
+        "LUAV",
+        "-S",
+        "UAV link",
+        "UD",
+        "-",
+        "UAV link",
+        "Edge server",
+        "SDN controller",
+        "Trajectory",
+        "UAV",
+        "-",
+        "UD link"
+      ],
+      "images": [
+        {
+          "name": "图片 37",
+          "media": "../media/image34.png",
+          "position": {
+            "off": {
+              "x": "22255",
+              "y": "2857031"
+            },
+            "ext": {
+              "cx": "9414076",
+              "cy": "4052417"
+            }
+          }
+        },
+        {
+          "name": "图片 10",
+          "media": "../media/image1.png",
+          "position": {
+            "off": {
+              "x": "3259131",
+              "y": "4145688"
+            },
+            "ext": {
+              "cx": "391676",
+              "cy": "261117"
+            }
+          }
+        },
+        {
+          "name": "图片 12",
+          "media": "../media/image3.png",
+          "position": {
+            "off": {
+              "x": "5595275",
+              "y": "5435261"
+            },
+            "ext": {
+              "cx": "447176",
+              "cy": "447176"
+            }
+          }
+        },
+        {
+          "name": "图片 14",
+          "media": "../media/image4.png",
+          "position": {
+            "off": {
+              "x": "5189788",
+              "y": "5820515"
+            },
+            "ext": {
+              "cx": "958577",
+              "cy": "639051"
+            }
+          }
+        },
+        {
+          "name": "图片 16",
+          "media": "../media/image35.png",
+          "position": {
+            "off": {
+              "x": "2589552",
+              "y": "3965802"
+            },
+            "ext": {
+              "cx": "301245",
+              "cy": "200830"
+            }
+          }
+        },
+        {
+          "name": "图片 18",
+          "media": "../media/image6.png",
+          "position": {
+            "off": {
+              "x": "3333379",
+              "y": "5165298"
+            },
+            "ext": {
+              "cx": "488955",
+              "cy": "325970"
+            }
+          }
+        },
+        {
+          "name": "图片 20",
+          "media": "../media/image7.png",
+          "position": {
+            "off": {
+              "x": "809167",
+              "y": "4835297"
+            },
+            "ext": {
+              "cx": "372744",
+              "cy": "248496"
+            }
+          }
+        },
+        {
+          "name": "图片 22",
+          "media": "../media/image8.png",
+          "position": {
+            "off": {
+              "x": "3951064",
+              "y": "5508845"
+            },
+            "ext": {
+              "cx": "631419",
+              "cy": "420946"
+            }
+          }
+        },
+        {
+          "name": "图片 24",
+          "media": "../media/image9.png",
+          "position": {
+            "off": {
+              "x": "4844421",
+              "y": "5296427"
+            },
+            "ext": {
+              "cx": "854941",
+              "cy": "569960"
+            }
+          }
+        },
+        {
+          "name": "图片 26",
+          "media": "../media/image10.png",
+          "position": {
+            "off": {
+              "x": "5940408",
+              "y": "5296427"
+            },
+            "ext": {
+              "cx": "445746",
+              "cy": "668620"
+            }
+          }
+        },
+        {
+          "name": "图片 28",
+          "media": "../media/image11.png",
+          "position": {
+            "off": {
+              "x": "1139906",
+              "y": "4027251"
+            },
+            "ext": {
+              "cx": "331995",
+              "cy": "497993"
+            }
+          }
+        },
+        {
+          "name": "图片 34",
+          "media": "../media/image12.png",
+          "position": {
+            "off": {
+              "x": "3156735",
+              "y": "4264501"
+            },
+            "ext": {
+              "cx": "631057",
+              "cy": "536998"
+            }
+          }
+        },
+        {
+          "name": "图片 36",
+          "media": "../media/image13.png",
+          "position": {
+            "off": {
+              "x": "5890369",
+              "y": "4389353"
+            },
+            "ext": {
+              "cx": "621528",
+              "cy": "378735"
+            }
+          }
+        },
+        {
+          "name": "图片 38",
+          "media": "../media/image14.png",
+          "position": {
+            "off": {
+              "x": "7634475",
+              "y": "5128903"
+            },
+            "ext": {
+              "cx": "363765",
+              "cy": "461775"
+            }
+          }
+        },
+        {
+          "name": "图片 40",
+          "media": "../media/image15.png",
+          "position": {
+            "off": {
+              "x": "4322030",
+              "y": "4953653"
+            },
+            "ext": {
+              "cx": "276816",
+              "cy": "242361"
+            }
+          }
+        },
+        {
+          "name": "图片 42",
+          "media": "../media/image36.png",
+          "position": {
+            "off": {
+              "x": "4127025",
+              "y": "5508845"
+            },
+            "ext": {
+              "cx": "502532",
+              "cy": "753796"
+            }
+          }
+        },
+        {
+          "name": "图片 44",
+          "media": "../media/image17.png",
+          "position": {
+            "off": {
+              "x": "7046706",
+              "y": "4587733"
+            },
+            "ext": {
+              "cx": "757802",
+              "cy": "461775"
+            }
+          }
+        },
+        {
+          "name": "图片 48",
+          "media": "../media/image18.png",
+          "position": {
+            "off": {
+              "x": "3730031",
+              "y": "5004798"
+            },
+            "ext": {
+              "cx": "781409",
+              "cy": "446226"
+            }
+          }
+        },
+        {
+          "name": "图片 50",
+          "media": "../media/image19.png",
+          "position": {
+            "off": {
+              "x": "7582721",
+              "y": "4436634"
+            },
+            "ext": {
+              "cx": "343545",
+              "cy": "476508"
+            }
+          }
+        },
+        {
+          "name": "图片 52",
+          "media": "../media/image20.emf",
+          "position": {
+            "off": {
+              "x": "6408062",
+              "y": "5590678"
+            },
+            "ext": {
+              "cx": "192974",
+              "cy": "305542"
+            }
+          }
+        },
+        {
+          "name": "图片 54",
+          "media": "../media/image21.png",
+          "position": {
+            "off": {
+              "x": "1193175",
+              "y": "4612884"
+            },
+            "ext": {
+              "cx": "370425",
+              "cy": "555638"
+            }
+          }
+        },
+        {
+          "name": "图片 56",
+          "media": "../media/image22.png",
+          "position": {
+            "off": {
+              "x": "3673735",
+              "y": "4332723"
+            },
+            "ext": {
+              "cx": "394550",
+              "cy": "591825"
+            }
+          }
+        },
+        {
+          "name": "图片 58",
+          "media": "../media/image23.png",
+          "position": {
+            "off": {
+              "x": "6817346",
+              "y": "4657226"
+            },
+            "ext": {
+              "cx": "383285",
+              "cy": "383285"
+            }
+          }
+        },
+        {
+          "name": "图片 60",
+          "media": "../media/image24.png",
+          "position": {
+            "off": {
+              "x": "4429296",
+              "y": "5370750"
+            },
+            "ext": {
+              "cx": "1088816",
+              "cy": "1088816"
+            }
+          }
+        },
+        {
+          "name": "图片 62",
+          "media": "../media/image25.png",
+          "position": {
+            "off": {
+              "x": "4290801",
+              "y": "5233176"
+            },
+            "ext": {
+              "cx": "502532",
+              "cy": "335021"
+            }
+          }
+        },
+        {
+          "name": "图片 76",
+          "media": "../media/image27.png",
+          "position": {
+            "off": {
+              "x": "1631048",
+              "y": "2491572"
+            },
+            "ext": {
+              "cx": "1188666",
+              "cy": "792445"
+            }
+          }
+        },
+        {
+          "name": "图片 78",
+          "media": "../media/image28.png",
+          "position": {
+            "off": {
+              "x": "681978",
+              "y": "4556023"
+            },
+            "ext": {
+              "cx": "302207",
+              "cy": "248496"
+            }
+          }
+        },
+        {
+          "name": "图片 80",
+          "media": "../media/image37.png",
+          "position": {
+            "off": {
+              "x": "5641351",
+              "y": "2564159"
+            },
+            "ext": {
+              "cx": "1419436",
+              "cy": "678024"
+            }
+          }
+        },
+        {
+          "name": "图片 82",
+          "media": "../media/image30.png",
+          "position": {
+            "off": {
+              "x": "4049481",
+              "y": "1025222"
+            },
+            "ext": {
+              "cx": "2067244",
+              "cy": "1115882"
+            }
+          }
+        },
+        {
+          "name": "图片 96",
+          "media": "../media/image31.png",
+          "position": {
+            "off": {
+              "x": "2477050",
+              "y": "4156655"
+            },
+            "ext": {
+              "cx": "596467",
+              "cy": "596467"
+            }
+          }
+        },
+        {
+          "name": "图片 165",
+          "media": "../media/image32.emf",
+          "position": {
+            "off": {
+              "x": "5890369",
+              "y": "1524906"
+            },
+            "ext": {
+              "cx": "504825",
+              "cy": "504825"
+            }
+          }
+        },
+        {
+          "name": "图片 171",
+          "media": "../media/image33.png",
+          "position": {
+            "off": {
+              "x": "195170",
+              "y": "1253298"
+            },
+            "ext": {
+              "cx": "295459",
+              "cy": "354305"
+            }
+          }
+        },
+        {
+          "name": "图片 173",
+          "media": "../media/image33.png",
+          "position": {
+            "off": {
+              "x": "2543023",
+              "y": "2857031"
+            },
+            "ext": {
+              "cx": "295459",
+              "cy": "354305"
+            }
+          }
+        },
+        {
+          "name": "图片 175",
+          "media": "../media/image33.png",
+          "position": {
+            "off": {
+              "x": "6774112",
+              "y": "2865918"
+            },
+            "ext": {
+              "cx": "261397",
+              "cy": "313459"
+            }
+          }
+        },
+        {
+          "name": "图片 2",
+          "media": "../media/image18.png",
+          "position": {
+            "off": {
+              "x": "1568988",
+              "y": "3892965"
+            },
+            "ext": {
+              "cx": "781409",
+              "cy": "446226"
+            }
+          }
+        },
+        {
+          "name": "图片 75",
+          "media": "../media/image32.emf",
+          "position": {
+            "off": {
+              "x": "132973",
+              "y": "1607603"
+            },
+            "ext": {
+              "cx": "504825",
+              "cy": "504825"
+            }
+          }
+        },
+        {
+          "name": "图片 79",
+          "media": "../media/image33.png",
+          "position": {
+            "off": {
+              "x": "5611900",
+              "y": "1511790"
+            },
+            "ext": {
+              "cx": "295459",
+              "cy": "354305"
+            }
+          }
+        },
+        {
+          "name": "图片 64",
+          "media": "../media/image26.png",
+          "position": {
+            "off": {
+              "x": "1618076",
+              "y": "4132758"
+            },
+            "ext": {
+              "cx": "362483",
+              "cy": "585419"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "size_emu": {
+    "cx": "9956800",
+    "cy": "6813550"
+  }
+}

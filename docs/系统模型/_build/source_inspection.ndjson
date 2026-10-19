@@ -1,0 +1,131 @@
+{"kind":"layout","id":"ly/atofqts7","editable":false,"name":"","type":"master","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"body","type":"body","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/ux4ruhcv","editable":false,"name":"标题幻灯片","type":"title","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"subtitle","type":"subtitle","textPreview":"单击此处编辑母版副标题样式"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/p83mt83u","editable":false,"name":"标题和内容","type":"obj","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"2","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/4v2ps7ql","editable":false,"name":"节标题","type":"secHead","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑标题"},{"name":"body","type":"body","textPreview":"单击此处编辑文本"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/3yt8jipk","editable":false,"name":"两栏内容","type":"twoObj","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"2","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"},{"name":"3","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/elwrupwj","editable":false,"name":"比较","type":"twoTxTwoObj","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"文本占位符 2","type":"body","textPreview":"单击此处编辑文本"},{"name":"3","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"},{"name":"文本占位符 4","type":"body","textPreview":"单击此处编辑文本"},{"name":"5","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/14ra9krq","editable":false,"name":"仅标题","type":"titleOnly","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/07y1cjyt","editable":false,"name":"空白","type":"blank","placeholders":[{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/bqdgbyxk","editable":false,"name":"图片与标题","type":"","placeholders":[{"name":"picture","type":"picture"},{"name":"body","type":"body","textPreview":"单击此处编辑母版文本样式"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"},{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"}]}
+{"kind":"layout","id":"ly/m1sra9c7","editable":false,"name":"竖排标题与文本","type":"vertTitleAndTx","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑标题"},{"name":"body","type":"body","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"},{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","id":"ly/2t4jax8v","editable":false,"name":"内容","type":"","placeholders":[{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"},{"name":"6","textPreview":"单击此处编辑母版文本样式 | 第二级 | 第三级 | 第四级 | 第五级"}]}
+{"kind":"layout","id":"ly/rm10zq1g","editable":false,"name":"末尾幻灯片","type":"","placeholders":[{"name":"dateTime","type":"dateTime","textPreview":"2026/7/15"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"},{"name":"title","type":"title","textPreview":"单击此处编辑标题"},{"name":"body","type":"body","textPreview":"单击此处编辑母版文本样式"}]}
+{"kind":"slide","id":"sl/y90nupkv","slideIndex":0,"layout":{"id":"ly/p83mt83u","name":"标题和内容"},"title":"Slide 1","textShapes":0,"backgroundColor":"rgba(255,255,255,1)"}
+{"kind":"shape","id":"sh/3ahk3u54","slideIndex":0,"position":{"left":525.91,"top":328.31,"width":133.58,"height":257.2},"name":"直接箭头连接符 83","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/pcz254na","slideIndex":0,"position":{"left":694.06,"top":327.03,"width":24.52,"height":76.3},"name":"直接箭头连接符 85","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/f6x0zu58","slideIndex":0,"position":{"left":682.89,"top":359.87,"width":20.29,"height":227.08},"name":"直接箭头连接符 87","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/8j2xsbmd","slideIndex":0,"position":{"left":126.2,"top":455.16,"width":107.9,"height":69.72},"name":"直接箭头连接符 97","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/jitg36dg","slideIndex":0,"position":{"left":243.7,"top":337.02,"width":56.73,"height":51.62},"name":"直接箭头连接符 100","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/654ze1wr","slideIndex":0,"position":{"left":240.48,"top":186.15,"width":268.12,"height":97.13},"name":"直接箭头连接符 103","geometry":"straightConnector1","lineColor":"#B21BA9","lineWidth":2.67}
+{"kind":"shape","id":"sh/t8vy9gvi","slideIndex":0,"position":{"left":526.29,"top":183.06,"width":127.42,"height":104.61},"name":"直接箭头连接符 106","geometry":"straightConnector1","lineColor":"#B21BA9","lineWidth":2.67}
+{"kind":"shape","id":"sh/bi1sze1s","slideIndex":0,"position":{"left":143.63,"top":325.01,"width":68.22,"height":34.86},"name":"曲线连接符 326","geometry":"curvedConnector3","lineColor":"#0D0D0D","lineWidth":3}
+{"kind":"shape","id":"sh/2pwv6tc3","slideIndex":0,"position":{"left":660.13,"top":337.18,"width":50.41,"height":23.25},"name":"曲线连接符 326","geometry":"curvedConnector3","lineColor":"#000000","lineWidth":3}
+{"kind":"shape","id":"sh/4red83u9","slideIndex":0,"position":{"left":276.49,"top":193.78,"width":242.68,"height":89.5},"name":"直接箭头连接符 136","geometry":"straightConnector1","lineColor":"#843F0B","lineWidth":2.67}
+{"kind":"shape","id":"sh/atgz6h8r","slideIndex":0,"position":{"left":548.4,"top":176.64,"width":115.45,"height":94.03},"name":"直接箭头连接符 139","geometry":"straightConnector1","lineColor":"#843F0B","lineWidth":2.67}
+{"kind":"shape","id":"sh/xw7i1w7i","slideIndex":0,"position":{"left":123.65,"top":339.51,"width":107.37,"height":73.07},"name":"直接箭头连接符 142","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/8reh4rql","slideIndex":0,"position":{"left":260.06,"top":428.58,"width":52.15,"height":44.35},"name":"直接箭头连接符 145","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/utkj25sv","slideIndex":0,"position":{"left":522.17,"top":319.68,"width":126.38,"height":244.18},"name":"直接箭头连接符 152","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/7q9krq9k","slideIndex":0,"position":{"left":673.58,"top":342.35,"width":18.58,"height":220.69},"name":"直接箭头连接符 155","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/w3edon2h","slideIndex":0,"position":{"left":705.79,"top":323.45,"width":26.18,"height":76.47},"name":"直接箭头连接符 159","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"image","id":"im/ipofexcz","slideIndex":0,"position":{"left":410.71,"top":395.67,"width":41.12,"height":27.41},"name":"图片 10"}
+{"kind":"image","id":"im/7mp0jixo","slideIndex":0,"position":{"left":29.97,"top":367.49,"width":957.26,"height":365.04},"name":"图片 8"}
+{"kind":"image","id":"im/kr6xgnu5","slideIndex":0,"position":{"left":587.43,"top":570.63,"width":46.95,"height":46.95},"name":"图片 12"}
+{"kind":"image","id":"im/alovadw3","slideIndex":0,"position":{"left":544.86,"top":611.08,"width":100.64,"height":67.09},"name":"图片 14"}
+{"kind":"image","id":"im/wn6xcnut","slideIndex":0,"position":{"left":419.46,"top":407.56,"width":60.23,"height":40.15},"name":"图片 16"}
+{"kind":"image","id":"im/mh4v6dwr","slideIndex":0,"position":{"left":349.96,"top":542.29,"width":51.33,"height":34.22},"name":"图片 18"}
+{"kind":"image","id":"im/rudgbyx4","slideIndex":0,"position":{"left":84.95,"top":507.64,"width":39.13,"height":26.09},"name":"图片 20"}
+{"kind":"image","id":"im/dgvyd8fa","slideIndex":0,"position":{"left":414.81,"top":578.36,"width":66.29,"height":44.19},"name":"图片 22"}
+{"kind":"image","id":"im/zidgfixg","slideIndex":0,"position":{"left":508.6,"top":556.06,"width":89.76,"height":59.84},"name":"图片 24"}
+{"kind":"image","id":"im/1kvyhsfm","slideIndex":0,"position":{"left":623.66,"top":556.06,"width":46.8,"height":70.2},"name":"图片 26"}
+{"kind":"image","id":"im/nmxgjixc","slideIndex":0,"position":{"left":108.77,"top":524.88,"width":34.86,"height":52.28},"name":"图片 28"}
+{"kind":"image","id":"im/kjq1kri5","slideIndex":0,"position":{"left":318.78,"top":493.94,"width":66.25,"height":56.38},"name":"图片 34"}
+{"kind":"image","id":"im/ih8jih0z","slideIndex":0,"position":{"left":620.34,"top":501.68,"width":65.25,"height":39.76},"name":"图片 36"}
+{"kind":"image","id":"im/s7a1obih","slideIndex":0,"position":{"left":801.52,"top":538.47,"width":38.19,"height":48.48},"name":"图片 38"}
+{"kind":"image","id":"im/p4nmp0ju","slideIndex":0,"position":{"left":453.76,"top":520.07,"width":29.06,"height":25.44},"name":"图片 40"}
+{"kind":"image","id":"im/32lkna14","slideIndex":0,"position":{"left":442.51,"top":576.93,"width":42.82,"height":64.24},"name":"图片 42"}
+{"kind":"image","id":"im/h032l0jy","slideIndex":0,"position":{"left":747.7,"top":512.61,"width":79.56,"height":48.48},"name":"图片 44"}
+{"kind":"image","id":"im/1w7mxkj2","slideIndex":0,"position":{"left":391.6,"top":525.44,"width":82.04,"height":46.85},"name":"图片 48"}
+{"kind":"image","id":"im/a1kfad8b","slideIndex":0,"position":{"left":300.51,"top":329.4,"width":36.07,"height":50.03},"name":"图片 50"}
+{"kind":"image","id":"im/w32xcnq1","slideIndex":0,"position":{"left":672.76,"top":586.95,"width":20.26,"height":32.08},"name":"图片 52"}
+{"kind":"image","id":"im/i5kfex87","slideIndex":0,"position":{"left":156.06,"top":512.27,"width":38.89,"height":58.33},"name":"图片 54"}
+{"kind":"image","id":"im/47mxg7qd","slideIndex":0,"position":{"left":205.99,"top":477.72,"width":41.42,"height":62.13},"name":"图片 56"}
+{"kind":"image","id":"im/y90f2t83","slideIndex":0,"position":{"left":712.96,"top":515.82,"width":40.24,"height":40.24},"name":"图片 58"}
+{"kind":"image","id":"im/3qh0369w","slideIndex":0,"position":{"left":465.02,"top":563.86,"width":114.31,"height":114.31},"name":"图片 60"}
+{"kind":"image","id":"im/pszi5gr2","slideIndex":0,"position":{"left":450.48,"top":549.41,"width":52.76,"height":35.17},"name":"图片 62"}
+{"kind":"image","id":"im/f2x0z690","slideIndex":0,"position":{"left":373.89,"top":331.71,"width":38.06,"height":61.46},"name":"图片 64"}
+{"kind":"image","id":"im/yls325cj","slideIndex":0,"position":{"left":171.24,"top":261.58,"width":124.79,"height":83.2},"name":"图片 76"}
+{"kind":"image","id":"im/cjal0vut","slideIndex":0,"position":{"left":443.8,"top":381.28,"width":31.73,"height":26.09},"name":"图片 78"}
+{"kind":"image","id":"im/p0vqlgnm","slideIndex":0,"position":{"left":588.83,"top":261.93,"width":166.04,"height":79.31},"name":"图片 80"}
+{"kind":"image","id":"im/nyt8j65g","slideIndex":0,"position":{"left":425.14,"top":107.63,"width":217.03,"height":117.15},"name":"图片 82"}
+{"kind":"image","id":"im/8z6tofq5","slideIndex":0,"position":{"left":280.91,"top":472.92,"width":62.62,"height":62.62},"name":"图片 96"}
+{"kind":"image","id":"im/retobaxo","slideIndex":0,"position":{"left":598.36,"top":161.92,"width":53,"height":53},"name":"图片 165"}
+{"kind":"image","id":"im/krel4rut","slideIndex":0,"position":{"left":641.74,"top":165.77,"width":31.02,"height":37.2},"name":"图片 171"}
+{"kind":"image","id":"im/mdw361cz","slideIndex":0,"position":{"left":266.98,"top":299.95,"width":31.02,"height":37.2},"name":"图片 173"}
+{"kind":"image","id":"im/8fyl8bup","slideIndex":0,"position":{"left":707.62,"top":296.6,"width":31.02,"height":37.2},"name":"图片 175"}
+{"kind":"slide","id":"sl/hwbqtkby","slideIndex":1,"layout":{"id":"ly/p83mt83u","name":"标题和内容"},"title":"SUAV-LUAV link","textShapes":7,"backgroundColor":"rgba(255,255,255,1)"}
+{"kind":"shape","id":"sh/jqt8nid8","slideIndex":1,"position":{"left":525.91,"top":328.31,"width":133.58,"height":257.2},"name":"直接箭头连接符 83","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/5sbqpsve","slideIndex":1,"position":{"left":694.06,"top":327.03,"width":41.79,"height":161.91},"name":"直接箭头连接符 85","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/3md8zmtc","slideIndex":1,"position":{"left":679.89,"top":345.78,"width":3,"height":241.17},"name":"直接箭头连接符 87","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/wzi583ah","slideIndex":1,"position":{"left":137.1,"top":345.78,"width":107.23,"height":77.03},"name":"直接箭头连接符 97","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/fi5gz2hk","slideIndex":1,"position":{"left":254.18,"top":350.19,"width":43.31,"height":98.4},"name":"直接箭头连接符 100","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"shape","id":"sh/2lgfahgb","slideIndex":1,"position":{"left":240.48,"top":186.15,"width":268.12,"height":97.13},"name":"直接箭头连接符 103","geometry":"straightConnector1","lineColor":"#B21BA9","lineWidth":2.67}
+{"kind":"shape","id":"sh/po7y5czm","slideIndex":1,"position":{"left":526.29,"top":183.06,"width":127.42,"height":104.61},"name":"直接箭头连接符 106","geometry":"straightConnector1","lineColor":"#B21BA9","lineWidth":2.67}
+{"kind":"shape","id":"sh/nmt0fq10","slideIndex":1,"position":{"left":143.63,"top":325.01,"width":68.22,"height":34.86},"name":"曲线连接符 326","geometry":"curvedConnector3","lineColor":"#0D0D0D","lineWidth":3}
+{"kind":"shape","id":"sh/0rix0re9","slideIndex":1,"position":{"left":276.49,"top":193.78,"width":242.68,"height":89.5},"name":"直接箭头连接符 136","geometry":"straightConnector1","lineColor":"#843F0B","lineWidth":2.67}
+{"kind":"shape","id":"sh/6t0jy5sr","slideIndex":1,"position":{"left":548.4,"top":176.64,"width":115.45,"height":94.03},"name":"直接箭头连接符 139","geometry":"straightConnector1","lineColor":"#843F0B","lineWidth":2.67}
+{"kind":"shape","id":"sh/twbitkri","slideIndex":1,"position":{"left":123.65,"top":339.51,"width":107.37,"height":73.07},"name":"直接箭头连接符 142","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/47ihwva1","slideIndex":1,"position":{"left":247.61,"top":360.97,"width":34.75,"height":82.58},"name":"直接箭头连接符 145","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/qt43u9cb","slideIndex":1,"position":{"left":522.17,"top":319.68,"width":126.38,"height":244.18},"name":"直接箭头连接符 152","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/3qdkjedk","slideIndex":1,"position":{"left":672.61,"top":342.44,"width":0.97,"height":220.6},"name":"直接箭头连接符 155","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/s76l4z25","slideIndex":1,"position":{"left":699.6,"top":327.03,"width":43.53,"height":157.26},"name":"直接箭头连接符 159","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/mtwrmxg7","slideIndex":1,"position":{"left":11,"top":121.18,"width":50,"height":0},"name":"直接箭头连接符 11","geometry":"straightConnector1","lineColor":"#FF0000","lineWidth":2.67}
+{"kind":"textbox","id":"sh/wjy9sry9","slideIndex":1,"position":{"left":72.27,"top":0,"width":243.8,"height":38.67},"name":"文本框 13","text":"SUAV-LUAV link","geometry":"rect","style":{"fontSize":23.87,"typeface":"Times New Roman","color":"#000000","bold":true,"alignment":"left"}}
+{"kind":"shape","id":"sh/ahwrqhgj","slideIndex":1,"position":{"left":10.6,"top":52.87,"width":50,"height":0},"name":"直接箭头连接符 15","geometry":"straightConnector1","lineColor":"#841894","lineWidth":2.67}
+{"kind":"textbox","id":"sh/cnupgny5","slideIndex":1,"position":{"left":72.27,"top":33.53,"width":207,"height":38.67},"name":"文本框 17","text":"LUAV-SUAV link","geometry":"rect","style":{"fontSize":23.87,"typeface":"Times New Roman","color":"#000000","bold":true,"alignment":"left"}}
+{"kind":"textbox","id":"sh/t8byxkn2","slideIndex":1,"position":{"left":72.27,"top":67.07,"width":207,"height":38.67},"name":"文本框 19","text":"UD-UAV link","geometry":"rect","style":{"fontSize":23.87,"typeface":"Times New Roman","color":"#000000","bold":true,"alignment":"left"}}
+{"kind":"textbox","id":"sh/v2lc36dw","slideIndex":1,"position":{"left":72.27,"top":134.13,"width":207,"height":38.67},"name":"文本框 47","text":"Edge server","geometry":"rect","style":{"fontSize":23.87,"typeface":"Times New Roman","color":"#000000","bold":true,"alignment":"left"}}
+{"kind":"textbox","id":"sh/0vq1o36x","slideIndex":1,"position":{"left":72.27,"top":167.67,"width":207,"height":38.67},"name":"文本框 49","text":"SDN controller","geometry":"rect","style":{"fontSize":23.87,"typeface":"Times New Roman","color":"#000000","bold":true,"alignment":"left"}}
+{"kind":"shape","id":"sh/et8zmto7","slideIndex":1,"position":{"left":8.6,"top":220.47,"width":54.8,"height":5.47},"name":"曲线连接符 682","geometry":"curvedConnector3","lineColor":"#000000","lineWidth":3}
+{"kind":"textbox","id":"sh/c76hk361","slideIndex":1,"position":{"left":72.27,"top":201.2,"width":207,"height":38.67},"name":"文本框 53","text":"Trajectory","geometry":"rect","style":{"fontSize":23.87,"typeface":"Times New Roman","color":"#000000","bold":true,"alignment":"left"}}
+{"kind":"textbox","id":"sh/w3a1wn65","slideIndex":1,"position":{"left":72.27,"top":100.6,"width":243.8,"height":38.67},"name":"文本框 57","text":"UAV-UD link","geometry":"rect","style":{"fontSize":23.87,"typeface":"Times New Roman","color":"#000000","bold":true,"alignment":"left"}}
+{"kind":"shape","id":"sh/5kfipszu","slideIndex":1,"position":{"left":10.6,"top":86.4,"width":50,"height":0},"name":"直接箭头连接符 59","geometry":"straightConnector1","lineColor":"#FFC000","lineWidth":2.67}
+{"kind":"shape","id":"sh/jix0niho","slideIndex":1,"position":{"left":10.7,"top":23.03,"width":50,"height":0},"name":"直接箭头连接符 61","geometry":"straightConnector1","lineColor":"#843F0B","lineWidth":2.67}
+{"kind":"shape","id":"sh/lkbyd4fq","slideIndex":1,"position":{"left":565.57,"top":319.34,"width":68.22,"height":34.86},"name":"曲线连接符 326","geometry":"curvedConnector3","lineColor":"#0D0D0D","lineWidth":3}
+{"kind":"image","id":"im/tgritonm","slideIndex":1,"position":{"left":2.34,"top":299.95,"width":988.35,"height":425.45},"name":"图片 37"}
+{"kind":"image","id":"im/ixwfa50j","slideIndex":1,"position":{"left":342.17,"top":435.24,"width":41.12,"height":27.41},"name":"图片 10"}
+{"kind":"image","id":"im/kzexcfip","slideIndex":1,"position":{"left":587.43,"top":570.63,"width":46.95,"height":46.95},"name":"图片 12"}
+{"kind":"image","id":"im/atwv650n","slideIndex":1,"position":{"left":544.86,"top":611.08,"width":100.64,"height":67.09},"name":"图片 14"}
+{"kind":"image","id":"im/wved8fit","slideIndex":1,"position":{"left":271.87,"top":416.36,"width":31.63,"height":21.08},"name":"图片 16"}
+{"kind":"image","id":"im/mpcv2l0b","slideIndex":1,"position":{"left":349.96,"top":542.29,"width":51.33,"height":34.22},"name":"图片 18"}
+{"kind":"image","id":"im/b2lwnql4","slideIndex":1,"position":{"left":84.95,"top":507.64,"width":39.13,"height":26.09},"name":"图片 20"}
+{"kind":"image","id":"im/do3yp03u","slideIndex":1,"position":{"left":414.81,"top":578.36,"width":66.29,"height":44.19},"name":"图片 22"}
+{"kind":"image","id":"im/zqlgral0","slideIndex":1,"position":{"left":508.6,"top":556.06,"width":89.76,"height":59.84},"name":"图片 24"}
+{"kind":"image","id":"im/ls3yt036","slideIndex":1,"position":{"left":623.66,"top":556.06,"width":46.8,"height":70.2},"name":"图片 26"}
+{"kind":"image","id":"im/nu5gfalw","slideIndex":1,"position":{"left":119.68,"top":422.81,"width":34.86,"height":52.28},"name":"图片 28"}
+{"kind":"image","id":"im/kry1gjmp","slideIndex":1,"position":{"left":331.42,"top":447.72,"width":66.25,"height":56.38},"name":"图片 34"}
+{"kind":"image","id":"im/ipgze94z","slideIndex":1,"position":{"left":618.41,"top":460.82,"width":65.25,"height":39.76},"name":"图片 36"}
+{"kind":"image","id":"im/sfi1kjm1","slideIndex":1,"position":{"left":801.52,"top":538.47,"width":38.19,"height":48.48},"name":"图片 38"}
+{"kind":"image","id":"im/pofu1wbq","slideIndex":1,"position":{"left":453.76,"top":520.07,"width":29.06,"height":25.44},"name":"图片 40"}
+{"kind":"image","id":"im/nmdczmt0","slideIndex":1,"position":{"left":433.28,"top":578.36,"width":52.76,"height":79.14},"name":"图片 42"}
+{"kind":"image","id":"im/1kvuxcbu","slideIndex":1,"position":{"left":739.81,"top":481.65,"width":79.56,"height":48.48},"name":"图片 44"}
+{"kind":"image","id":"im/lgzu9gby","slideIndex":1,"position":{"left":391.6,"top":525.44,"width":82.04,"height":46.85},"name":"图片 48"}
+{"kind":"image","id":"im/u9sf65cv","slideIndex":1,"position":{"left":796.09,"top":465.79,"width":36.07,"height":50.03},"name":"图片 50"}
+{"kind":"image","id":"im/wbax8ful","slideIndex":1,"position":{"left":672.76,"top":586.95,"width":20.26,"height":32.08},"name":"图片 52"}
+{"kind":"image","id":"im/idsfa5cr","slideIndex":1,"position":{"left":125.27,"top":484.29,"width":38.89,"height":58.33},"name":"图片 54"}
+{"kind":"image","id":"im/4fuxcfux","slideIndex":1,"position":{"left":385.69,"top":454.88,"width":41.42,"height":62.13},"name":"图片 56"}
+{"kind":"image","id":"im/yh8fylcn","slideIndex":1,"position":{"left":715.73,"top":488.95,"width":40.24,"height":40.24},"name":"图片 58"}
+{"kind":"image","id":"im/3yp0zyxg","slideIndex":1,"position":{"left":465.02,"top":563.86,"width":114.31,"height":114.31},"name":"图片 60"}
+{"kind":"image","id":"im/p07i18fm","slideIndex":1,"position":{"left":450.48,"top":549.41,"width":52.76,"height":35.17},"name":"图片 62"}
+{"kind":"image","id":"im/yt03yxgj","slideIndex":1,"position":{"left":171.24,"top":261.58,"width":124.79,"height":83.2},"name":"图片 76"}
+{"kind":"image","id":"im/crilwnyd","slideIndex":1,"position":{"left":71.6,"top":478.32,"width":31.73,"height":26.09},"name":"图片 78"}
+{"kind":"image","id":"im/p83qh8b6","slideIndex":1,"position":{"left":592.27,"top":269.2,"width":149.02,"height":71.18},"name":"图片 80"}
+{"kind":"image","id":"im/n618fyt0","slideIndex":1,"position":{"left":425.14,"top":107.63,"width":217.03,"height":117.15},"name":"图片 82"}
+{"kind":"image","id":"im/87ytk7up","slideIndex":1,"position":{"left":260.06,"top":436.39,"width":62.62,"height":62.62},"name":"图片 96"}
+{"kind":"image","id":"im/jy50fixw","slideIndex":1,"position":{"left":618.41,"top":160.1,"width":53,"height":53},"name":"图片 165"}
+{"kind":"image","id":"im/cbax8zu1","slideIndex":1,"position":{"left":20.49,"top":131.58,"width":31.02,"height":37.2},"name":"图片 171"}
+{"kind":"image","id":"im/edsfapc7","slideIndex":1,"position":{"left":266.98,"top":299.95,"width":31.02,"height":37.2},"name":"图片 173"}
+{"kind":"image","id":"im/0faxczud","slideIndex":1,"position":{"left":711.19,"top":300.88,"width":27.44,"height":32.91},"name":"图片 175"}
+{"kind":"image","id":"im/lczil8jm","slideIndex":1,"position":{"left":164.72,"top":408.71,"width":82.04,"height":46.85},"name":"图片 2"}
+{"kind":"image","id":"im/zu9k72ho","slideIndex":1,"position":{"left":13.96,"top":168.78,"width":53,"height":53},"name":"图片 75"}
+{"kind":"image","id":"im/o7apo3al","slideIndex":1,"position":{"left":589.18,"top":158.72,"width":31.02,"height":37.2},"name":"图片 79"}
+{"kind":"image","id":"im/fa50vexk","slideIndex":1,"position":{"left":169.88,"top":433.89,"width":38.06,"height":61.46},"name":"图片 64"}

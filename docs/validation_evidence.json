@@ -1,0 +1,94 @@
+{
+  "source_sha256": "aed565f13500f850fad53b395c0cd3c8bee3d0892b3a4ddd980678fdf4d99fe4",
+  "unit_tests_passed": 215,
+  "unit_tests_skipped": 4,
+  "skipped_reason": "CUDA unavailable on this validation machine",
+  "smoke_batch": "results/validation_smoke_final",
+  "groups": [
+    {
+      "id": "baseline_priority_greedy",
+      "completed": true,
+      "evaluations": [
+        "evaluation"
+      ]
+    },
+    {
+      "id": "baseline_greedy_solver",
+      "completed": true,
+      "evaluations": [
+        "evaluation"
+      ]
+    },
+    {
+      "id": "pure_ppo",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    },
+    {
+      "id": "pure_sac",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    },
+    {
+      "id": "pure_ddpg",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    },
+    {
+      "id": "pure_ppo_ar_adaptive",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    },
+    {
+      "id": "pure_ppo_ar05",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    },
+    {
+      "id": "hybrid_ppo",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    },
+    {
+      "id": "hybrid_ppo_ar_adaptive",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    },
+    {
+      "id": "hybrid_ppo_ar05",
+      "completed": true,
+      "evaluations": [
+        "evaluation_best",
+        "evaluation_last"
+      ]
+    }
+  ],
+  "paired_exogenous_scenarios_verified": true,
+  "tasks_vary_across_frames": true,
+  "episode_log_rows_per_train_group": 4,
+  "full_horizon_process_probe_steps": 120,
+  "full_horizon_trajectory_points": 61,
+  "long_training_started": false,
+  "research_result_claims": false
+}

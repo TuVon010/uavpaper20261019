@@ -1,0 +1,10 @@
+{
+  "id": "baseline_greedy_solver",
+  "label": "Greedy trajectory + proposed solver",
+  "kind": "baseline",
+  "control": "greedy_solver",
+  "training": {
+    "algorithm": "ppo",
+    "control": "hybrid"
+  }
+}

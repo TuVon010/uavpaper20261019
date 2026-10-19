@@ -1,0 +1,10 @@
+{
+  "id": "baseline_priority_greedy",
+  "label": "Priority-Aware Greedy Offloading",
+  "kind": "baseline",
+  "control": "greedy_rate",
+  "training": {
+    "algorithm": "ppo",
+    "control": "hybrid"
+  }
+}

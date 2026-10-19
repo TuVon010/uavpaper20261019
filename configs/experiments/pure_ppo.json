@@ -1,0 +1,10 @@
+{
+  "id": "pure_ppo",
+  "label": "Pure PPO",
+  "kind": "train",
+  "control": "pure",
+  "training": {
+    "algorithm": "ppo",
+    "control": "pure"
+  }
+}

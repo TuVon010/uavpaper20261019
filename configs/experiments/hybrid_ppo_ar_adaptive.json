@@ -1,0 +1,23 @@
+{
+  "id": "hybrid_ppo_ar_adaptive",
+  "label": "Hybrid PPO adaptive AR + continuation",
+  "kind": "train",
+  "control": "hybrid",
+  "training": {
+    "algorithm": "ppo",
+    "control": "hybrid",
+    "ppo_variant": "value_decomp_popart",
+    "ppo_motion_memory": true,
+    "ppo_ar_rho": 0.8,
+    "ppo_ar_adaptive": true,
+    "ppo_ar_rho_max": 0.9,
+    "ppo_continuation_critic": true,
+    "ppo_continuation_mode": "known",
+    "ppo_known_delay_feature": true
+  },
+  "allow_schedules": true,
+  "options": {
+    "noise_decay": true,
+    "lr_decay": true
+  }
+}

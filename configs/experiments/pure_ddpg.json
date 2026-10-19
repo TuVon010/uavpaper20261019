@@ -1,0 +1,10 @@
+{
+  "id": "pure_ddpg",
+  "label": "Pure DDPG",
+  "kind": "train",
+  "control": "pure",
+  "training": {
+    "algorithm": "ddpg",
+    "control": "pure"
+  }
+}

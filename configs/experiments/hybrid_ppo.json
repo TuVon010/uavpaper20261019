@@ -1,0 +1,12 @@
+{
+  "id": "hybrid_ppo",
+  "label": "Hybrid original PPO",
+  "kind": "train",
+  "control": "hybrid",
+  "training": {
+    "algorithm": "ppo",
+    "control": "hybrid",
+    "ppo_motion_memory": true,
+    "ppo_known_delay_feature": true
+  }
+}
