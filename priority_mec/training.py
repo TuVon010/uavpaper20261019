@@ -9,7 +9,8 @@ from .environment import UAVMECEnv
 from .learners import SAC,SACConfig,DeterministicConfig,DeterministicLearner,PPO,PPOConfig,Replay,seed_everything
 from .vector import VectorEnvs
 from .io import write_json,append_csv,capture_rng,restore_rng,save_checkpoint,load_checkpoint,source_manifest,clean
-from .episode_log import EpisodeAccumulator,normalized_delay
+from .episode_log import (EpisodeAccumulator,ServiceCutoffAccumulator,normalized_delay,
+                          delay_reward_cost,service_cutoff_protocol)
 
 @dataclass(frozen=True)
 class TrainConfig:
@@ -147,11 +148,12 @@ def learner_for(obs_size,action_size,run,physics=None):
         tau=run.tau,batch_size=run.batch_size,replay_capacity=run.replay_capacity),device=run.device)
 
 def _cost(info):
+    # Scientific metrics remain physical J, independent of its reward coefficient.
     return normalized_delay(info)
 
 
 def augment_observations(base,previous_raw,known_delays,run):
-    """Explicit causal policy context; never stores a hidden noise/history state."""
+    """Explicit causal context; known_delays are positive weighted reward costs."""
     result=np.asarray(base,dtype=np.float32)
     single=result.ndim==1
     if single:result=result[None,:]
@@ -185,6 +187,7 @@ def evaluate(cfg,learner=None,control='pure',episodes=5,episode_start=30000,seed
     records=[];scenarios=[]
     for episode in range(episode_start,episode_start+episodes):
         obs=env.reset(episode=episode);rows=[];hashes=[];rewards=[];done=False
+        service_log=ServiceCutoffAccumulator()
         previous_raw=np.zeros(6,np.float32)
         while not done:
             known_delay=env.prepare_service() if context.ppo_known_delay_feature else None
@@ -202,6 +205,7 @@ def evaluate(cfg,learner=None,control='pure',episodes=5,episode_start=30000,seed
                 action=learner.act(policy_obs,deterministic=False,generator=generator)
             policy_wall=time.perf_counter()-start
             obs,reward,terminated,truncated,info=env.step(action);done=terminated or truncated
+            service_log.add(info)
             row=clean(dict(info));row.update(episode=episode,reward=float(reward),policy_wall_s=policy_wall)
             row['total_decision_wall_s']=policy_wall+float(info.get('decision_wall_s',0.))
             rows.append(row);rewards.append(float(reward));hashes.append(info['frame_scenario_hash'])
@@ -214,10 +218,15 @@ def evaluate(cfg,learner=None,control='pure',episodes=5,episode_start=30000,seed
         budget_ok=bool(np.all(cumulative<=cfg.energy_budget_j+1e-6))
         record={'episode':episode,'scenario_hash':rows[0]['scenario_hash'],'frames':len(rows),
             'weighted_delay_mean':float(np.mean([_cost(r) for r in rows])),
-            'weighted_delay_sum_per_frame':20*float(np.mean([_cost(r) for r in rows])),
+            'weighted_delay_sum_per_frame':cfg.num_users*float(np.mean([_cost(r) for r in rows])),
             'mean_delay_s':float(np.mean([r['mean_delay_s'] for r in rows])),
             'deadline_completion':float(np.mean([r['deadline_completion'] for r in rows])),
             'episode_return':sum(rewards),'per_uav_energy_j':cumulative.tolist(),
+            'delay_cost_weight':cfg.delay_cost_weight,
+            'delay_reward_cost_sum':float(sum(delay_reward_cost(r) for r in rows)),
+            'delay_reward_cost_mean':float(np.mean([delay_reward_cost(r) for r in rows])),
+            'delay_reward_sum':float(-sum(delay_reward_cost(r) for r in rows)),
+            'penalty_sum':float(-sum(rewards)-sum(delay_reward_cost(r) for r in rows)),
             'total_energy_j':float(cumulative.sum()),'budget_feasible':budget_ok,
             'deadline_feasible':deadline_ok,'fully_feasible':budget_ok and deadline_ok,
             'collision_attempt_frames':sum(bool(r['collision_attempt']) for r in rows),
@@ -235,6 +244,7 @@ def evaluate(cfg,learner=None,control='pure',episodes=5,episode_start=30000,seed
             'fallback_rate':float(np.mean([r['fallback_rate'] for r in rows])),
             'total_decision_mean_s':float(np.mean([r['total_decision_wall_s'] for r in rows])),
             'total_decision_p95_s':float(np.percentile([r['total_decision_wall_s'] for r in rows],95))}
+        record.update(service_log.record())
         records.append(record);scenarios.append({'episode':episode,'scenario_hash':record['scenario_hash'],'frame_scenario_hashes':hashes})
         if out is not None:append_csv(out/'episodes.csv',record)
     summary={key:float(np.mean([r[key] for r in records])) for key in records[0]
@@ -247,6 +257,7 @@ def evaluate(cfg,learner=None,control='pure',episodes=5,episode_start=30000,seed
         action_protocol=('deterministic conditional actor mean' if deterministic else 'sampled conditional policy; independent RNG continuous across episodes')+'; pure association uses unchanged keyed categorical routing',
         deterministic_policy=deterministic,policy_seed=policy_seed if not deterministic else None,
         motion_memory=context.ppo_motion_memory,known_delay_feature=context.ppo_known_delay_feature,
+        service_cutoff_protocol=service_cutoff_protocol(cfg),
         energy_semantics='J per episode; aggregate totals are means of episode totals')
     result={'summary':summary,'episodes':records,'scenarios':scenarios}
     if learner is not None and hasattr(learner,'policy_diagnostics'):
@@ -308,7 +319,7 @@ def train(cfg,out,steps,run=None,resume=None):
     replay=None if run.algorithm=='ppo' else Replay(observation_size,pool.action_size,run.replay_capacity,run.seed+101)
     episode_ids=list(range(run.num_envs));next_episode=run.num_envs
     returns=np.zeros(run.num_envs);lengths=np.zeros(run.num_envs,int)
-    episode_accumulators=[EpisodeAccumulator(episode_ids[i],i) for i in range(run.num_envs)]
+    episode_accumulators=[EpisodeAccumulator(episode_ids[i],i,num_users=cfg.num_users) for i in range(run.num_envs)]
     completed_episodes=0
     pending_fields=PENDING_FIELDS
     decomposed=run.algorithm=='ppo' and run.ppo_variant in {'value_decomp','value_decomp_popart'}
@@ -360,8 +371,10 @@ def train(cfg,out,steps,run=None,resume=None):
             'ppo_variant':run.ppo_variant,
             'parameters':{'actor':sum(p.numel() for p in learner.actor.parameters()),
                 'critic':sum(p.numel() for p in learner.critic.parameters()) if hasattr(learner,'critic') else None},
-            'reward_changed':False,'resource_solver_changed':False}
+            'reward_changed':cfg.delay_cost_weight!=1.,'resource_solver_changed':False,
+            'reward_semantics':'-delay_cost_weight * normalized_weighted_delay - unchanged violation penalties'}
         manifest['selection_mode']=run.selection_mode
+        manifest['service_cutoff_protocol']=service_cutoff_protocol(cfg)
         manifest['policy_context']={'previous_motion_latent':run.ppo_motion_memory,'current_solver_cost':run.ppo_known_delay_feature}
         manifest['schedule_semantics']='Fixed run-config horizon; progress changes only before an empty PPO rollout; active scales saved in learner checkpoints.'
         manifest['training_log_semantics']={'episodes.csv':'One completed training episode per row; end_step is the last global transition index.',
@@ -461,6 +474,8 @@ def train(cfg,out,steps,run=None,resume=None):
                         reward=float(reward[i]),episode_return_so_far=float(returns[i]),terminated=bool(terminal[i]),
                         scenario_hash=info['scenario_hash'],frame_scenario_hash=info['frame_scenario_hash'],
                         weighted_delay_mean=_cost(info),mean_delay_s=info['mean_delay_s'],deadline_completion=info['deadline_completion'],
+                        delay_cost_weight=info['delay_cost_weight'],delay_reward_cost=delay_reward_cost(info),
+                        delay_reward_component=info['delay_reward_component'],penalty_cost=info['penalty_cost'],
                         deadline_violation_cost=info['deadline_violation_cost'],allocation_invalid_rate=info.get('allocation_invalid_rate',0.),
                         solver_feasible=info.get('solver_feasible',True),solver_wall_s=info['solver_wall_s'],
                         energy_j=info['total_energy_j'],per_uav_energy_j=info['energy_j'],propulsion_energy_j=info['propulsion_energy_j'],compute_energy_j=info['compute_energy_j'],
@@ -477,7 +492,7 @@ def train(cfg,out,steps,run=None,resume=None):
                         reset_cost=pool.prepare_one(i) if run.ppo_known_delay_feature else None
                         next_obs[i]=augment_observations(reset_base,np.zeros(6,np.float32),reset_cost,run)
                         episode_ids[i]=next_episode;next_episode+=1;returns[i]=0.;lengths[i]=0
-                        episode_accumulators[i]=EpisodeAccumulator(episode_ids[i],i)
+                        episode_accumulators[i]=EpisodeAccumulator(episode_ids[i],i,num_users=cfg.num_users)
                 observations=next_obs;step+=run.num_envs;rollout_wall+=time.perf_counter()-clock
                 metrics=[];clock=time.perf_counter()
                 if replay is not None and step>=run.random_steps and replay.size>=run.batch_size:

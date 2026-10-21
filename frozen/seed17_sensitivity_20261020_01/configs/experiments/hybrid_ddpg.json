@@ -1,0 +1,10 @@
+{
+  "id": "hybrid_ddpg",
+  "label": "Hybrid original DDPG",
+  "kind": "train",
+  "control": "hybrid",
+  "training": {
+    "algorithm": "ddpg",
+    "control": "hybrid"
+  }
+}

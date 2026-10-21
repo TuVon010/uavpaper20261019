@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "project": "E:/postgraduateLife/paper_code/uav_mec_final_1019",
+  "full_data": true,
+  "checks": {
+    "release": {"files": 1870, "bytes": 342277977, "matched": 1870},
+    "figures": {"files": 1576, "bytes": 297559413, "matched": 1576},
+    "raw_data": {"files": 7368, "bytes": 17110157475, "matched": 7368, "cases": 18, "suite_id": "seed17_sensitivity_20261020_01"}
+  },
+  "errors": [],
+  "policy": "Read-only SHA256/size verification; no training or metadata changes."
+}

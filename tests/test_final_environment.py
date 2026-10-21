@@ -78,7 +78,8 @@ class FinalEnvironmentTests(unittest.TestCase):
         final = physical_probe(project)
         additions = {'user_cluster_halfwidth_m', 'user_cluster_center_x_fraction',
             'user_cluster_center_y_fraction', 'greedy_direction_count',
-            'greedy_speed_levels', 'greedy_refine_rounds'}
+            'greedy_speed_levels', 'greedy_refine_rounds', 'delay_cost_weight',
+            'uav_service_cutoff_enabled'}
         self.assertEqual(set(final['config']) - set(original['config']), additions)
         self.assertEqual(original['config'], {key: final['config'][key] for key in original['config']})
         # The configuration fingerprint expands with its newly editable fields.

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "pytest": {
+    "passed": 267,
+    "skipped": 1,
+    "duration_s": 23.59
+  },
+  "source_sha256": "8336489dca394491b79654d40f0ce343c4efc2f1615efd8fa8fe44487f46efd9",
+  "full_data_hashes_verified": true,
+  "selected_best_models_load_verified": true,
+  "training_performed": false
+}

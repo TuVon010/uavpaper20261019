@@ -57,6 +57,7 @@ class Config:
     air_density: float = 1.225
     rotor_solidity: float = 0.05
     rotor_area_m2: float = 0.5
+    delay_cost_weight: float = 1.0
     deadline_penalty: float = 1.0
     collision_penalty: float = 5.0
     boundary_penalty: float = 2.0
@@ -72,9 +73,10 @@ class Config:
     user_cluster_halfwidth_m: float = 100.0
     user_cluster_center_x_fraction: float = .5
     user_cluster_center_y_fraction: float = .5
-    greedy_direction_count: int = 72
-    greedy_speed_levels: int = 5
-    greedy_refine_rounds: int = 2
+    greedy_direction_count: int = 16
+    greedy_speed_levels: int = 4
+    greedy_refine_rounds: int = 0
+    uav_service_cutoff_enabled: bool = False
 
     @property
     def n_users(self): return self.num_users
@@ -90,14 +92,18 @@ class Config:
         return self.noise_reference_dbm - 10 * math.log10(self.noise_reference_bandwidth_hz)
 
     def validate(self):
+        if isinstance(self.num_users, bool) or not isinstance(self.num_users, int) or self.num_users < 1:
+            raise ValueError('num_users must be a positive integer')
+        if isinstance(self.num_uavs, bool) or not isinstance(self.num_uavs, int) or self.num_uavs != 3:
+            raise ValueError('This scenario fixes three UAVs')
+        if not isinstance(self.uav_service_cutoff_enabled, bool):
+            raise ValueError('uav_service_cutoff_enabled must be Boolean')
         for f in fields(self):
             if not math.isfinite(getattr(self, f.name)):
                 raise ValueError(f"{f.name} must be finite")
-        if self.num_uavs != 3 or self.num_users != 20:
-            raise ValueError("This scenario fixes 20 users and three UAVs")
         if (not isinstance(self.greedy_direction_count,int) or self.greedy_direction_count<4
                 or not isinstance(self.greedy_speed_levels,int) or self.greedy_speed_levels<2
-                or not isinstance(self.greedy_refine_rounds,int) or self.greedy_refine_rounds<0):
+                or not isinstance(self.greedy_refine_rounds,int) or self.greedy_refine_rounds!=0):
             raise ValueError('Invalid greedy direction/speed grid or refinement count')
         center=[self.area_m*self.user_cluster_center_x_fraction,self.area_m*self.user_cluster_center_y_fraction]
         if (self.user_cluster_halfwidth_m<=0 or min(center)<self.user_cluster_halfwidth_m
@@ -109,7 +115,7 @@ class Config:
         positive = ('frame_s','area_m','altitude_m','speed_max_mps','safe_distance_m',
                     'local_cpu_hz','uav_cpu_hz','satellite_cpu_hz','uav_bandwidth_hz',
                     'satellite_bandwidth_hz','energy_budget_j','data_min_bit','deadline_min_s',
-                    'noise_reference_bandwidth_hz','carrier_hz','tx_power_w')
+                    'noise_reference_bandwidth_hz','carrier_hz','tx_power_w','delay_cost_weight')
         if any(getattr(self, k) <= 0 for k in positive):
             raise ValueError('Physical capacities must be positive')
         if self.data_max_bit < self.data_min_bit or self.deadline_max_s < self.deadline_min_s:

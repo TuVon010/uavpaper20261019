@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "verified_utc": "2026-10-21T07:30:26.606829+00:00",
+  "suite_id": "seed17_sensitivity_20261020_01",
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "managed_files_identical": 73,
+  "result_files_identical": 7368,
+  "published_files_identical": 10,
+  "root_archive_record_sha256": "8896758614dbe3050f28f3a84b36eff45db2c2ee597bc0207c53dfa1d0de6eb4",
+  "local_and_server_independent_audits_passed": true,
+  "counts": {
+    "cases": 18,
+    "verified_jobs": 144,
+    "trained_jobs": 108,
+    "training_episode_rows": 108000,
+    "evaluation_protocols": 252,
+    "evaluation_episode_rows": 2520,
+    "evaluation_frame_rows": 151200
+  },
+  "suite_done": true,
+  "training_and_evaluation_processes_remaining": 0,
+  "next_phase_started": false
+}

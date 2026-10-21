@@ -17,11 +17,11 @@ def _softmax(x):
 class UAVMECEnv:
     """Gym-style five-value step. No queue, no task dropping, no hidden inner energy price.
 
-    Pure control uses 6 velocities + 20x5 route preferences + 20 bandwidth + 20 CPU
+    Pure control uses 6 velocities + Nx5 route preferences + N bandwidth + N CPU
     preferences. Routes are WHOLE-task categorical draws, using an independent common
     exogenous stream. Resource normalization never invokes an optimization solver.
     """
-    STATE_VERSION = 4
+    STATE_VERSION = 8
     CONTROLS = {'hybrid','pure','hover_random','hover_balanced','hover_solver','local','follow_solver','greedy_rate','greedy_solver'}
 
     def __init__(self, cfg=None, seed=1, control='hybrid'):
@@ -29,7 +29,10 @@ class UAVMECEnv:
         self.seed, self.control = int(seed), control
         if control not in self.CONTROLS:
             raise ValueError(f'Unknown control {control}')
-        self.action_size = 146 if control == 'pure' else 6
+        self.motion_size = 2*self.cfg.num_uavs
+        self.route_end = self.motion_size+self.cfg.num_users*(self.cfg.num_uavs+2)
+        self.bandwidth_end = self.route_end+self.cfg.num_users
+        self.action_size = self.bandwidth_end+self.cfg.num_users if control == 'pure' else self.motion_size
         self.reset(0)
         self.observation_size = len(self._observation())
 
@@ -56,12 +59,25 @@ class UAVMECEnv:
         self.rho_hz, self.offset_s, self.channel_info = channel_parameters(
             self.user_position, self.uav_position, k, self.scenario, self.cfg)
 
+    def service_available(self):
+        """Slot-start remote-node eligibility; flight is never disabled.
+
+        Index j=0..2 identifies a UAV; the final entry is the satellite.
+        A crossing during this slot changes eligibility only next slot.
+        """
+        available = np.ones(self.cfg.num_uavs+1, dtype=bool)
+        if self.cfg.uav_service_cutoff_enabled:
+            available[:self.cfg.num_uavs] = self.cumulative_energy_j < self.cfg.energy_budget_j
+        return available
+
     def prepare_service(self):
         """Cache the unchanged slot-start solver, once per observed state.
 
         This reveals an already determined current cost to every V4 comparison
         policy. It neither moves a UAV nor advances tasks, mobility or RNG.
         A terminal has no service to prepare and a zero continuation feature.
+        The returned positive cost is delay_cost_weight * J in reward units;
+        the cached physical cost and the resource optimizer remain unscaled.
         """
         if self.frame >= self.cfg.episode_frames:
             return 0.
@@ -74,13 +90,17 @@ class UAVMECEnv:
             data, deadline = self.scenario.data_bit[t], self.scenario.deadline_s[t]
             allocation = solve(data, data*c.cycles_per_bit, 1/deadline,
                                self.rho_hz, self.offset_s, self.previous_association,
-                               c, deadline_s=deadline)
+                               c, deadline_s=deadline,
+                               **({'remote_available':self.service_available()} if c.uav_service_cutoff_enabled else {}))
             solver_wall = time.perf_counter()-started
             delay = self._evaluate_allocation(allocation, data, data*c.cycles_per_bit, deadline)[3]
             self._service_cache = dict(frame=t, allocation=allocation,
+                remote_available=self.service_available().tolist(),
                 cost=float(np.mean(delay/deadline)), solver_wall_s=solver_wall,
                 prepare_wall_s=time.perf_counter()-started)
-        return self._service_cache['cost']
+        if self._service_cache['remote_available'] != self.service_available().tolist():
+            raise RuntimeError('Stale service eligibility in prepared allocation')
+        return self.cfg.delay_cost_weight*self._service_cache['cost']
 
     def _observation(self):
         c, n = self.cfg, self.cfg.num_users
@@ -135,6 +155,9 @@ class UAVMECEnv:
         f = np.asarray(allocation['cpu_hz'], dtype=float).copy()
         if a.shape != (c.num_users,) or np.any(a < 0) or np.any(a > c.num_uavs+1):
             raise ValueError('Invalid whole-task association')
+        remote_users = a > 0
+        if np.any(~self.service_available()[a[remote_users]-1]):
+            raise ValueError('Allocation assigned a task to a disabled UAV service')
         if b.shape != a.shape or f.shape != a.shape or np.any(~np.isfinite(b)) or np.any(~np.isfinite(f)) or np.any(b < 0) or np.any(f < 0):
             raise ValueError('Invalid resource allocation')
         tol = c.feasibility_tol
@@ -169,7 +192,7 @@ class UAVMECEnv:
         if action.shape != (self.action_size,) or np.any(~np.isfinite(action)):
             raise ValueError(f'Action must be finite shape ({self.action_size},)')
         bounded = np.clip(action, -1, 1)
-        requested = bounded[:6].reshape(c.num_uavs, 2)*c.speed_max_mps
+        requested = bounded[:self.motion_size].reshape(c.num_uavs, 2)*c.speed_max_mps
         motion_diagnostics = {}
         if self.control.startswith('hover') or self.control == 'local':
             requested[:] = 0
@@ -182,42 +205,52 @@ class UAVMECEnv:
             requested, motion_diagnostics = plan_velocity(self.user_position,self.uav_position,
                 1/self.scenario.deadline_s[t],self.rho_hz,c,
                 direction_count=c.greedy_direction_count,
-                speed_fractions=np.linspace(0.,1.,c.greedy_speed_levels),
+                speed_fractions=(0.,.25,.5,1.) if c.greedy_speed_levels==4 else np.linspace(0.,1.,c.greedy_speed_levels),
                 refine_rounds=c.greedy_refine_rounds)
         velocity, safety = safe_velocity(self.uav_position, requested, c)
         data = self.scenario.data_bit[t]
         cycles = data*c.cycles_per_bit
         deadline = self.scenario.deadline_s[t]
         weights = 1/deadline
+        available = self.service_available()
         solve_start = time.perf_counter()
         prepared_wall_s = 0.
         if self.control in {'hybrid','hover_solver','follow_solver','greedy_solver'}:
             if self._service_cache is not None:
                 if self._service_cache['frame'] != t:
                     raise RuntimeError('Stale slot-start service cache')
+                if self._service_cache['remote_available'] != available.tolist():
+                    raise RuntimeError('Stale service eligibility in prepared allocation')
                 allocation = self._service_cache['allocation']
                 prepared_wall_s = self._service_cache['prepare_wall_s']
             else:
                 from .solvers import solve
                 allocation = solve(data, cycles, weights, self.rho_hz, self.offset_s,
-                                   self.previous_association, c, deadline_s=deadline)
+                                   self.previous_association, c, deadline_s=deadline,
+                                   **({'remote_available':available} if c.uav_service_cutoff_enabled else {}))
         elif self.control == 'greedy_rate':
             from .greedy_baseline import greedy_allocation
-            allocation = greedy_allocation(data,cycles,deadline,self.rho_hz,self.offset_s,c)
+            allocation = greedy_allocation(data,cycles,deadline,self.rho_hz,self.offset_s,c,
+                **({'remote_available':available} if c.uav_service_cutoff_enabled else {}))
         elif self.control == 'pure':
-            score = c.pure_route_temperature_scale*bounded[6:106].reshape(c.num_users,c.num_uavs+2)
+            score = c.pure_route_temperature_scale*bounded[self.motion_size:self.route_end].reshape(c.num_users,c.num_uavs+2)
+            if c.uav_service_cutoff_enabled:
+                score[:,1:] = np.where(available[None,:],score[:,1:],-np.inf)
             probability = _softmax(score)
             a = np.sum(self.scenario.route_uniform[t,:,None] > np.cumsum(probability, axis=1), axis=1)
             a = np.minimum(a, c.num_uavs+1)
             allocation = self._simple_resources(a,
-                c.pure_resource_temperature_scale*bounded[106:126],
-                c.pure_resource_temperature_scale*bounded[126:146])
+                c.pure_resource_temperature_scale*bounded[self.route_end:self.bandwidth_end],
+                c.pure_resource_temperature_scale*bounded[self.bandwidth_end:self.action_size])
         elif self.control == 'hover_random':
-            a = np.minimum((self.scenario.route_uniform[t]*(c.num_uavs+2)).astype(int), c.num_uavs+1)
+            nodes = np.flatnonzero(np.concatenate(([True],available)))
+            a = nodes[np.minimum((self.scenario.route_uniform[t]*len(nodes)).astype(int), len(nodes)-1)]
             allocation = self._simple_resources(a)
         elif self.control == 'hover_balanced':
-            # Only UAV nodes; twenty indivisible tasks form 7/7/6 groups, rotated each slot.
-            allocation = self._simple_resources((np.arange(c.num_users)+t)%c.num_uavs+1)
+            # Only UAV nodes; indivisible tasks are balanced and rotated each slot.
+            nodes = np.flatnonzero(available[:c.num_uavs])+1
+            if not len(nodes): nodes = np.array([0,c.num_uavs+1])
+            allocation = self._simple_resources(nodes[(np.arange(c.num_users)+t)%len(nodes)])
         else:
             allocation = self._simple_resources(np.zeros(c.num_users, dtype=int))
         solver_wall_s = time.perf_counter()-solve_start
@@ -231,11 +264,14 @@ class UAVMECEnv:
         self.cumulative_propulsion_j += propulsion
         self.cumulative_compute_j += compute
         self.cumulative_energy_j += energy
+        newly_disabled = available[:c.num_uavs] & ~self.service_available()[:c.num_uavs]
         after_excess = np.maximum(self.cumulative_energy_j/c.energy_budget_j-1, 0)
         normalized = float(np.mean(delay/deadline))
         late = float(np.mean(np.maximum(delay/deadline-1,0)))
         energy_cost = c.energy_penalty*c.episode_frames*np.mean(after_excess-before_excess)
-        reward = -normalized-c.deadline_penalty*late-energy_cost-c.collision_penalty*safety['collision_attempt']-c.boundary_penalty*safety['boundary_attempt']-c.allocation_failure_penalty*np.mean(invalid)
+        delay_reward_cost = c.delay_cost_weight*normalized
+        penalty_cost = c.deadline_penalty*late+energy_cost+c.collision_penalty*safety['collision_attempt']+c.boundary_penalty*safety['boundary_attempt']+c.allocation_failure_penalty*np.mean(invalid)
+        reward = -delay_reward_cost-c.deadline_penalty*late-energy_cost-c.collision_penalty*safety['collision_attempt']-c.boundary_penalty*safety['boundary_attempt']-c.allocation_failure_penalty*np.mean(invalid)
         service_satellite_channel = {key: np.asarray(value).tolist() for key,value in self.channel_info.items()
             if key.startswith('satellite_')}
         old_user_position, old_uav_position = self.user_position.copy(), self.uav_position.copy()
@@ -252,7 +288,10 @@ class UAVMECEnv:
         terminated = self.frame == c.episode_frames
         self._refresh_channel()
         info = {
-            'episode': self.episode, 'frame': t, 'normalized_weighted_delay': normalized,
+            'episode': self.episode, 'frame': t, 'num_users': c.num_users, 'normalized_weighted_delay': normalized,
+            'delay_cost_weight': c.delay_cost_weight,
+            'delay_reward_cost': float(delay_reward_cost),
+            'delay_reward_component': float(-delay_reward_cost), 'penalty_cost': float(penalty_cost),
             'weighted_delay_sum': float(np.sum(delay/deadline)), 'mean_delay_s': float(np.mean(delay)),
             'deadline_completion': float(np.mean((delay <= deadline+c.feasibility_tol)&~invalid)),
             'deadline_violation_rate': float(np.mean((delay > deadline+c.feasibility_tol)|invalid)),
@@ -263,6 +302,14 @@ class UAVMECEnv:
             'cumulative_propulsion_energy_j': self.cumulative_propulsion_j.tolist(),
             'cumulative_compute_energy_j': self.cumulative_compute_j.tolist(),
             'energy_budget_ok': bool(np.all(self.cumulative_energy_j <= c.energy_budget_j+c.feasibility_tol)),
+            'service_cutoff_enabled': c.uav_service_cutoff_enabled,
+            'service_cutoff_threshold_j': c.energy_budget_j,
+            'uav_service_available': available[:c.num_uavs].tolist(),
+            'uav_service_disabled': (~available[:c.num_uavs]).tolist(),
+            'newly_service_disabled': newly_disabled.tolist(),
+            'local_task_fraction': float(np.mean(a==0)),
+            'uav_task_fraction': float(np.mean((a>0)&(a<=c.num_uavs))),
+            'satellite_task_fraction': float(np.mean(a==c.num_uavs+1)),
             'scenario_hash': self.scenario.hash, 'frame_scenario_hash': self.scenario.frame_hash(t),
             'association': a.tolist(), 'association_counts': np.bincount(a,minlength=c.num_uavs+2).tolist(),
             'bandwidth_hz': bandwidth.tolist(), 'cpu_hz': cpu.tolist(), 'delay_s': delay.tolist(),
@@ -313,6 +360,8 @@ class UAVMECEnv:
         self._service_cache = deepcopy(state.get('service_cache'))
         if self._service_cache is not None and self._service_cache['frame'] != self.frame:
             raise ValueError('Checkpoint service cache is stale')
+        if self._service_cache is not None and self._service_cache['remote_available'] != self.service_available().tolist():
+            raise ValueError('Checkpoint service eligibility differs')
 
 
 Environment = UAVMECEnv

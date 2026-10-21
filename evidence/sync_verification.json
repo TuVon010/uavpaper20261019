@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "release_id": "final_20261020_cutoff_seed20",
+  "verified_epoch": 1792497393.6342802,
+  "local_project": "E:\\postgraduateLife\\paper_code\\uav_mec_final_1019",
+  "server_project": "/home/zhaojunan_25/uav_mec_final",
+  "managed_files_identical": 236,
+  "result_files_identical": 623,
+  "retained_result_bytes": 950122777,
+  "source_sha256": "8336489dca394491b79654d40f0ce343c4efc2f1615efd8fa8fe44487f46efd9",
+  "local_and_server_release_manifest_sha256": "9a844d9dd321da214ebb9afc592df5f0543a5a1382fe7e133fb804295f65e3ac",
+  "current_and_frozen_source_identical": true,
+  "all_selected_best_checkpoints_preserved": true,
+  "local_regression": {
+    "passed": 263,
+    "skipped": 5
+  },
+  "server_regression": {
+    "passed": 267,
+    "skipped": 1,
+    "duration_s": 23.59
+  },
+  "physical_parameters_and_weights_unchanged": true,
+  "default_entry_now_matches_retained_cutoff_batch": true,
+  "historical_items_archived_outside_project": true,
+  "platform_specific_directories_not_mirrored": [
+    ".git",
+    ".venv",
+    "__pycache__",
+    ".pytest_cache"
+  ],
+  "operations_archive": "/home/zhaojunan_25/uav_mec_final_archives/final_20261020/maintenance_records"
+}

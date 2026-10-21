@@ -1,0 +1,43 @@
+{
+  "verified_at_epoch": 1792468816.209286,
+  "source_sha256": "8336489dca394491b79654d40f0ce343c4efc2f1615efd8fa8fe44487f46efd9",
+  "verified_files": 78,
+  "previous_freeze_and_results_preserved": true,
+  "only_parameter_change": {
+    "uav_service_cutoff_enabled": {
+      "before": false,
+      "after": true
+    }
+  },
+  "server_regression": {
+    "exit": 0,
+    "log": "/home/zhaojunan_25/uav_mec_final/validation/wide_compute1000_w5_cutoff_20261020_01/regression.log",
+    "tail": "........................................s............................... [ 26%]\n........................................................................ [ 52%]\n........................................................................ [ 79%]\n........................................................                 [100%]\n271 passed, 1 skipped in 24.77s\n"
+  },
+  "all_eight_smokes_passed": true,
+  "real_60_slot_cutoff": {
+    "frames": 60,
+    "threshold_j": 12000,
+    "disabled_uav_frames": 15,
+    "no_compute_on_disabled_uav": true,
+    "propulsion_continues": true,
+    "per_uav_first_service_disabled_slot": [
+      55,
+      57,
+      56
+    ]
+  },
+  "state": "running",
+  "current_group": "pure_ppo",
+  "group_states": {
+    "baseline_priority_greedy": "complete",
+    "baseline_greedy_solver": "complete",
+    "pure_ppo": "running",
+    "hybrid_ppo": "queued",
+    "hybrid_sac": "queued",
+    "hybrid_ddpg": "queued",
+    "hybrid_ppo_ar_adaptive": "queued",
+    "hybrid_ppo_ar05": "queued"
+  },
+  "local_resume_audit": true
+}

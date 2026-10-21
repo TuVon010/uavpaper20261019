@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "seed17_sensitivity",
+  "description": "Seed 17 main scene and one-factor sensitivity; every learned policy trains from scratch.",
+  "environment": "configs/environment.json",
+  "common": "configs/common.json",
+  "seed": 17,
+  "episodes": 1000,
+  "render_every_episodes": 100,
+  "evaluation": {"episodes": 10, "episode_start": 30000, "policy_seed": 17, "also_sample": false},
+  "validation": {"episodes": 3, "episode_start": 20000},
+  "methods": ["baseline_priority_greedy", "baseline_greedy_solver", "pure_ppo", "hybrid_ppo", "hybrid_sac", "hybrid_ddpg", "hybrid_ppo_ar_adaptive", "hybrid_ppo_ar05"],
+  "main_only": false,
+  "data_distribution": {"kind": "relative_uniform", "lower_fraction": 0.4, "upper_fraction": 1.6, "unit": "Mbit"},
+  "axes": [
+    {"id": "users", "field": "num_users", "unit": "users", "values": [10, 15, 20, 25, 30]},
+    {"id": "mean_data_mbit", "field": "mean_data_mbit", "unit": "Mbit", "values": [0.5, 1, 1.5, 2, 2.5]},
+    {"id": "uav_cpu_ghz", "field": "uav_cpu_hz", "scale": 1000000000, "unit": "GHz", "values": [5, 10, 15, 20, 25]},
+    {"id": "uav_bandwidth_mhz", "field": "uav_bandwidth_hz", "scale": 1000000, "unit": "MHz", "values": [5, 10, 15, 20, 25]}
+  ]
+}

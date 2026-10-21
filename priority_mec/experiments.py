@@ -15,9 +15,38 @@ def read_json(path):
 def recipes():
     entries = {p.stem: read_json(p) for p in sorted((ROOT/'configs'/'experiments').glob('*.json'))}
     order = ('baseline_priority_greedy','baseline_greedy_solver','pure_ppo','pure_sac','pure_ddpg',
-             'pure_ppo_ar_adaptive','pure_ppo_ar05','hybrid_ppo','hybrid_ppo_ar_adaptive','hybrid_ppo_ar05')
+             'pure_ppo_ar_adaptive','pure_ppo_ar05','hybrid_ppo','hybrid_sac','hybrid_ddpg',
+             'hybrid_ppo_ar_adaptive','hybrid_ppo_ar05')
     ordered = [name for name in order if name in entries]
     return {name: entries[name] for name in ordered+sorted(set(entries)-set(ordered))}
+
+
+def campaign_settings(path, root=None):
+    """Resolve a frozen campaign's explicit groups and config files.
+
+    Campaign JSON names files relative to the project, so the same selection
+    remains usable after copying a project to another computer or frozen path.
+    """
+    root = Path(root or ROOT).resolve()
+    path = Path(path)
+    if not path.is_absolute(): path = root/path
+    campaign = read_json(path)
+    required = {'id', 'environment', 'common', 'experiments'}
+    if not required.issubset(campaign) or set(campaign)-required-{'description'}:
+        raise ValueError('Invalid campaign fields')
+    names = campaign['experiments']
+    available = recipes()
+    if (not isinstance(names, list) or not names or any(not isinstance(n, str) or n not in available for n in names)
+            or len(names) != len(set(names))):
+        raise ValueError('Campaign requires unique known experiment IDs')
+    resolved = {}
+    for key in ('environment', 'common'):
+        item = Path(campaign[key])
+        target = (root/item).resolve()
+        if item.is_absolute() or not target.is_relative_to(root) or not target.is_file():
+            raise ValueError('Campaign config must be a saved file inside this project: '+key)
+        resolved[key] = target
+    return campaign, resolved
 
 
 def validate_protocol(protocol):

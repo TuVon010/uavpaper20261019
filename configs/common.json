@@ -3,7 +3,7 @@
   "training": {
     "algorithm": "ppo",
     "control": "pure",
-    "seed": 1,
+    "seed": 17,
     "num_envs": 8,
     "use_processes": true,
     "device": "auto",
@@ -38,7 +38,7 @@
     "eval_start": 20000,
     "checkpoint_every": 3000,
     "log_frames": false,
-    "render_every_episodes": 10
+    "render_every_episodes": 100
   },
   "evaluation": {
     "episodes": 10,

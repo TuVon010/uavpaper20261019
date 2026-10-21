@@ -1,7 +1,7 @@
 """Actual experiment recipes, CLI switches, evaluation and output preservation."""
 import argparse
 import copy
-from dataclasses import asdict
+from dataclasses import asdict, replace
 import json
 from pathlib import Path
 import shutil
@@ -15,9 +15,8 @@ from priority_mec.io import write_json
 
 EXPECTED_IDS = {
     'baseline_priority_greedy', 'baseline_greedy_solver',
-    'pure_ppo', 'pure_sac', 'pure_ddpg',
-    'pure_ppo_ar_adaptive', 'pure_ppo_ar05',
-    'hybrid_ppo', 'hybrid_ppo_ar_adaptive', 'hybrid_ppo_ar05',
+    'pure_ppo',
+    'hybrid_ppo', 'hybrid_sac', 'hybrid_ddpg', 'hybrid_ppo_ar_adaptive', 'hybrid_ppo_ar05',
 }
 
 
@@ -29,11 +28,74 @@ def _args(**overrides):
     return argparse.Namespace(**values)
 
 
-def test_catalog_has_all_ten_requested_groups_with_baselines_first():
+def test_catalog_has_all_requested_groups_with_baselines_first():
     catalog = experiments.recipes()
     assert set(catalog) == EXPECTED_IDS
     assert [r['kind'] for r in list(catalog.values())[:2]] == ['baseline', 'baseline']
     assert all(r['id'] == name for name, r in catalog.items())
+
+
+def test_plain_hybrid_off_policy_recipes_use_six_motion_actions_without_ppo_changes():
+    for name, algorithm in [('hybrid_sac', 'sac'), ('hybrid_ddpg', 'ddpg')]:
+        _, run, _, _, flags = experiments.settings(_args(), experiments.recipes()[name])
+        assert run.algorithm == algorithm and run.control == 'hybrid'
+        assert run.ppo_variant == 'baseline' and not run.ppo_motion_memory
+        assert not run.ppo_continuation_critic and not run.ppo_known_delay_feature
+        assert not flags and run.ppo_schedule_steps == 0
+
+
+def test_release_campaign_selects_eight_groups_and_preserves_the_completed_cutoff_parameters():
+    campaign, paths = experiments.campaign_settings('configs/campaigns/wide_compute1000_w5_cutoff.json')
+    assert campaign['experiments'] == ['baseline_priority_greedy', 'baseline_greedy_solver',
+        'pure_ppo', 'hybrid_ppo', 'hybrid_sac', 'hybrid_ddpg',
+        'hybrid_ppo_ar_adaptive', 'hybrid_ppo_ar05']
+    old = Config().to_dict()
+    new = Config.load(paths['environment']).to_dict()
+    assert {k for k in old if old[k] != new[k]} == {
+        'user_cluster_halfwidth_m', 'cycles_per_bit', 'delay_cost_weight',
+        'uav_service_cutoff_enabled'}
+    assert Config.load(experiments.ROOT/'configs/environment.json').to_dict() == new
+    assert new['user_cluster_halfwidth_m'] == 250 and new['cycles_per_bit'] == 1000
+    assert new['delay_cost_weight'] == 5
+    for name in campaign['experiments']:
+        cfg, run, steps, protocol, flags = experiments.settings(
+            _args(environment=str(paths['environment']), common=str(paths['common'])),
+            experiments.recipes()[name])
+        assert cfg.to_dict() == new and steps == 60000 and run.seed == 17
+        assert protocol['episodes'] == 10 and protocol['episode_start'] == 30000
+        if name.startswith('hybrid_ppo_ar'):
+            assert flags == {'noise_decay': True, 'lr_decay': True}
+
+
+def test_campaign_rejects_duplicate_unknown_and_escaping_configs(tmp_path):
+    base = {'id':'test','environment':'env.json','common':'common.json','experiments':['pure_ppo']}
+    for filename in ['env.json', 'common.json']: write_json(tmp_path/filename, {})
+    for overrides in [dict(experiments=['pure_ppo', 'pure_ppo']),
+                      dict(experiments=['missing']), dict(environment='../environment.json'),
+                      dict(typo=True)]:
+        path = tmp_path/'campaign.json';write_json(path, dict(base, **overrides))
+        with pytest.raises(ValueError): experiments.campaign_settings(path, root=tmp_path)
+
+
+def test_service_cutoff_campaign_changes_only_service_eligibility_rule():
+    new, new_paths = experiments.campaign_settings('configs/campaigns/wide_compute1000_w5_cutoff.json')
+    assert set(new['experiments']) == EXPECTED_IDS and len(new['experiments']) == 8
+    configured = Config.load(new_paths['environment'])
+    before = replace(configured, uav_service_cutoff_enabled=False).to_dict()
+    after = configured.to_dict()
+    assert {k for k in before if before[k] != after[k]} == {'uav_service_cutoff_enabled'}
+    assert before['uav_service_cutoff_enabled'] is False
+    assert after['uav_service_cutoff_enabled'] is True
+    for key in ['cycles_per_bit', 'user_cluster_halfwidth_m', 'delay_cost_weight', 'energy_budget_j']:
+        assert after[key] == {'cycles_per_bit':1000., 'user_cluster_halfwidth_m':250.,
+                             'delay_cost_weight':5., 'energy_budget_j':12000.}[key]
+    for name in new['experiments']:
+        cfg, run, steps, protocol, flags = experiments.settings(
+            _args(environment=str(new_paths['environment']), common=str(new_paths['common'])),
+            experiments.recipes()[name])
+        assert cfg.to_dict() == after and steps == 60000 and run.seed == 17
+        if name.startswith('hybrid_ppo_ar'):
+            assert flags == {'noise_decay':True, 'lr_decay':True}
 
 
 def test_actual_recipes_share_physical_scenes_training_budget_and_evaluation_protocol():
@@ -52,24 +114,17 @@ def test_actual_recipes_share_physical_scenes_training_budget_and_evaluation_pro
 
 
 @pytest.mark.parametrize('suffix', ['ar_adaptive', 'ar05'])
-def test_pure_and_hybrid_improvements_use_the_appropriate_continuation_information(suffix):
+def test_current_hybrid_improvements_use_known_current_delay_and_continuation_information(suffix):
     catalog = experiments.recipes()
-    _, pure, _, _, pure_flags = experiments.settings(_args(), catalog['pure_ppo_' + suffix])
     _, hybrid, steps, _, hybrid_flags = experiments.settings(_args(), catalog['hybrid_ppo_' + suffix])
-    for run in (pure, hybrid):
-        assert run.algorithm == 'ppo'
-        assert run.ppo_variant == 'value_decomp_popart'
-        assert run.ppo_motion_memory and run.ppo_continuation_critic
-        assert run.ppo_ar_adaptive == (suffix == 'ar_adaptive')
-        assert run.ppo_ar_rho == (.8 if suffix == 'ar_adaptive' else .5)
-    assert pure.control == 'pure' and hybrid.control == 'hybrid'
-    assert pure.ppo_continuation_mode == 'learned'
-    assert not pure.ppo_known_delay_feature
+    assert hybrid.algorithm == 'ppo'
+    assert hybrid.ppo_variant == 'value_decomp_popart'
+    assert hybrid.ppo_motion_memory and hybrid.ppo_continuation_critic
+    assert hybrid.ppo_ar_adaptive == (suffix == 'ar_adaptive')
+    assert hybrid.ppo_ar_rho == (.8 if suffix == 'ar_adaptive' else .5)
+    assert hybrid.control == 'hybrid'
     assert hybrid.ppo_continuation_mode == 'known'
     assert hybrid.ppo_known_delay_feature
-    assert pure.ppo_schedule_steps == 0
-    assert pure.ppo_noise_final_scale == pure.ppo_actor_lr_final_scale == 1.
-    assert not pure_flags
     assert hybrid_flags == {'noise_decay': True, 'lr_decay': True}
     assert hybrid.ppo_schedule_steps == steps
 
@@ -278,8 +333,8 @@ def test_resume_rejects_relabeling_a_checkpoint_as_another_method(tmp_path, monk
     _, checkpoint, _, _, _ = _resume_fixture(tmp_path, monkeypatch, name='pure_ppo')
     args = _args(resume=str(checkpoint), out=str(tmp_path/'resumed'))
     with pytest.raises(ValueError, match='experiment ID differs'):
-        experiments.run_one(args, 'pure_ppo_ar_adaptive',
-                            experiments.recipes()['pure_ppo_ar_adaptive'], tmp_path)
+        experiments.run_one(args, 'hybrid_ppo',
+                            experiments.recipes()['hybrid_ppo'], tmp_path)
     assert not (tmp_path/'resumed').exists()
 
 
@@ -366,9 +421,9 @@ def test_paused_batch_stops_before_starting_the_next_group_or_comparing(tmp_path
     monkeypatch.setattr(experiments, 'run_one', paused)
     monkeypatch.setattr(reporting, 'render_comparison', lambda *args, **kwargs:
                         pytest.fail('A paused batch must not publish incomplete comparisons'))
-    experiments.main(['batch', '--experiments', 'pure_ppo', 'pure_sac', '--tag', 'paused'])
+    experiments.main(['batch', '--experiments', 'pure_ppo', 'hybrid_sac', '--tag', 'paused'])
     assert calls == ['pure_ppo']
-    assert not (tmp_path/'results'/'paused'/'pure_sac').exists()
+    assert not (tmp_path/'results'/'paused'/'hybrid_sac').exists()
     assert 'stop' in capsys.readouterr().out.lower()
 
 

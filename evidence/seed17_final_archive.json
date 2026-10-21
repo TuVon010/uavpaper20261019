@@ -1,0 +1,47 @@
+{
+  "suite_id": "seed17_sensitivity_20261020_01",
+  "status": "complete",
+  "archival_complete": true,
+  "completed_utc": "2026-10-21T07:28:30.463547+00:00",
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "managed_files_verified": 73,
+  "counts": {
+    "cases": 18,
+    "verified_jobs": 144,
+    "trained_jobs": 108,
+    "training_episode_rows": 108000,
+    "evaluation_protocols": 252,
+    "evaluation_episode_rows": 2520,
+    "evaluation_frame_rows": 151200
+  },
+  "report_row_counts": {
+    "case_summary": 288,
+    "all_episodes": 2520,
+    "single_selected_scene17": 252,
+    "main_training": 6000,
+    "sweep_best": 160,
+    "sweep_last": 160
+  },
+  "verified_result_files": 7368,
+  "final_binary_hash_verification": true,
+  "result_bytes": 17110157475,
+  "local_independent_audit_passed": true,
+  "server_independent_audit_passed": true,
+  "result_directory": "results/seed17_sensitivity_20261020_01",
+  "completion_document": "docs/12_seed17_suite_completion.md",
+  "analysis_document": "docs/13_seed17_sensitivity_results.md",
+  "old_seed1_results_preserved": true,
+  "no_next_phase_authorized": true,
+  "published_files": {
+    "evidence/seed17_full_independent_audit.json": "f9db0e32850ed1b44bacc8a1df18541a22d8752bbe0edcd72eb0713935bb9832",
+    "evidence/seed17_server_full_audit.json": "7008c58d529fd69adb35773b42393814a7340b7bacf345d478c706ed42451cf5",
+    "evidence/seed17_server_full_audit_initial.json": "601ea94b784970ad3650632f8f57924e1db66ca91baa741d2d5a678543eda72b",
+    "evidence/seed17_transfer_final_verification.log": "81de3597552d58d3a448507522ab4d8c7193bb06f26c5a4b7a214cf7cdc7a733",
+    "evidence/seed17_full_analysis.json": "74f98bbaa86ed996f4278e582de54761f1fb16b3efdc9d76e003aa988e092ada",
+    "docs/13_seed17_sensitivity_results.md": "f1e973609e6bdc15dde2656af696979ea3c008d1fcae31723f90f262bab5d52c",
+    "evidence/audit_seed17_full.py": "b925be1787ac27744a2a8efb2f015122881bef162f21ec7d0dbb5bb42eb975d7",
+    "docs/12_seed17_suite_completion.md": "b02453b930b3b60cc36ec17c814c5cfb49d7763a59c1f44d4ad544d10b018ecc",
+    "evidence/seed17_full_download.json": "1680e6b9906493794753e6d201ee1d5bff542fb36f93c957a60f4ed29364081e",
+    "evidence/seed17_final_archive_manifest.json": "4e27068f7113324481bbc81ef861cb9e2bc75d69524de3b012d9d7ce922f0e7c"
+  }
+}

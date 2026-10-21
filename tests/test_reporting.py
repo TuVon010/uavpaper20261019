@@ -16,7 +16,7 @@ import numpy as np
 import pytest
 
 from priority_mec.reporting import (
-    extract_trajectory, read_csv_rows, render_comparison, render_run_curves,
+    _pairing, extract_trajectory, read_csv_rows, render_comparison, render_run_curves,
     render_trajectories, render_training_comparison, rolling_mean,
 )
 from tools.live_dashboard import DashboardHandler, metrics_snapshot, safe_path
@@ -72,6 +72,25 @@ def test_csv_ignores_partial_final_append_and_keeps_full_episodes(tmp_path):
     assert rows[0]["per_uav_energy_j"] == [1, 2, 3]
     assert rolling_mean([10., 20., 30.]) == [10., 15., 20.]
     assert rolling_mean(list(range(30)))[-1] == np.mean(list(range(5, 30)))
+
+
+def test_baseline_versions_pair_only_when_physics_reward_and_realized_scenes_match(tmp_path):
+    import copy
+    old, _ = evaluation_fixture(tmp_path/'old')
+    old['summary']['environment_config'].update(
+        greedy_direction_count=72, greedy_speed_levels=5, greedy_refine_rounds=2)
+    new = copy.deepcopy(old)
+    new['summary']['environment_config'].update(
+        greedy_direction_count=16, greedy_speed_levels=4, greedy_refine_rounds=0)
+    assert _pairing(old) == _pairing(new)
+    for key in ('area_m', 'energy_budget_j', 'collision_penalty', 'satellite_bandwidth_hz'):
+        changed = copy.deepcopy(new)
+        changed['summary']['environment_config'][key] = -1
+        assert _pairing(old) != _pairing(changed)
+    for key in ('scenario_hash', 'frame_scenario_hashes'):
+        changed = copy.deepcopy(new)
+        changed['scenarios'][0][key] = 'different' if key == 'scenario_hash' else ['changed']
+        assert _pairing(old) != _pairing(changed)
 
 
 def test_episode_rendering_and_real_initial_trajectory(tmp_path):

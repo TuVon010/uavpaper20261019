@@ -1,0 +1,174 @@
+{
+  "passed": true,
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "runtime_files": {
+    "configs/campaigns/wide_compute1000_w5_cutoff.json": "b97c8517dc01e5ef2067c79c85184633839821c70685ccad30509879c89b4d76",
+    "configs/common.json": "79787cf948061d83da4bd64f6127e12757ed040be2ac0f59b0e9dea472bc215e",
+    "configs/environment.json": "c336401415a491bf0ef8262e4cac284b4490bb6611f98bf73af83472264901dd",
+    "configs/environment_wide_compute1000_w5_cutoff.json": "c336401415a491bf0ef8262e4cac284b4490bb6611f98bf73af83472264901dd",
+    "configs/experiments/baseline_greedy_solver.json": "fc182a1bdc420b6c8bca9fe5ca1b5ec6b8dbf65e497795ccbd9905a05c600c26",
+    "configs/experiments/baseline_priority_greedy.json": "c59d52645737b0912439efa3d5b45a5e4bec8b2a020ceb5e27fbd453a8fd2597",
+    "configs/experiments/hybrid_ddpg.json": "3d5bfcc4a66532330eef507a28d9c705d7ac7ad2c6915ff6ee85ecbd0b7bf1af",
+    "configs/experiments/hybrid_ppo.json": "5c80776f31b3cfbac1e9ee73b61bed5bce4e71363f3e01f3446149570cb90594",
+    "configs/experiments/hybrid_ppo_ar05.json": "b49b5a8fe0e153b37269327c98ff9bbd67c3b6a79d330bc6cfa3d785405c4c5f",
+    "configs/experiments/hybrid_ppo_ar_adaptive.json": "42bed75799cc18c24ef3c6f52127e40e5f446303ddddefeeb2d65c00ad1da286",
+    "configs/experiments/hybrid_sac.json": "66ada4e489f5ecf1c30bb629ee4b0fcf054445a2560acfee98f140e4a63e8202",
+    "configs/experiments/pure_ppo.json": "ff65128f04625192295113175e19e546a21c2378b32ad491f831c83ba63098de",
+    "configs/suites/seed17_sensitivity.json": "2f08d35a2c0e4969b577b6f54e772e1581377196a128d80b1616aad78cf51921",
+    "CURRENT_SUITE.json": "8fbd557d4950abafff2f05aa9f7c2fdb4cbf1ece238941f27975b20a14fc00e8",
+    "docs/01_system_model.md": "a4eef5aefe71eb48bfb0fab51a48eaa312375066bbc65d363eb37fce111c623c",
+    "docs/02_methods.md": "722fd7ebd6470c52a3f26b6e5dbac5339b409edee1ceedfde52c707016ff547e",
+    "docs/03_parameters.md": "f6512e08f39890001e6243fb242b495067bb73e8475ad408bb39e30a8666ca8c",
+    "docs/04_operations.md": "bc2898e42d7373f133a1a7299e6ba7874c1bc833e4b641ad68f07f79c5506c4f",
+    "docs/05_results_and_analysis.md": "4f9853ffef1eb1b8cc1f5811c75818ca0d5bdf932fd10cf8c4dfdcdde9f3ad77",
+    "docs/06_reproducibility.md": "f5d696824e766b95e87ab583bac5b1e6cecb7efc78d2988a03e58ac037485ad4",
+    "docs/07_release_inventory.md": "387e7fa5ee37735743d946550e3d623b7b41fb6f5d951b2db4797fd1da5aff30",
+    "docs/08_seed17_sensitivity.md": "435d2a6e19421750ef5191f8d43018229bc8d0baf9178dba14f08c8f0aad9c56",
+    "priority_mec/__init__.py": "c5225755404b79548cae994dc1ada79d9aa5838a9b03949f62528a39493bc3a1",
+    "priority_mec/__main__.py": "7019f2aa7436bf633aeb86bbc0b9829fd0e3cd123037d188b8601a8877a4af88",
+    "priority_mec/config.py": "a82ad1c26c24323a70a76e5324667abd07548f868b4fa4cbdb435f654608198f",
+    "priority_mec/environment.py": "a288de1ebe53ca2299adede907441e85b0e8568dba3bcc7eee687d31c83f8ff0",
+    "priority_mec/episode_log.py": "820b187285bb097ec18e4c47c89fcb3463c23a480365ceb9d0d73d3609bc56a8",
+    "priority_mec/experiments.py": "9ca99968ed5ebdc034dbcba38ee9a67a4e1a5c46c0833d02db60afb4d297026a",
+    "priority_mec/greedy_baseline.py": "42ae3974673b07e33280d11d6b7b3eb452fe98d23c033efe6f795dc79f1fd4a2",
+    "priority_mec/io.py": "798477cd5670169f37671db662734b294bb5d4e3c572695082efe4a3659a66b7",
+    "priority_mec/learners.py": "e11775e0609783da766dbe40ff6a8ce67d6578e5b5b3f8853a57d3126f92fc32",
+    "priority_mec/physics.py": "7eff031f04fd8f713563776971489520c56afb133dda4443804a048b2e0aec11",
+    "priority_mec/reporting.py": "86ce2203582b53db99630826c55088703d827b7bc79ff2c99bfaa9c297c75e23",
+    "priority_mec/resources.py": "4121274e2129bc2fa298aa1e5fc9de5c93c448757b692d0160698fcda3df72ed",
+    "priority_mec/rl/__init__.py": "e9dd3cc26c306932de65b23de2aa8887e0101322f8a57b0d483f4338026b038d",
+    "priority_mec/rl/common.py": "b7a17e12adf2834c7d803f992fb669107b97bbeba990cb0a63f501faf157118b",
+    "priority_mec/rl/deterministic.py": "4ffef7bba76561339df52bb0254dc595b9e23776c6e93365659b419d3534dc1a",
+    "priority_mec/rl/ppo.py": "551e554c4cb81f366f34e73a2044bb4d12bb06d5e5292c7015c9ef08da4a06c8",
+    "priority_mec/rl/sac.py": "ccd2cfbdad2572d964f4a71e92f601d6a28b357cd72c56eade6ca2952ed71a99",
+    "priority_mec/rl/value_components.py": "93c9a4c47463cbfae2f35c8cac56cf1b02473a1b5760ace8aad5d1c957d3aa95",
+    "priority_mec/scenarios.py": "32faf84e0dd79695ffd163d6242caeb06cd73b597da9d44eba7e49853872d477",
+    "priority_mec/solvers.py": "743dc1f5570d3b08593544e7730039c4dfe3be83561d9bef06cbd55e5616b8e7",
+    "priority_mec/training.py": "c1d3ad3b1082dfaef4ebe27b2372c36694f4b9b29e0957295d6a1f7ae74162a8",
+    "priority_mec/vector.py": "1d4660ebc07c0ee24265a8b5b5ab365f83a578fccf923537c8d1610117d36376",
+    "pyproject.toml": "76048474521e949593550d618695b7d14bf9edb69c4e92b6c2b8bd7c33ffee92",
+    "README.md": "d0e12e178b689c5ba93d6c0b13b6a383a835f71dfdb4bdb02114faa6840fa92d",
+    "requirements-dev.txt": "7506a87e3996f427dbef2f1d9770401515b0d3344cc68358b9e03a6f07e9b226",
+    "requirements.txt": "872ead4b6896d7edd103d4647981028e42605a39deb531c90e735ab1e36c2b7f",
+    "run.py": "f31e1620e0b0b26048744a36c31387ebab28c2b19427f528f5976b666fbfbcba",
+    "tests/test_association.py": "99e5582388b2ae0a6391c9b2878b066956658cd03049c78f42323666cfca1685",
+    "tests/test_delay_reward_weight.py": "b07e2e498f986e9c7f43a9db7109094c140acb87ed8f3934477aac9f6aea376a",
+    "tests/test_dynamic_users.py": "b110bc1750b154f51bdc109594e73db181ac23c3a7080eef00c8dab9c6b6d62d",
+    "tests/test_environment.py": "343c2ab2d02c2adad1e561f815e0e182eefa297cef00532f7e536fc23ef8be3a",
+    "tests/test_episode_logging.py": "944a78e66580c92d501eabd48f639454f25da415fc8ebd0695ba58a867f44d59",
+    "tests/test_final_environment.py": "45b8348cfc72e532240e6a9ab09e8c4c0677c0c0953a901a384c906cf7ae46f4",
+    "tests/test_greedy_baseline.py": "6d59f12d943c6f8b3d850971c3514f7475ecf1b997bd723719a6caa90dea21f9",
+    "tests/test_launcher.py": "4f8e66b5fa95fed86d66e6ab122989e6944a0bd25b87e77b02704d0aa0ed2af6",
+    "tests/test_learners.py": "d483ee60d7c8bc0f4fcf9f58d3427926c5b63e86faef7aa9ad818e4ad308b8f8",
+    "tests/test_pure_continuation.py": "de55b7c49f3f71152459ef2ac87876affca58cf4912a03b13d49c97cee4a456e",
+    "tests/test_reporting.py": "d7e24e85e29ebcf899def8ea23a00d7ba3e894db208d5f43526f8db523a5602e",
+    "tests/test_resources.py": "232e3659b1b0d7b76c20c4d6040db40077441029ab3b0b23d6ba0adfa22802ba",
+    "tests/test_safety_v4.py": "eaf5edf4fd7a90bde2e30c8e648e5bd306e243d53ce887b160421c6dfc1c3c87",
+    "tests/test_satellite_channel.py": "b1946e0869d4b54d5583d4d29675b4297356083a4b3d94f32b6a18f4560e2f56",
+    "tests/test_sensitivity_suite.py": "dbfc6600547900966e1d21a8f07f6fdb012020b1f771f63822c120036026cea7",
+    "tests/test_service_candidate_mask.py": "58dae450aae6bf20111042f2c38df49450a6af727de0f5d27f63c2bc4af6ae4f",
+    "tests/test_service_cutoff.py": "8c18e80f025912d68d3e6ecb3f7e6edc321ab387b2600d25bf1d0465489a9b68",
+    "tests/test_service_cutoff_logging.py": "d44299aff93b1be6f2fc3dc84a4f39bb79b35664a4e3c214f53bc01f6e70363a",
+    "tools/evaluate_seed20.py": "d71e221393ac6e13993e40380fa9f75de76d9cd89624d2cd9f953e7f54d8a51e",
+    "tools/live_dashboard.py": "899a11823340ee48046fdef30d09d481f0cf6a1c62bc59ef575a13e62b06a2a7",
+    "tools/report_seed20.py": "018003cad6532acd617b0003b3af935d823ffaa75f828ea91e6d5902bd35c01f",
+    "tools/sensitivity_suite.py": "99c55d03e3f8fb8244c8671843036381def0521158c1c85446f4a0beee0145e7",
+    "tools/server_campaign.py": "1f04ac019da6b0a6a057754880dfb425bdea6f8d9bfa238eae481df6ba03a805",
+    "tools/verify_release.py": "6cb36f3164c847803d38ae84915c12e384dab8810150777fc0aa4aa69e3cc6a8"
+  },
+  "created_epoch": 1792500121.1800683,
+  "core_regression": {
+    "passed": 302,
+    "skipped": 1
+  },
+  "runner_regression": {
+    "passed": 9
+  },
+  "local_regression": {
+    "passed": 307,
+    "skipped": 5
+  },
+  "cuda_smokes": {
+    "passed": true,
+    "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+    "smokes": {
+      "00_baseline_priority_greedy_n20": {
+        "passed": true,
+        "seconds": 6.915555953979492,
+        "users": 20
+      },
+      "01_baseline_greedy_solver_n20": {
+        "passed": true,
+        "seconds": 7.167313814163208,
+        "users": 20
+      },
+      "02_pure_ppo_n20": {
+        "passed": true,
+        "seconds": 14.559962034225464,
+        "users": 20
+      },
+      "03_hybrid_ppo_n20": {
+        "passed": true,
+        "seconds": 17.76694655418396,
+        "users": 20
+      },
+      "04_hybrid_sac_n20": {
+        "passed": true,
+        "seconds": 17.828806161880493,
+        "users": 20
+      },
+      "05_hybrid_ddpg_n20": {
+        "passed": true,
+        "seconds": 17.692693948745728,
+        "users": 20
+      },
+      "06_hybrid_ppo_ar_adaptive_n20": {
+        "passed": true,
+        "seconds": 18.02407193183899,
+        "users": 20
+      },
+      "07_hybrid_ppo_ar05_n20": {
+        "passed": true,
+        "seconds": 18.006885528564453,
+        "users": 20
+      },
+      "08_pure_ppo_n10": {
+        "passed": true,
+        "seconds": 14.71181869506836,
+        "users": 10
+      },
+      "09_pure_ppo_n30": {
+        "passed": true,
+        "seconds": 14.789237260818481,
+        "users": 30
+      },
+      "10_hybrid_ppo_ar05_n30": {
+        "passed": true,
+        "seconds": 21.2826726436615,
+        "users": 30
+      },
+      "11_hybrid_sac_n10": {
+        "passed": true,
+        "seconds": 16.16222834587097,
+        "users": 10
+      },
+      "12_hybrid_ddpg_n30": {
+        "passed": true,
+        "seconds": 20.976985692977905,
+        "users": 30
+      }
+    },
+    "dynamic_pure_checkpoint_resume": true,
+    "cpu_bandwidth_hashes_unchanged": true,
+    "user_count_random_prefixes_identical": true,
+    "software_test_only": true,
+    "training_seed": 17,
+    "gpu": "NVIDIA GeForce RTX 4070 Ti"
+  },
+  "main_physics_equal_previous": true,
+  "validated_case_method_settings": 144,
+  "unique_cases": 18,
+  "jobs": 144,
+  "seed": 17,
+  "parameters_except_single_factor_unchanged": true
+}

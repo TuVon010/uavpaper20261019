@@ -1,0 +1,9 @@
+{
+  "case_id": "uav_cpu_ghz_20",
+  "verified_files": 405,
+  "uncompressed_bytes": 947454633,
+  "copied_files": 405,
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "passed": true,
+  "utc": "2026-10-21T07:18:07.114222+00:00"
+}

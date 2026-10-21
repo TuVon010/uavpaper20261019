@@ -1,0 +1,9 @@
+{
+  "case_id": "mean_data_mbit_2",
+  "verified_files": 409,
+  "uncompressed_bytes": 955394807,
+  "copied_files": 409,
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "passed": true,
+  "utc": "2026-10-21T07:11:08.775005+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "release_id": "final_seed17_figures_20261021",
+  "figure_count": 394,
+  "figure_files": 1576,
+  "raw_data_unchanged": true,
+  "original_library_files_verified": 22,
+  "original_frozen_files_verified": 73,
+  "selected_checkpoint_protocol_unchanged": true,
+  "visual_checks": [
+    "main training",
+    "all/hybrid metrics",
+    "main trajectories",
+    "per-run overview",
+    "four sweep axes"
+  ],
+  "smoothing": "25 completed episodes, trailing mean; raw retained",
+  "scenario_error_bars": "min-max, not CI",
+  "training_seed": 17,
+  "methods": 8,
+  "cases": 18,
+  "reporting_tests_passed": 17
+}

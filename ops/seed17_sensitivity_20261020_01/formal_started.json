@@ -1,0 +1,10 @@
+{
+  "started_epoch": 1792500121.5201418,
+  "tmux_socket": "mec-final",
+  "tmux_session": "mec-seed17-suite-20261020",
+  "parallel": 4,
+  "seed": 17,
+  "cases": 18,
+  "jobs": 144,
+  "phase": "main first; sweeps automatically after all main methods verified"
+}

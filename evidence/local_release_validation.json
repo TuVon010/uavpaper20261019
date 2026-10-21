@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "pytest": {
+    "passed": 263,
+    "skipped": 5,
+    "duration_s": 35.5,
+    "platform": "Windows Python 3.10.16; torch 2.0.1 CPU",
+    "preliminary_sandbox_attempt": "Interrupted after temporary-directory permission errors; verified rerun used a fresh approved project temporary directory."
+  },
+  "launcher_check": {
+    "active_experiments": 8,
+    "cutoff_default_config": true
+  },
+  "models": {
+    "passed": true,
+    "models": {
+      "pure_ppo": {
+        "selected_step": 24000,
+        "source_verified": true,
+        "loaded_on": "cpu"
+      },
+      "hybrid_ppo": {
+        "selected_step": 51000,
+        "source_verified": true,
+        "loaded_on": "cpu"
+      },
+      "hybrid_sac": {
+        "selected_step": 33000,
+        "source_verified": true,
+        "loaded_on": "cpu"
+      },
+      "hybrid_ddpg": {
+        "selected_step": 3000,
+        "source_verified": true,
+        "loaded_on": "cpu"
+      },
+      "hybrid_ppo_ar_adaptive": {
+        "selected_step": 18000,
+        "source_verified": true,
+        "loaded_on": "cpu"
+      },
+      "hybrid_ppo_ar05": {
+        "selected_step": 12000,
+        "source_verified": true,
+        "loaded_on": "cpu"
+      }
+    }
+  },
+  "plot_regeneration": {
+    "passed": true,
+    "method": "hybrid_ppo_ar05",
+    "copied_data_only": true,
+    "original_result_untouched": true,
+    "regenerated_images": [
+      "plots\\report_metadata.json",
+      "plots\\training_curves.pdf",
+      "plots\\training_curves.png",
+      "plots\\training_curves.svg",
+      "plots\\training_energy.pdf",
+      "plots\\training_energy.png",
+      "plots\\training_energy.svg",
+      "plots\\trajectory_best.pdf",
+      "plots\\trajectory_best.png",
+      "plots\\trajectory_best.svg",
+      "plots\\trajectory_best_metadata.json",
+      "plots\\validation_curves.pdf",
+      "plots\\validation_curves.png",
+      "plots\\validation_curves.svg"
+    ]
+  },
+  "source_unchanged": true,
+  "training_performed": false,
+  "result_archive_verified": true,
+  "result_files": 623
+}

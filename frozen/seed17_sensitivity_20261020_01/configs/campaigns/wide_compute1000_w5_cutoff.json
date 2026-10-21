@@ -1,0 +1,16 @@
+{
+  "id": "wide_compute1000_w5_cutoff",
+  "description": "Slot-start energy-triggered UAV compute-service cutoff; flight energy continues; all other parameters unchanged.",
+  "environment": "configs/environment_wide_compute1000_w5_cutoff.json",
+  "common": "configs/common.json",
+  "experiments": [
+    "baseline_priority_greedy",
+    "baseline_greedy_solver",
+    "pure_ppo",
+    "hybrid_ppo",
+    "hybrid_sac",
+    "hybrid_ddpg",
+    "hybrid_ppo_ar_adaptive",
+    "hybrid_ppo_ar05"
+  ]
+}

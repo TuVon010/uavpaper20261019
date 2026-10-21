@@ -1,0 +1,28 @@
+{
+  "suite_id": "seed17_sensitivity_20261020_01",
+  "downloaded_utc": "2026-10-20T14:19:25.790044+00:00",
+  "archive_sha256": "accff397df70ec987953b7bb9e724d31bab47b97994a98f624131b99e6de360f",
+  "archive_bytes": 388907738,
+  "server_snapshot_utc": "2026-10-20T14:17:10.931959+00:00",
+  "main_complete": true,
+  "main_methods_included": [
+    "baseline_priority_greedy",
+    "baseline_greedy_solver",
+    "pure_ppo",
+    "hybrid_ppo",
+    "hybrid_sac",
+    "hybrid_ddpg",
+    "hybrid_ppo_ar_adaptive",
+    "hybrid_ppo_ar05"
+  ],
+  "local_complete_case_ids": [
+    "main"
+  ],
+  "partial_snapshot": true,
+  "suite_complete": false,
+  "files_verified": 437,
+  "uncompressed_bytes": 937461144,
+  "copied_files": 309,
+  "unchanged_files": 128,
+  "note": "All eight main jobs are local. Reports may include later server scan progress; scan job files are not yet downloaded. Server suite state is authoritative."
+}

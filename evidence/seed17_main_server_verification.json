@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-20T14:25:10.622250+00:00",
+  "main_jobs_complete": 8,
+  "immutable_result_files_verified": 428,
+  "source_files_verified": 73,
+  "maintenance_files_verified": 4,
+  "main_download_archive_sha256": "accff397df70ec987953b7bb9e724d31bab47b97994a98f624131b99e6de360f",
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "suite_state": "running",
+  "suite_done": false
+}

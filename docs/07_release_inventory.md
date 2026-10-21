@@ -1,0 +1,3 @@
+# 旧版定稿清单说明
+
+当前定稿的数据范围以[seed17全套结果](13_seed17_sensitivity_results.md)、[定稿说明](16_final_release_guide.md)和根目录CURRENT_RELEASE.json为准。旧seed1结果和原版本说明已保存在项目外uav_mec_final_archives/figures_release_20261021/及其working_source_before_figures.zip。当前项目results只保留seed17全部18场景数据，不混用旧训练模型。

@@ -8,6 +8,7 @@ import math
 import numpy as np
 import torch
 from torch import nn
+from ..episode_log import delay_reward_cost
 
 
 class RewardDecomposedCritic(nn.Module):
@@ -90,7 +91,8 @@ class PopArtContinuationCritic(PopArtRewardDecomposedCritic):
 
     The two normalized head targets are (U_delay, V_penalty). Public values,
     GAE and actor advantages remain in original reward units, with
-    V_delay(s) = -J(s) + U_delay(s). At the last service slot U is exactly zero.
+    V_delay(s) = -delay_cost_weight*J(s) + U_delay(s). The observed known cost
+    already includes its configured reward weight. At the last slot U is zero.
     """
     def __init__(self, observation_size, hidden=128, beta=.01, min_std=.1,
                  known_delay_index=None, time_index=None, episode_frames=None):
@@ -130,7 +132,7 @@ class PopArtLearnedContinuationCritic(PopArtRewardDecomposedCritic):
     """State-only estimates of immediate delay, future delay, and penalties.
 
     A pure controller chooses resources in its action, so its realized current
-    reward r_d = -J_t is unavailable before that action. The internal heads are
+    reward r_d = -delay_cost_weight*J_t is unavailable before that action. The internal heads are
     W(s) = E[r_d | s], U(s) = E[sum_{k>t} gamma^(k-t) r_d,k | s], and V_p(s).
     PPO sees only the physical-unit pair [W + U, V_p]. These are state baselines;
     neither the sampled action nor its resulting delay enters their forward.
@@ -190,7 +192,7 @@ def reward_components(infos, rewards):
     rewards = np.asarray(rewards, dtype=np.float64).reshape(-1)
     if len(infos) != len(rewards):
         raise ValueError('Reward/info lengths differ')
-    delay = -np.asarray([i['normalized_weighted_delay'] for i in infos], np.float64)
+    delay = -np.asarray([delay_reward_cost(i) for i in infos], np.float64)
     components = np.column_stack((delay, rewards-delay))
     if not np.isfinite(components).all():
         raise ValueError('Non-finite reward components')

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "suite_id": "seed17_sensitivity_20261020_01",
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "managed_files_identical": 73,
+  "local_payload_source": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "old_release_preserved": true,
+  "server_suite_state": "running",
+  "snapshot_epoch": 1792500223.0564797,
+  "runtime": "frozen/seed17_sensitivity_20261020_01",
+  "training_seed": 17,
+  "scene_seed": 17,
+  "cases": 18,
+  "jobs": 144,
+  "state_file": "results/seed17_sensitivity_20261020_01/suite_state.json",
+  "logs": "ops/seed17_sensitivity_20261020_01/suite.log"
+}

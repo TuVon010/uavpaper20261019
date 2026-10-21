@@ -1,0 +1,20 @@
+{
+  "updated_utc": "2026-10-20T14:24:28.517063+00:00",
+  "suite_id": "seed17_sensitivity_20261020_01",
+  "main_jobs_complete": 8,
+  "main_training_rows": 6000,
+  "main_evaluations": 14,
+  "paired_evaluation_episodes": 10,
+  "main_data_downloaded": true,
+  "independent_main_audit_passed": true,
+  "suite_complete": false,
+  "next_action": "Continue existing parameter-sensitivity queue only; do not retrain main or alter code.",
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "managed_files_verified": 73,
+  "maintenance_files": {
+    "docs/10_seed17_main_completion.md": "bf166beeadae69928e94cf4f49817fbaaed0a7249f02020a36a7a8638700962f",
+    "docs/11_seed17_main_analysis.md": "27e6ec5e9934d0893c7e6bd17110e0ac305200972b7441ee69f553993203c6e2",
+    "evidence/seed17_main_independent_audit.json": "98dd12e46d10568cdb38ade8c9cc06c2bfbaffed8c43c855fb0b78ec063da06f",
+    "evidence/seed17_main_analysis.json": "9c24fd930b4e9a162aebd826359168dab923f9c398386fa3ed47cfddffb438b1"
+  }
+}

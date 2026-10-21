@@ -1,0 +1,30 @@
+{
+  "suite_id": "seed17_sensitivity_20261020_01",
+  "version": "1.2.0",
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "training_seed": 17,
+  "scenario_seed": 17,
+  "main_scenario_episode": 30000,
+  "evaluation_episodes": [
+    30000,
+    30001,
+    30002,
+    30003,
+    30004,
+    30005,
+    30006,
+    30007,
+    30008,
+    30009
+  ],
+  "suite_config": "configs/suites/seed17_sensitivity.json",
+  "result_directory": "results/seed17_sensitivity_20261020_01",
+  "runtime": "frozen/seed17_sensitivity_20261020_01",
+  "data_unit": "Mbit",
+  "data_distribution": "uniform[0.4*mean,1.6*mean]",
+  "historical_release": "final_20261020_cutoff_seed20",
+  "historical_source": "8336489dca394491b79654d40f0ce343c4efc2f1615efd8fa8fe44487f46efd9",
+  "old_models_use_their_saved_frozen_runtime": true,
+  "state_file": "results/seed17_sensitivity_20261020_01/suite_state.json",
+  "suite_completion_marker": "results/seed17_sensitivity_20261020_01/suite.done"
+}

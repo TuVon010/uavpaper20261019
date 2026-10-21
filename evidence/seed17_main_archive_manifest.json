@@ -1,0 +1,1770 @@
+{
+  "suite_id": "seed17_sensitivity_20261020_01",
+  "source_sha256": "3ef6b15c31a7de84f7ce1fb64ee1e70f71b252e8ee7db35e05766d1db35ca870",
+  "snapshot_utc": "2026-10-20T14:17:10.931959+00:00",
+  "scope": "all eight completed main jobs plus suite metadata; parameter scan files are not included",
+  "main_complete": true,
+  "suite_complete": false,
+  "main_methods": [
+    "baseline_priority_greedy",
+    "baseline_greedy_solver",
+    "pure_ppo",
+    "hybrid_ppo",
+    "hybrid_sac",
+    "hybrid_ddpg",
+    "hybrid_ppo_ar_adaptive",
+    "hybrid_ppo_ar05"
+  ],
+  "archive_sha256": "accff397df70ec987953b7bb9e724d31bab47b97994a98f624131b99e6de360f",
+  "archive_bytes": 388907738,
+  "files": {
+    "suite_plan.json": {
+      "sha256": "748219a1dcf638f158260add271e483ff5e46e88c708afc322a547e1de8c11f2",
+      "bytes": 95316
+    },
+    "suite_state.json": {
+      "sha256": "e12b8b3d5982d21899bd00e6e3e19713fe0ea2e713ef28a69adddc51aaa64318",
+      "bytes": 24497
+    },
+    "generated/common.json": {
+      "sha256": "266636e15e65ce8ffadab2cb7b62a9f31b757b5c06b829153170436648693b20",
+      "bytes": 1152
+    },
+    "generated/environment/main.json": {
+      "sha256": "31386569ca9d1d4bb30cd41d29fded3eb2ff6de17ef4ae01f6c919829a48000e",
+      "bytes": 2049
+    },
+    "generated/environment/mean_data_mbit_0p5.json": {
+      "sha256": "91db44f999890cfe8f1d674ad2e2a77837218e9faa75a6b8b8601d265230a3f3",
+      "bytes": 2048
+    },
+    "generated/environment/mean_data_mbit_1.json": {
+      "sha256": "04246c28416da36c78a54f22d13a766f9f71ded0c38a22de0a43e30fb1766eb7",
+      "bytes": 2049
+    },
+    "generated/environment/mean_data_mbit_1p5.json": {
+      "sha256": "03f7b54509ffa8fcf152a6316de0c8166640efe2e19b4eae2e27f4613fa4f222",
+      "bytes": 2067
+    },
+    "generated/environment/mean_data_mbit_2.json": {
+      "sha256": "7ff79e49d4f7b6d8f1cc5ffbd258a3528cab53c62d84d4488e8dba6c677a5827",
+      "bytes": 2049
+    },
+    "generated/environment/mean_data_mbit_2p5.json": {
+      "sha256": "e4d4253ea4245214c565117fcfce995262a51036fc2542d0195c6a8308833c62",
+      "bytes": 2050
+    },
+    "generated/environment/uav_bandwidth_mhz_15.json": {
+      "sha256": "76c9a760b4845fdfdd74f7ab0c02c43d8879b10dee6005795254ab70b1a63842",
+      "bytes": 2049
+    },
+    "generated/environment/uav_bandwidth_mhz_20.json": {
+      "sha256": "9a5d3d3ea6a1217ac79a55fafdd616d93449c1fd6b377e49929c83a96ce527e2",
+      "bytes": 2049
+    },
+    "generated/environment/uav_bandwidth_mhz_25.json": {
+      "sha256": "9b59301cc9e5dcdceeceadb0575416bbf45de6147210399b612ec1bc701deab0",
+      "bytes": 2049
+    },
+    "generated/environment/uav_bandwidth_mhz_5.json": {
+      "sha256": "9f5e36f726938f2e9ee02f46adb4bc45830f3396e9d15f7bdd9382ffb5d30adb",
+      "bytes": 2048
+    },
+    "generated/environment/uav_cpu_ghz_15.json": {
+      "sha256": "ebba44ff3502db793edd77240fd5721991374258db17e5b60ab45e1b71416ca0",
+      "bytes": 2049
+    },
+    "generated/environment/uav_cpu_ghz_20.json": {
+      "sha256": "3ef6e57268d43f0501eb1b4eacd50fdba3b6bdfc75d921362f27586f7736172d",
+      "bytes": 2049
+    },
+    "generated/environment/uav_cpu_ghz_25.json": {
+      "sha256": "1648c8e21c2138afd24b5bf099d7956e9a09a028a560d9d4761dbb482a95a35d",
+      "bytes": 2049
+    },
+    "generated/environment/uav_cpu_ghz_5.json": {
+      "sha256": "685825a623063b999d6076de3399d9758777538fb74b29e5031b6477dae216e0",
+      "bytes": 2048
+    },
+    "generated/environment/users_10.json": {
+      "sha256": "1284e52ffcb4a197224e6829e273d4c9471216407ef917e27835ce2213a78bae",
+      "bytes": 2049
+    },
+    "generated/environment/users_15.json": {
+      "sha256": "95de5860bdbf2bec5564eceff0aaadc8368b406eaa0c6587f3357fbfca7938b1",
+      "bytes": 2049
+    },
+    "generated/environment/users_25.json": {
+      "sha256": "fba7eda566c4dcb122718a398ac00765b4bd8677a6779e0b4becf6c6c31bf946",
+      "bytes": 2049
+    },
+    "generated/environment/users_30.json": {
+      "sha256": "e8deb48a987990205ac4f413c93e185a463e8c4026e2ae0dc85d664c242304cf",
+      "bytes": 2049
+    },
+    "generated/experiments/baseline_greedy_solver.json": {
+      "sha256": "1b24411dd93b268bb0351a1975dee5194ef62585d77bcbabaa1694e32cfddbf9",
+      "bytes": 208
+    },
+    "generated/experiments/baseline_priority_greedy.json": {
+      "sha256": "f85567e3f8d37161d2e50510f7d080064023220b1f8acec6fee12a39e3691ea0",
+      "bytes": 205
+    },
+    "generated/experiments/hybrid_ddpg.json": {
+      "sha256": "3d5bfcc4a66532330eef507a28d9c705d7ac7ad2c6915ff6ee85ecbd0b7bf1af",
+      "bytes": 173
+    },
+    "generated/experiments/hybrid_ppo.json": {
+      "sha256": "975e58db878188a549e202fdea8b4c5be57b0e35a710c8f84c5b6a061afcb84d",
+      "bytes": 238
+    },
+    "generated/experiments/hybrid_ppo_ar05.json": {
+      "sha256": "765ecb6eae9ee9894db0d3a391cf1514c3e7816e2e91ae80d8f75e1c9099f1fb",
+      "bytes": 546
+    },
+    "generated/experiments/hybrid_ppo_ar_adaptive.json": {
+      "sha256": "66723d4f6ba67675e4762989cc48ff68031e9baf9586b98e052afd157a35b58f",
+      "bytes": 557
+    },
+    "generated/experiments/hybrid_sac.json": {
+      "sha256": "66ada4e489f5ecf1c30bb629ee4b0fcf054445a2560acfee98f140e4a63e8202",
+      "bytes": 170
+    },
+    "generated/experiments/pure_ppo.json": {
+      "sha256": "adb6579936de9e8e6857822e40dbf1c2de0130953375d35fac99b151c191c21c",
+      "bytes": 153
+    },
+    "generated/suite.json": {
+      "sha256": "55f33c0654fac1a373f73c449dc6a007013ae860b7270398be146851526dcc20",
+      "bytes": 1642
+    },
+    "reports/REPORT.md": {
+      "sha256": "6dd2ad8a03e1cec0aca9cdb39960b6e583a80ec03c0d5d643f8ed042a953d9a5",
+      "bytes": 2057
+    },
+    "reports/all_episodes.csv": {
+      "sha256": "ffc359ff70f0b09a7c39a98ba74d0f0bc4e379fe69cfe5c16ae583f388ca2116",
+      "bytes": 73495
+    },
+    "reports/case_summary.csv": {
+      "sha256": "151e3409aaebf867545f3694c7926089d1bac45f7b34699010af54ae104beb99",
+      "bytes": 7475
+    },
+    "reports/collection_audit.json": {
+      "sha256": "3af647990aef08d602f880660a40104cf97fe3621b16376fc070a5c49b918ab9",
+      "bytes": 767
+    },
+    "reports/main_training.csv": {
+      "sha256": "11678a20e3450958aca2da75e5f161f57eabc19d8b2bd8d4e22d50435e937adf",
+      "bytes": 4762033
+    },
+    "reports/single_selected_scene17.csv": {
+      "sha256": "1387d29f28716ca6a1cea8db6f735eb2cf419c257abdc2f323c25ae487419a64",
+      "bytes": 7551
+    },
+    "reports/sweep_best.csv": {
+      "sha256": "4a8db7b5bd63bb8450e5705564510dd62b99389c48de2ded3b8ede8ee6be236a",
+      "bytes": 7981
+    },
+    "reports/sweep_last.csv": {
+      "sha256": "37b89d111f1938b41aa4e791cc3580215de36ce9c0cc2c06a607d96ff98d2f33",
+      "bytes": 8080
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/effective_training.json": {
+      "sha256": "404ad6ba3cf29207cf688a2c3076fb9948307ab90ebe3a01e280da3048ad004e",
+      "bytes": 1374
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/evaluation/episodes.csv": {
+      "sha256": "17ef7647611dce0df4287dd3a6dd2259a8bc2d494cc8287f803649161c9ffa94",
+      "bytes": 7683
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/evaluation/summary.json": {
+      "sha256": "5a6e4b21ba1e8973e7d0a1523dbe8afb840210af8139bfe90bfdb7dfe51f6c67",
+      "bytes": 77029
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/evaluation/trajectories.jsonl": {
+      "sha256": "9ac47c65db9fb05ab090592e5a33d88e7efe7ce9bd30d7a024162f5f7f2d0327",
+      "bytes": 9622913
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/experiment.json": {
+      "sha256": "e4eb237e3906c4bab33ba6c3ffa04d3da10285e0aad26bb7ed75dc6d189a8fb3",
+      "bytes": 4090
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/job.done": {
+      "sha256": "175894bffb310c64588f0cee445a4f4cd05e9765c78d4953494a8cb13703321c",
+      "bytes": 46
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/plots/trajectory_best.pdf": {
+      "sha256": "e544f51444fc828693bc62d9565a54974e57e51f0d1a43a7e6664f3c6e019806",
+      "bytes": 29472
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/plots/trajectory_best.png": {
+      "sha256": "69b15c879a4586113d61dac61d8e8e2b5a0990011475c79e1adf488a1c0da41d",
+      "bytes": 87867
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/plots/trajectory_best.svg": {
+      "sha256": "153ff84d52576432a26dedf3f282fae1674bfa1eb254e75e70f08fe51da67c39",
+      "bytes": 61181
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/plots/trajectory_best_metadata.json": {
+      "sha256": "cae7c28572c66163bd73c790ee9cb380ea41ec94c5f6b8d367c71745121ec9c0",
+      "bytes": 889
+    },
+    "cases/main/jobs/baseline_priority_greedy/baseline_priority_greedy/status.json": {
+      "sha256": "e3abbf31d14ca2fb55662d3fd178f94d1c1bb7a825292cfde31a926eea756ed1",
+      "bytes": 106
+    },
+    "cases/main/jobs/baseline_priority_greedy/experiment_manifest.json": {
+      "sha256": "ca8ee67cd33e5e539b1da34af84c077a22a6bb28a1d4081f44f2a2b25099c9ab",
+      "bytes": 376
+    },
+    "cases/main/jobs/baseline_priority_greedy/launcher.log": {
+      "sha256": "f6f5d286156ba72f8189d4c3ceb9847418f81b3f2d5411027d6055af3bb6cfd5",
+      "bytes": 341
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/effective_training.json": {
+      "sha256": "404ad6ba3cf29207cf688a2c3076fb9948307ab90ebe3a01e280da3048ad004e",
+      "bytes": 1374
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/evaluation/episodes.csv": {
+      "sha256": "b47480a4aa3387ff6fc923f72f6a3f4fc0dd9f12133c452b4579313548a11ae9",
+      "bytes": 7769
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/evaluation/summary.json": {
+      "sha256": "cd63ed55f98e10ab660479d96685e771515b24b4be282e84b345c66a2253a9ac",
+      "bytes": 77101
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/evaluation/trajectories.jsonl": {
+      "sha256": "f9dd999e719c438f478cf4a514bcee0faeb86fb72694949948f8c704e80f7584",
+      "bytes": 9631436
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/experiment.json": {
+      "sha256": "063090edf028882576b71afa12591a412977f600436eb64406a063f1ab97f832",
+      "bytes": 4093
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/job.done": {
+      "sha256": "175894bffb310c64588f0cee445a4f4cd05e9765c78d4953494a8cb13703321c",
+      "bytes": 46
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/plots/trajectory_best.pdf": {
+      "sha256": "7d169c4054eef26181236e419c567b2032227a95541a679276a62a7a946e3152",
+      "bytes": 29472
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/plots/trajectory_best.png": {
+      "sha256": "69b15c879a4586113d61dac61d8e8e2b5a0990011475c79e1adf488a1c0da41d",
+      "bytes": 87867
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/plots/trajectory_best.svg": {
+      "sha256": "9844bbbffe56e2cfdea95d689a39e641301903df2e3a00bacb52922e286ae0cc",
+      "bytes": 61181
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/plots/trajectory_best_metadata.json": {
+      "sha256": "1fafd36f8431442bbed46ba4cc80aa0481f9f7034f4527b70fde3ca728e09d81",
+      "bytes": 885
+    },
+    "cases/main/jobs/baseline_greedy_solver/baseline_greedy_solver/status.json": {
+      "sha256": "e3abbf31d14ca2fb55662d3fd178f94d1c1bb7a825292cfde31a926eea756ed1",
+      "bytes": 106
+    },
+    "cases/main/jobs/baseline_greedy_solver/experiment_manifest.json": {
+      "sha256": "af7b1fe5d3a1f36bfae0230df96b629a644821cbba69fe3314d254c97c7697b2",
+      "bytes": 377
+    },
+    "cases/main/jobs/baseline_greedy_solver/launcher.log": {
+      "sha256": "0e6079f54675948e0a87382c3df7473f37e657011c06ea0609b240c4ae63a333",
+      "bytes": 335
+    },
+    "cases/main/jobs/pure_ppo/experiment_manifest.json": {
+      "sha256": "16460a013c451d87fbc464e968e7056809a31a630e68b2418df184484cee09a5",
+      "bytes": 310
+    },
+    "cases/main/jobs/pure_ppo/launcher.log": {
+      "sha256": "6ca759b50a53e354dddff4bd6c7c3488d6dc0b33e0a194195bc60d78aacfcf97",
+      "bytes": 1387
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/best.pt": {
+      "sha256": "6ba139fb01a835e4cd5c12e0f2f3d8cbdc7e5c7058273686505d435edb62fff8",
+      "bytes": 1808370
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/best_checkpoints/step_00003000.pt": {
+      "sha256": "f4e0c3a9ed3ea67d9f9230c0905df2700b54301e7267c06dd550fea737ae955e",
+      "bytes": 1808370
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/best_checkpoints/step_00057000.pt": {
+      "sha256": "6ba139fb01a835e4cd5c12e0f2f3d8cbdc7e5c7058273686505d435edb62fff8",
+      "bytes": 1808370
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/effective_training.json": {
+      "sha256": "0aa4a7d84e8d1138260b8af1b824a140c8aae6edf54fecc1269c7a87b63ad783",
+      "bytes": 1372
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/episodes.csv": {
+      "sha256": "974597ecf660194e71156b8de7674fb018cbdd7c52fe2fcfec0a100ddffdeba6",
+      "bytes": 789458
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/evaluation_best/episodes.csv": {
+      "sha256": "0fc635601eee9d6427209c7b9f21e1ab2649fbdea728cbca056f8f2ee8231a84",
+      "bytes": 7085
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/evaluation_best/summary.json": {
+      "sha256": "72d3ad28115ca8d5abb3393a4def608ac44a7c3b7f6cf8463f5050c5023786ee",
+      "bytes": 76531
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/evaluation_best/trajectories.jsonl": {
+      "sha256": "5183134ef1dc0a44ba0947acd80ee5e4805067dac7bd3607c2ff36d4b352223f",
+      "bytes": 9097117
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/evaluation_last/episodes.csv": {
+      "sha256": "8c33ff85ffd570813ef884d35ae349da047be10fa2116aeef80c7b9dc014d304",
+      "bytes": 7107
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/evaluation_last/summary.json": {
+      "sha256": "4994904b5272e91219ad2f3265640ed1de0e9f9bac2fd0668913db39dd2f2f50",
+      "bytes": 76551
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/evaluation_last/trajectories.jsonl": {
+      "sha256": "6737c2b168354dcba0bd449ebab898eb693e033bb8d4fc32113943a358c28a11",
+      "bytes": 9095967
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/experiment.json": {
+      "sha256": "42507f1610f6195dc4db5f752844e6daf729458f74e387f5770acce4940d5fb6",
+      "bytes": 4036
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/job.done": {
+      "sha256": "2dc01e83739b0ddc4c89dbd12aa40638305cd4d5034d669070fc6bc42875c5d0",
+      "bytes": 136
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/last.pt": {
+      "sha256": "fe19cdf7cf150da7d3c5141b706ea8a0571329415641a94804eb1a59efc85e8d",
+      "bytes": 1863732
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/manifest.json": {
+      "sha256": "7cc8299cc0408c4ffcdad62ff8138d4d2f5982582456f9a5bc4a066e6a7ed5a5",
+      "bytes": 8623
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/report_metadata.json": {
+      "sha256": "81b89c040222a0b5724bcdc7f42f4b57649e8f7483e69bf960a4ac984869ca4f",
+      "bytes": 637
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/training_curves.pdf": {
+      "sha256": "14b052fc66558013636cbe09a6cb356475ec5a33bf3389543ca7ba6e9c942543",
+      "bytes": 81976
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/training_curves.png": {
+      "sha256": "a2c586914fd06518da30651d17e7b1d3449bf8cd0ba12bb711e6505fa136b8d9",
+      "bytes": 316225
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/training_curves.svg": {
+      "sha256": "7eab9fc04a5eff3349ce054a94f370385498481274f104d5e8e92e0b8bb8c710",
+      "bytes": 225702
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/training_energy.pdf": {
+      "sha256": "5e436e22fc8bc644ac96113cda4896bc2572253f66df133ab66f03127c2ad5e6",
+      "bytes": 61214
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/training_energy.png": {
+      "sha256": "b49358dc5bd97e713bf3bc4df354fda2251d74c2f9be697f3f2d687e9e3be9dd",
+      "bytes": 303681
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/training_energy.svg": {
+      "sha256": "b8ed113cf62a1e642e28a246f820009eb1d461b057208a9ff9fcd139f53a5b8f",
+      "bytes": 151276
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_best.pdf": {
+      "sha256": "58e3198464bb928bc7af652bcfee89669fcae373fbceb4831cf008193ef99d81",
+      "bytes": 29285
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_best.png": {
+      "sha256": "181520cc6592592c169ef56df979f1489754b2d13d5f0a775f1ca9aeadadf450",
+      "bytes": 73551
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_best.svg": {
+      "sha256": "481b0f4f0f4ee51b3b8f190b473a1527fd90d27684eed6a06411aec1db55f0f1",
+      "bytes": 61125
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_best_metadata.json": {
+      "sha256": "aa80968d892c6c2ee7b9ae45905e4b14db48e8a162f966cf14ed88a47fb047f6",
+      "bytes": 853
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_last.pdf": {
+      "sha256": "4064d3dea21b629cf768ce15353b294f38c5e7e3ef3c366e66c088e7b12b27a2",
+      "bytes": 29192
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_last.png": {
+      "sha256": "f81969fbcac08bf8570fe2f7361310da343c5c800d5f86f6cdf7fa579516c179",
+      "bytes": 72201
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_last.svg": {
+      "sha256": "b54e54738abbbdbb1acdde055efd1fd81ce8a3cab05712d2415fbbe1270cf552",
+      "bytes": 61129
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/trajectory_last_metadata.json": {
+      "sha256": "c194f8b66e512c7d20f5b1a8cceaa9438f00257ac1b65786f67421f7b68e9bf5",
+      "bytes": 854
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/validation_curves.pdf": {
+      "sha256": "b4f4cca59ab4a4c3913edf21c9f9c52eb5d21867eaeea673acefc0a111a67c8f",
+      "bytes": 18453
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/validation_curves.png": {
+      "sha256": "035cddebe2b83ec372f63f317707b643fdf8a49de7f8ae28ab7790dd96280256",
+      "bytes": 207614
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/plots/validation_curves.svg": {
+      "sha256": "8c2bf7f800317bcc080c67a9afb3c7698cc88bdad8d00cc4aabe212be2e8d788",
+      "bytes": 62042
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/status.json": {
+      "sha256": "5c88fa32baeec1d039fe86f9ff80b8248d091350252b28d83dd00e06a95d9d87",
+      "bytes": 772
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/updates.jsonl": {
+      "sha256": "bfa9234d28039a382c178c30672a0dd4c5978f1e498764733846164b0e1f1746",
+      "bytes": 149851
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00003000.json": {
+      "sha256": "8160045393cffc6e115ffc6cb7f6220cccae3879a533cc20373b413293e768c7",
+      "bytes": 28279
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00006000.json": {
+      "sha256": "d8446329cdfa0fa64794d4cef88275ace1419fff38f7ffb9e81d20a03fe91c16",
+      "bytes": 28272
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00009000.json": {
+      "sha256": "cd9ab0b6eee9881950a83c1af2eaaef982793f3c3597bca940d4c79dd896e977",
+      "bytes": 28255
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00012000.json": {
+      "sha256": "2720aaf53813eb8a98955f1c56e76da4bae2b52da4d57e8d315333378b13ff42",
+      "bytes": 28281
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00015000.json": {
+      "sha256": "dfc766d04a429e5023eac068caee2f8aecdd31758a73d2f1f00b8389ec863c05",
+      "bytes": 28240
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00018000.json": {
+      "sha256": "d6c3a5fb0bbdef57864dd7a6338f7329c4c5a57720c830a62c181706024f64c5",
+      "bytes": 28226
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00021000.json": {
+      "sha256": "f7c80757c675ae3fd79635b3ffd02f2567cae40560e4ad7ccb6373ce448dc822",
+      "bytes": 28261
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00024000.json": {
+      "sha256": "492716c26faee115877ddb5ae9b82adcc9aa723f8b1a2cba846e0305a8394ea6",
+      "bytes": 28268
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00027000.json": {
+      "sha256": "dc7f5b4f19af58bda46a565ed72c09b5a17ae0d7fbbd8f83f7955d12934b935f",
+      "bytes": 28269
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00030000.json": {
+      "sha256": "ddd015567fc7910ac4e0e2dd5cd6502a54bd2167bf2ad00afdd48ce018ca31ff",
+      "bytes": 28279
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00033000.json": {
+      "sha256": "c03d3318b21d60de21e35a160536da734044ec012c918d5d7149329d713868fc",
+      "bytes": 28253
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00036000.json": {
+      "sha256": "a73d7b3c76ef884267170d746920ab018eadb8acf2aa72f647d834a4dd4aa4aa",
+      "bytes": 28260
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00039000.json": {
+      "sha256": "f890536f96b10f58ec3cc7f2eccb0be9dc05a6465adda60fce615764ed807c07",
+      "bytes": 28206
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00042000.json": {
+      "sha256": "121e072a6eefeca84542c26aac2947269ef7878ed527b7fff7580a18423ef160",
+      "bytes": 28274
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00045000.json": {
+      "sha256": "2e004e994a40325d45f2d9a1187fef0acf595ddf1f25278184bd886d3e02f307",
+      "bytes": 28274
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00048000.json": {
+      "sha256": "1f043525ea17113d89bfaee88d02b412e01d3a5ef625726d44ab3de460ed5042",
+      "bytes": 28272
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00051000.json": {
+      "sha256": "402c0b38fa73f1374cd532e5e1b2c03487e80cbc77b6e91a474d24a9486b7ee0",
+      "bytes": 28283
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00054000.json": {
+      "sha256": "156a7e1e6fa3288a5fce3802fc8cdc15498c573ea4ba16c2dc3d5713d72b9d24",
+      "bytes": 28274
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00057000.json": {
+      "sha256": "a0d38c418cf769e18b219049cae7bd9707f317235752cfb030236e0b92d1c8ae",
+      "bytes": 28259
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation/step_00060000.json": {
+      "sha256": "92b7af8b74985e0b3ce30bdc59f62739ed9b1aef6d25f07d5a7e054ba01c3799",
+      "bytes": 28275
+    },
+    "cases/main/jobs/pure_ppo/pure_ppo/validation.csv": {
+      "sha256": "d666dcdd8f03dee92f5a9dc3f29add0019c37ef42c40f46a2d1e880f24c869bc",
+      "bytes": 2285
+    },
+    "cases/main/jobs/hybrid_ppo/experiment_manifest.json": {
+      "sha256": "56ad345e015c1c18a0c042b8d0daa3289f835e5723504e2a52048184259081c3",
+      "bytes": 327
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/best.pt": {
+      "sha256": "bce108ff67bc0b42c3ac73dcc7b19a7497b51cced93bb7b1e3541b20efd0bffa",
+      "bytes": 1611378
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/best_checkpoints/step_00003000.pt": {
+      "sha256": "fdc356907172bfa84eb0f20b1ffe5b9b57b05195cc6dfd8055ce88903400985e",
+      "bytes": 1611378
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/best_checkpoints/step_00012000.pt": {
+      "sha256": "29b6d1cf2cde0fa2e0472999514c7d6ce39bf9f7cb311d28be1f039f692619e0",
+      "bytes": 1611378
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/best_checkpoints/step_00015000.pt": {
+      "sha256": "3b5eb6c83528da0db9fcc05917bcf6c01ef0d27d096b9256cc353472e0eb9279",
+      "bytes": 1611378
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/best_checkpoints/step_00018000.pt": {
+      "sha256": "b9054f57c2cf606bfb6cfd0c5b4204c6b33eea06c2eebd463b09ce04fddfe5e1",
+      "bytes": 1611378
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/best_checkpoints/step_00039000.pt": {
+      "sha256": "b82cddb40f263b70f5650559b8fbfd9f6151ac59c1f61da177ba988eae2e37d5",
+      "bytes": 1611378
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/best_checkpoints/step_00054000.pt": {
+      "sha256": "bce108ff67bc0b42c3ac73dcc7b19a7497b51cced93bb7b1e3541b20efd0bffa",
+      "bytes": 1611378
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/effective_training.json": {
+      "sha256": "d2ad7ce9ca500f795b48d3d1b2d739b2ff5400c7e871afd3a1f9ac1f4ea0bca3",
+      "bytes": 1372
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/episodes.csv": {
+      "sha256": "fdbca8a5e0590adee0a55fe7eaecb7ee60095652aaf873fa4a1a4f65fd815c2f",
+      "bytes": 782146
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/evaluation_best/episodes.csv": {
+      "sha256": "e4a8e15bc1ee7f2ed3437cce0c3902493b82f64d2e103204da915ec803dc3b44",
+      "bytes": 6954
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/evaluation_best/summary.json": {
+      "sha256": "837a406602de4be9cba36a6f431000c50a6c90ea9071b6736627b78ae8cf7373",
+      "bytes": 76432
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/evaluation_best/trajectories.jsonl": {
+      "sha256": "d602e3c3059a9084099eab965e2c12bc8d506ae78687bf99a97093c62df819a4",
+      "bytes": 9446652
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/evaluation_last/episodes.csv": {
+      "sha256": "0f1d0878dd6ef8057cda2822a8dfb3fd1b9047c3b4beb536f95cbf89dfc916e6",
+      "bytes": 6964
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/evaluation_last/summary.json": {
+      "sha256": "9fe3ee8ea59f9fed3becf31a755116648be92e56877d066e7b8adb562b5c64c3",
+      "bytes": 76458
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/evaluation_last/trajectories.jsonl": {
+      "sha256": "0757743b537b04c30a98292da305fc5f3916380b4b7461fc1e5c0409887ace3a",
+      "bytes": 9446716
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/experiment.json": {
+      "sha256": "f16cecb2b21b0b6469643b87f3c0b11ffa3e3b3882ca4fa53b7afdd74cb302cb",
+      "bytes": 4121
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/job.done": {
+      "sha256": "2dc01e83739b0ddc4c89dbd12aa40638305cd4d5034d669070fc6bc42875c5d0",
+      "bytes": 136
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/last.pt": {
+      "sha256": "cd6c3d9bffd0e2249ac2fa2067b89d1bcf1e1e9088cacd503727b0377439514c",
+      "bytes": 1698804
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/manifest.json": {
+      "sha256": "f1b0fb3c01e66c9ce81fa01b9c1be35df2cd7da37e9125ea5e32358408de19e3",
+      "bytes": 8616
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/report_metadata.json": {
+      "sha256": "9b4e62d9d807970aebea45ea424859ac6d3023d8a04d65d7bfb07bcd32dc98ee",
+      "bytes": 641
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/training_curves.pdf": {
+      "sha256": "e57cf1be61098240ddf6a42ac985ffac979d2543721c8929a354c6dc7e07f78b",
+      "bytes": 95914
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/training_curves.png": {
+      "sha256": "681c36e33573dcfbee173e02251520ce30bba7ae74199cfb9943b8f95dbe7a09",
+      "bytes": 435603
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/training_curves.svg": {
+      "sha256": "aa685aa29d22d548a14b9c10cc194b0d76f1671c4b6b2b05e4af100924273cc3",
+      "bytes": 252418
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/training_energy.pdf": {
+      "sha256": "7faa0172cfbf783c320b6e020cd3272a404adc41b99ddaa488b3380c569d38c0",
+      "bytes": 60963
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/training_energy.png": {
+      "sha256": "1eea1be3db02f8886eee7c4c1501dd53dddd98d2e1cceb237078ac6532c64314",
+      "bytes": 270958
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/training_energy.svg": {
+      "sha256": "3ecec9d3e9c8c72272ef7f2ac54bf7b1b4f464339d43ac183ea31ab899f2c216",
+      "bytes": 149221
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_best.pdf": {
+      "sha256": "be24928c2e4d4b28cbc17ebdecadd709ee1a3f74796c3fe1f4849df3665b1d3d",
+      "bytes": 29515
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_best.png": {
+      "sha256": "405c8a658194b43f769cee3f5f240998a7c129f37ed77f9b57085ef77dfd308d",
+      "bytes": 83625
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_best.svg": {
+      "sha256": "4fdf8fac7e2f5aa387f2de362d18082e8c0f9b68c78ed692f1c98b021dd70f35",
+      "bytes": 61098
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_best_metadata.json": {
+      "sha256": "4b9b90dfea315b11ca2d145c27f8612e56c710c6f90b7b4c9249c5e2cc3f1eb2",
+      "bytes": 860
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_last.pdf": {
+      "sha256": "c498dce25a2468bd378989b01d849b98ef8cc23eed8dfbfa67564a61734a66d0",
+      "bytes": 29532
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_last.png": {
+      "sha256": "589447fee4d0065b321ab754ec4476e572caca35c54c0b7319ee3b72098bb07d",
+      "bytes": 85409
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_last.svg": {
+      "sha256": "fc4586b98626aab5b9c3d2389b142393df52df7ef2cc5f418a5c7d6825f9121a",
+      "bytes": 61117
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/trajectory_last_metadata.json": {
+      "sha256": "20a9a03e997fae88cc89f65fcb0f1c1b9a6500877eec6ac13ba08feeeda0a68b",
+      "bytes": 870
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/validation_curves.pdf": {
+      "sha256": "899335d67b0af9a011d47de8e326813dd26e1ba43b87fdb30018aa3d2415598d",
+      "bytes": 18205
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/validation_curves.png": {
+      "sha256": "e2a31cf19d217d16d58db7ee2e33422c26ad50341a0e5b5362002729009461e0",
+      "bytes": 206091
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/plots/validation_curves.svg": {
+      "sha256": "1db08a606858ea0a9eacc11106250880f87e128a8b843dc7dcc8aafdec95d5c4",
+      "bytes": 62672
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/status.json": {
+      "sha256": "022909af9dd4dbea3adf418703bdcd043f26005a87428196c93a5d1290705131",
+      "bytes": 776
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/updates.jsonl": {
+      "sha256": "16eb2b792c1a881f8f6b735f7f8768c7fcec1c01a97e59b570d90348e6eeed07",
+      "bytes": 151531
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00003000.json": {
+      "sha256": "d514de4ed99e3efdfb4120dc64edcc61d0196e25a247247402989f18f684172a",
+      "bytes": 28158
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00006000.json": {
+      "sha256": "95c4e968bcb0730a91eaea519b5c161aa72b8ee852359d25a817b6f1f611552b",
+      "bytes": 28172
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00009000.json": {
+      "sha256": "456187cd4f853c662cc457335c6850b48adcc0cea4308bc312cf2c3d896eeebe",
+      "bytes": 28176
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00012000.json": {
+      "sha256": "40b46a39f0918ce8d1806527969aa8ccdae891f3951b4ea2b5e3333edbd5c50e",
+      "bytes": 28167
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00015000.json": {
+      "sha256": "9bee62614c30f37626a25bf87c768888b9a517d401b22ccd93c6a96ef3ac09f1",
+      "bytes": 28163
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00018000.json": {
+      "sha256": "cdc694d4fbb2f7956612541a943415291fe136cfc91808110c73c3db96a9b92a",
+      "bytes": 28173
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00021000.json": {
+      "sha256": "4c72e2395b2103ae55fc26521fa8dcabff71f9cab7ddd67da901a7383cec4d77",
+      "bytes": 28188
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00024000.json": {
+      "sha256": "d6512190bf6841e26d46992041e384a5beef8bf2b2992a47b343a2bf20847dc0",
+      "bytes": 28185
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00027000.json": {
+      "sha256": "470707a2166bb0f9d88c355d9794b7c93ec1892760702e4fc831d723322e7cba",
+      "bytes": 28169
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00030000.json": {
+      "sha256": "05ccf34923db9eb6e91c0614fb7c6f0ce3f85b2e92081493ebd66ab406ff3c69",
+      "bytes": 28300
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00033000.json": {
+      "sha256": "4d7d6902cc468fd273e755a8b7814fc338fab085317dae94dc12ca8940b218d7",
+      "bytes": 28307
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00036000.json": {
+      "sha256": "d7a29edae6a182f9c09a5b77e621ce4f6353cb99d2b70c7a6860c4b583c6d18c",
+      "bytes": 28195
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00039000.json": {
+      "sha256": "c1b4e8ecea907eae99dfd8f0ccf7ee1fa9bda39757df8ee7432976a9d0734a78",
+      "bytes": 28178
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00042000.json": {
+      "sha256": "b65fb5c7bf3b880fc32f993808a9a3d1d0e5dfa26ebeb27a543ccb93f723c8ec",
+      "bytes": 28216
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00045000.json": {
+      "sha256": "b5b8d83c26995fee1538c7baa3c23c48b850e9ea91a95cd33b8a673c2d9817e6",
+      "bytes": 28219
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00048000.json": {
+      "sha256": "25c69a49c3bc7ff9ae7d48e1ad145bc1585b0dc459ac12657de521efd7eec6e0",
+      "bytes": 28207
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00051000.json": {
+      "sha256": "2e601f7cdb5bacc1cdf1cd18841d64679ff1b48297edfc55651a7dd61e6847e5",
+      "bytes": 28205
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00054000.json": {
+      "sha256": "ef7c059648616f2724a5a9ab76c9abc73c1524c3c5e22e96885d31881e03e199",
+      "bytes": 28185
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00057000.json": {
+      "sha256": "ab4e154c120e7a2c76dbf2312d9ac2cedd8066d93ac85a957d8892e4c2c60a29",
+      "bytes": 28214
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation/step_00060000.json": {
+      "sha256": "584bcc5d3597625b383e8de752a412ddba8bee17cba42e71bd0d682c6d775f4c",
+      "bytes": 28184
+    },
+    "cases/main/jobs/hybrid_ppo/hybrid_ppo/validation.csv": {
+      "sha256": "13efad29bc2b82923a8b404abdd3647aec83f67e7741db1914d23c28609e20e9",
+      "bytes": 2070
+    },
+    "cases/main/jobs/hybrid_ppo/launcher.log": {
+      "sha256": "2e7a33df19213cba6a00768d2e399aeb90cc90a11e7d56ee9dc0b74e0eabd04a",
+      "bytes": 1417
+    },
+    "cases/main/jobs/hybrid_sac/experiment_manifest.json": {
+      "sha256": "d1d364ccd899301daabe13687482fa5763b73267c39e1612d2ec6181ec4c9af7",
+      "bytes": 327
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/best.pt": {
+      "sha256": "a2b58b92a86ee25e5f4ac17c1fdc9bb465d211e83233b6b7effc9b299f730afe",
+      "bytes": 2931146
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/best_checkpoints/step_00003000.pt": {
+      "sha256": "4b4e4efd571073347b6676b1b69fd5963d557214b46e8729e41610e3d8ceb7a6",
+      "bytes": 2931146
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/best_checkpoints/step_00006000.pt": {
+      "sha256": "a2b58b92a86ee25e5f4ac17c1fdc9bb465d211e83233b6b7effc9b299f730afe",
+      "bytes": 2931146
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/effective_training.json": {
+      "sha256": "158a5b2fb6c3081e1e09a143a36452336d85cdb90b3c495e4dfa60196fd6b221",
+      "bytes": 1374
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/episodes.csv": {
+      "sha256": "e48c703f4c5b5d62f67efb88053598e85b5c7a27cb3a93b5da630146e275c751",
+      "bytes": 805463
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/evaluation_best/episodes.csv": {
+      "sha256": "a17a57b5f63bcc3b58455c004e98e5c644a0d20b471cb2fa62f577aab21dfc09",
+      "bytes": 7756
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/evaluation_best/summary.json": {
+      "sha256": "4a92acc1eb6c3b0c6652e42717d41dc7b9c409e2fc785032bab95f341925e38e",
+      "bytes": 77163
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/evaluation_best/trajectories.jsonl": {
+      "sha256": "ab285eb8f0e7d6d34cfbb054fc5083763777047ab983e7202fabbfe1fb0683bd",
+      "bytes": 9272559
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/evaluation_last/episodes.csv": {
+      "sha256": "4e21881607c659a46dffbb291a1edad523be87f9b8c43437fbc97898dbe099bb",
+      "bytes": 7647
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/evaluation_last/summary.json": {
+      "sha256": "0b7c1a22571551054ad0d67e7e6732370c22fab71c0250a99a06ea1560d5c0c1",
+      "bytes": 77058
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/evaluation_last/trajectories.jsonl": {
+      "sha256": "46481d099370e811aa2fd280f650b0a8d4a17a7013ba6a5bcaf01f2aaf832b32",
+      "bytes": 9265159
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/experiment.json": {
+      "sha256": "1bdbef92d8c350d21aca4b97830504ac803485884e54ed0c8cff1905a26908e2",
+      "bytes": 4055
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/job.done": {
+      "sha256": "2dc01e83739b0ddc4c89dbd12aa40638305cd4d5034d669070fc6bc42875c5d0",
+      "bytes": 136
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/last.pt": {
+      "sha256": "34c12a30935c5e72ad0a25cda2c302d7897800d7f7ad20f241f1e761c97ca68d",
+      "bytes": 358424840
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/manifest.json": {
+      "sha256": "961695e8cc9597a9cf9254aaf3b503840fe61465bd479fd3769711b6bfef4327",
+      "bytes": 8034
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/report_metadata.json": {
+      "sha256": "9696e1e64ada0a0966f295f38114cbc174b8833853123641c20243fbaa6b162b",
+      "bytes": 641
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/training_curves.pdf": {
+      "sha256": "8ee8a5bc551942beeb12b5754d968fe3219ca1434f42383100368e2d40345d34",
+      "bytes": 99741
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/training_curves.png": {
+      "sha256": "7cfae94bf9d0a0dabd53693cb95cf1eeca6a52e0e6318eac78250d7f91c7435f",
+      "bytes": 441749
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/training_curves.svg": {
+      "sha256": "0e373f04becec1ef4b8f7c07d417ed50db783818b5253432faf76c2a10fea9b5",
+      "bytes": 264178
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/training_energy.pdf": {
+      "sha256": "2aa101d42f9d11d5c1bd7aede7a6b0926c71c3c444aee9206feedb4899a10e5d",
+      "bytes": 61335
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/training_energy.png": {
+      "sha256": "47434b49876121743d8459c46f864c123b7139a46742cdd32781f7addcb7c6c7",
+      "bytes": 281174
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/training_energy.svg": {
+      "sha256": "be7c5eac1bd7579ddb5ad587b6a355bc71c7f2e40eb49293d35960591685b7ad",
+      "bytes": 146969
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_best.pdf": {
+      "sha256": "f56bb47e4240bba07bd416f4b07ab265a75a0995082c9c3a2b9f03f54925f8ff",
+      "bytes": 29707
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_best.png": {
+      "sha256": "0c2a39c1746bda238d6e0959bb4a2aa7b59b30ffbd1885cd5106f26811dc516c",
+      "bytes": 109448
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_best.svg": {
+      "sha256": "c3cc0c80ac27fe3f7e7de2cc253558a927962317d8996703bad1facad4d845f1",
+      "bytes": 61134
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_best_metadata.json": {
+      "sha256": "dcf46c619a47f2dda4673259b5c7de4a294e2da8e62726dfcaa03c7a661910a7",
+      "bytes": 870
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_last.pdf": {
+      "sha256": "3314bd7054fc0b98f0b4f538f5cd100e56ce477a1f19a70a1986b98361495098",
+      "bytes": 29629
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_last.png": {
+      "sha256": "474fd7618e1ce557ab3f654600d97d97ee7950fd6c77e7665dae38ba8a24d2d8",
+      "bytes": 110736
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_last.svg": {
+      "sha256": "c6611014e0d5a0073850fcfb6e0ce9c52c2a8898e30c0d6f189592d9b9b8ceb3",
+      "bytes": 61155
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/trajectory_last_metadata.json": {
+      "sha256": "44e53fbf32bd47c414f4c1bef78658d6669334045383808ac7bf00a1d783e5ae",
+      "bytes": 871
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/validation_curves.pdf": {
+      "sha256": "42146592702dbabc99b22130941efada789052015aa8846f557e469118985132",
+      "bytes": 18475
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/validation_curves.png": {
+      "sha256": "10420c602ce7447e9168f3b78dc0e169982f2cadf54686e13bbef38f92648f1c",
+      "bytes": 237334
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/plots/validation_curves.svg": {
+      "sha256": "0dea9cf9bd05d2759e5290f7e3b687c38843e72cc9f0c89ad24fb10e93730d17",
+      "bytes": 62686
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/status.json": {
+      "sha256": "69c5ba697b87f9c870811ce6facb17657652b287593dd3a9d20a5de6eb95746a",
+      "bytes": 659
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/updates.jsonl": {
+      "sha256": "7c4864174efdc3e4418ee5b3f02364cf000878868c39f0e7419f6c4aa7b23bc4",
+      "bytes": 3986023
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00003000.json": {
+      "sha256": "8415352deafbb02ef233818827967a877a3b07e462d455bdc4c9cb6a3175b790",
+      "bytes": 28404
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00006000.json": {
+      "sha256": "feb8605254003bb8967f108ac33bdd12124159f76faaa857e4b59d63832ac1fe",
+      "bytes": 28490
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00009000.json": {
+      "sha256": "c82f96bb060d39d0dbb25dc03b920f6b289fe3adf51eb7e54da558a1136f53b7",
+      "bytes": 28377
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00012000.json": {
+      "sha256": "ac150772d69a65ec3978fb22580c824821008446fd5e9c79b0f1085819e4734a",
+      "bytes": 28438
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00015000.json": {
+      "sha256": "c654e66710071d2388ff0e0a41266af56719f88c463452b99227c6e8057ae3db",
+      "bytes": 28450
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00018000.json": {
+      "sha256": "1ecd0eb39214db6f3e0a0d8cc1a60e96123805cf1af861683e6fff695eb5f1fe",
+      "bytes": 28474
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00021000.json": {
+      "sha256": "a4b2a9459d75ca369fdaadf97de467e7a9718d78cb6cb36e7bac8a22b19a34df",
+      "bytes": 28441
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00024000.json": {
+      "sha256": "c8d9cefbcb30026b180e4a48625b7e5dd0bb27b0873e04792f7a2840ffa1e4d6",
+      "bytes": 28394
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00027000.json": {
+      "sha256": "17eb6d278a5667acb364cb7231ff526f1e441c5d9b45f0e699a606727d80afe2",
+      "bytes": 28482
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00030000.json": {
+      "sha256": "0f046dc6523aaab9853cbfa1d14476910cd840ed14df819ef3ecee8abb57d6b2",
+      "bytes": 28459
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00033000.json": {
+      "sha256": "da66f12ee9f8478159ccfff37d69daad95fd9727ae7004fe08bd6fb01d8a9ae5",
+      "bytes": 28450
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00036000.json": {
+      "sha256": "e1f0ef5c30f1905b39714a132a926b3151ecffed0471cd5c6f4a2f7ecbe6414a",
+      "bytes": 28395
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00039000.json": {
+      "sha256": "aecff989491cdb6bd77e636b5401aa595146e69dd9b032d7e5dd6e7082c655c0",
+      "bytes": 28453
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00042000.json": {
+      "sha256": "03ddf0731b739e55ec725d946fdc3fd060843960393ce2165e2b55ca72bbb02b",
+      "bytes": 28472
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00045000.json": {
+      "sha256": "68cf796bc52ed74934f07a443ebc37ed42d4815b8012881379f0dc321771cd38",
+      "bytes": 28459
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00048000.json": {
+      "sha256": "01d45d00694bdded4d0b6740bf198f3e1edc37bb5229073a5393771713f8acb8",
+      "bytes": 28422
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00051000.json": {
+      "sha256": "93c9900b8386a99bcb581ec7ea13a0181baa25fffa02268ca4d551a4acb7b6ab",
+      "bytes": 28434
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00054000.json": {
+      "sha256": "daccc907cea4ff3d4a7059f0106a86db336eda87059c1b3592c8d648598cbbdd",
+      "bytes": 28362
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00057000.json": {
+      "sha256": "6e49fc1c85bfc3dd24f187550952e2cf9cf41cab03eefdf1287e21b692165146",
+      "bytes": 28450
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation/step_00060000.json": {
+      "sha256": "378f2e2b9a0684a9d0c3462d2f50a90aa2d9bb874dda883e530daa85781909ea",
+      "bytes": 28435
+    },
+    "cases/main/jobs/hybrid_sac/hybrid_sac/validation.csv": {
+      "sha256": "3e710a570eb71e944a4a5e7799acf3568afd22e27365ce8f40c8b1794774a52c",
+      "bytes": 2319
+    },
+    "cases/main/jobs/hybrid_sac/launcher.log": {
+      "sha256": "a00a5494826062c5b47600ee7f85a31e75de83bb06dca645acd941a5a4863d87",
+      "bytes": 1417
+    },
+    "cases/main/jobs/hybrid_ddpg/experiment_manifest.json": {
+      "sha256": "4df29407a2c7895cb07974c93f5316ba9bcd7b2b1da105fc6cea670d76233a1e",
+      "bytes": 330
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/best.pt": {
+      "sha256": "06cdbe18d4b2700b7e939cd291120f11fbc159fde4738ab3695951b921f69327",
+      "bytes": 2125410
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/best_checkpoints/step_00003000.pt": {
+      "sha256": "980528c3c8f1d171a5fb700f1129c8e39bcd473f0644aab6ad690cd16fa77014",
+      "bytes": 2125410
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/best_checkpoints/step_00006000.pt": {
+      "sha256": "bbe59c2a7a67dcdb34fb2d154cd5d2f096d549c8388b4c23da6b7831a291f853",
+      "bytes": 2125410
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/best_checkpoints/step_00009000.pt": {
+      "sha256": "06cdbe18d4b2700b7e939cd291120f11fbc159fde4738ab3695951b921f69327",
+      "bytes": 2125410
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/effective_training.json": {
+      "sha256": "f4eda1b2c4d72b34c6a96cece94b013bef3b38c8a2a7fe1880ab6dec71dfe7d5",
+      "bytes": 1375
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/episodes.csv": {
+      "sha256": "6961f6e5e727de8e91c03bb89080541997ef5cd0d10785d5f88f7d28fc4f5b61",
+      "bytes": 807641
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/evaluation_best/episodes.csv": {
+      "sha256": "33aaac41e0805cda74af18b1d0c1015fd7c1a8aa5f8f4256c7447303c827dad4",
+      "bytes": 7657
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/evaluation_best/summary.json": {
+      "sha256": "32baecbb9e95a40c0b8e77a13a642cf97f9a02fbc57379469d64879a447e4813",
+      "bytes": 77065
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/evaluation_best/trajectories.jsonl": {
+      "sha256": "e1cfb1d681bc99ee9d0488beb481c2e3add9dcf5e620da6f910ff93fa07ff24d",
+      "bytes": 9233518
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/evaluation_last/episodes.csv": {
+      "sha256": "af9853880bcb2a0dd543104c494c2cdb46eeadc621d5c45e06b57436e05d779e",
+      "bytes": 7614
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/evaluation_last/summary.json": {
+      "sha256": "bc1cab80ccbee1325b04ffc34e9fcbefed42ad7f244b4877656afe5313c624c6",
+      "bytes": 77006
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/evaluation_last/trajectories.jsonl": {
+      "sha256": "d6b1ed4e5d8325ac08d93bfa9ef6e84285045df79ed9106031dc6f96e82ee6e7",
+      "bytes": 9191991
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/experiment.json": {
+      "sha256": "f0a895232b4e2f1a8b4586019a36fd9d774da97b1ba73e2667b7f3528535ba64",
+      "bytes": 4059
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/job.done": {
+      "sha256": "2dc01e83739b0ddc4c89dbd12aa40638305cd4d5034d669070fc6bc42875c5d0",
+      "bytes": 136
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/last.pt": {
+      "sha256": "035534b773f50d9bddfea462cadfcd5642d7f5a18a70c6f93d9d51c9d48ebe8c",
+      "bytes": 357474460
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/manifest.json": {
+      "sha256": "0223a39d842712a1578a7993eea4aba5616d99f4a547376b72a660ab69956c98",
+      "bytes": 8090
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/report_metadata.json": {
+      "sha256": "a8f03c483e74798434f874e9961c66a02472b862e0732bab95f3fc037fe9dc1e",
+      "bytes": 643
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/training_curves.pdf": {
+      "sha256": "bb8d9bcae9a881de5a775986d14e3c363e4f58e45ee20e1652b42b35dcd552a7",
+      "bytes": 98357
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/training_curves.png": {
+      "sha256": "e9f939d87b5bf1fdc70ab1efdf582f6ceb6ba6091b12f2beb5729296b27ea4cd",
+      "bytes": 411812
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/training_curves.svg": {
+      "sha256": "7892906123d3e336941c00b6e3f067c84ea1c401dc8efaa0bea8e68fa6daf7b9",
+      "bytes": 264187
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/training_energy.pdf": {
+      "sha256": "a86529db4ea63162c7baa3be3a5ccdb365680c7cc9699cf38ce635175c859911",
+      "bytes": 59584
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/training_energy.png": {
+      "sha256": "076d0620fc1dead490ac60f396539c6e3148eccace4a8c4ba2d223bb1ae4842e",
+      "bytes": 212128
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/training_energy.svg": {
+      "sha256": "37642f85d93e72a9f5d085c883816bec474e8520c19799fe99b5e3a9683f8d4e",
+      "bytes": 141702
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_best.pdf": {
+      "sha256": "5259d451653e0fd678d231b57218e9a421a84680df91664e0e0bb1876ea0aa52",
+      "bytes": 29707
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_best.png": {
+      "sha256": "5ddfb970212878c3103757173fc71b53317feeab246675195ce6a00006d8bffd",
+      "bytes": 114562
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_best.svg": {
+      "sha256": "a295ce607f267730020cb23197337d4cde0899939020ce1409d11517e3bf2396",
+      "bytes": 61166
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_best_metadata.json": {
+      "sha256": "8ae4e0b60e31287d7ad6bc6044f645c3840d9b5c61eddc9ab9392af3e699905f",
+      "bytes": 858
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_last.pdf": {
+      "sha256": "93dd1c36b1fe55ccd21becfe0d2d2a9ddf682c816d0228e407df2db364360796",
+      "bytes": 29649
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_last.png": {
+      "sha256": "7f92305758c8eb4aeb68ff6d7ad06730596c4637b875e655b4ef1caf43504344",
+      "bytes": 113466
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_last.svg": {
+      "sha256": "fc84393663d92b11ba06413bf1a124989df773757aab9278f6da989b4011a12b",
+      "bytes": 61144
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/trajectory_last_metadata.json": {
+      "sha256": "eeb627b674d6c8944ad5cfd67c257dcb175de7eab204c3633534f90227c0f56d",
+      "bytes": 876
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/validation_curves.pdf": {
+      "sha256": "893f28fed28466da1965e99510c066c224ba05ead04b7dcc3a1901ec790eb79f",
+      "bytes": 18692
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/validation_curves.png": {
+      "sha256": "d199cb370b32e756a17f2a89cf00664495178b4b17af783c9b7eff43faa386f1",
+      "bytes": 257583
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/plots/validation_curves.svg": {
+      "sha256": "6f5217c468b3a6fdc6fb07b334083638bf0e4f8ba956fa1b1d03a0f5e19586bc",
+      "bytes": 64951
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/status.json": {
+      "sha256": "5c17356fc7a6bcd5f7a0abe4a49724aa34b7f3a6c52c0e899ad34bf225073f3f",
+      "bytes": 660
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/updates.jsonl": {
+      "sha256": "c522dfc2caba16d837335e2a2051d181aad2b1649e19b81f65f913382111e46f",
+      "bytes": 2361978
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00003000.json": {
+      "sha256": "d8d16af6b8cf13bfad7a862f75c05746b84b4c1550357914761d29b98c8ef75d",
+      "bytes": 28392
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00006000.json": {
+      "sha256": "ece46c64ca1c4213c5ff7424f8b4166b37be7d54f8609a7953e6c92f98dc4d54",
+      "bytes": 28468
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00009000.json": {
+      "sha256": "d02c36901e2eac7edd0d32bd925d28b6b4277819709b72f1da89098e591db4ca",
+      "bytes": 28411
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00012000.json": {
+      "sha256": "797f30918c19e142944f5d54360135cf04dcf6cd5f8f9115fc0561c4de96f960",
+      "bytes": 28470
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00015000.json": {
+      "sha256": "ebb2b1e9b043577c2ce177ef8713ca2c66144dc8a510de17d03a3f727800384d",
+      "bytes": 28453
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00018000.json": {
+      "sha256": "1ab2787b03dd511cb20d67a9642c73a2dbd9d6c2737ec2e063f7cad9fcb61785",
+      "bytes": 28401
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00021000.json": {
+      "sha256": "ba27fa047cc5f5e20ea1c5395f5057e520f4065092539d1ebf4fbf817f336dae",
+      "bytes": 28458
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00024000.json": {
+      "sha256": "4cc8eb8b30fb8464fb4edf628477596636160e4d73a698aec41af8f0c23e8e1b",
+      "bytes": 28388
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00027000.json": {
+      "sha256": "aafc336245ae74bcd210dd4b9e4509c4c49b34d031a350977343ce10e9a94564",
+      "bytes": 28415
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00030000.json": {
+      "sha256": "d967697b623a7d84dca6ab5f98ba5c85735abe8a41e99f5f1c32d9dc8b7b74e3",
+      "bytes": 28405
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00033000.json": {
+      "sha256": "e33e13595af7517b976ce334ef2bb1b23958d9dc309382fa0dc7c987ea11ea79",
+      "bytes": 28446
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00036000.json": {
+      "sha256": "9a82011c79363b86b5ef5bab83b59e85b441d8f32ac75c7159f4ec4cbc9951de",
+      "bytes": 28460
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00039000.json": {
+      "sha256": "8c5b6098db1a20023e6e67313e077a8ff3a46fcf2664f95ffeccdb7b106cd16e",
+      "bytes": 28424
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00042000.json": {
+      "sha256": "bf400f7ed62b9de44e37c6bbe773321f1f35fd823e3219d0ef186ad464ec61e9",
+      "bytes": 28417
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00045000.json": {
+      "sha256": "f4418874cbcfda71b4596bc3737bc8519a6fa9de8def589d155b9658dcb34894",
+      "bytes": 28436
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00048000.json": {
+      "sha256": "9538b1855efa520c1aed51373022170e83df0dc680466564cb87694caa9b56e5",
+      "bytes": 28460
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00051000.json": {
+      "sha256": "59f54b1e5b13dae4e509cfa9e980ebffa2c5b129f06b5efa397d685cc1dd9fe7",
+      "bytes": 28391
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00054000.json": {
+      "sha256": "fbe020363963a016b4c96f159cab41ea7b32a8e741c93dffc585d042417e6a82",
+      "bytes": 28373
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00057000.json": {
+      "sha256": "1436b98cf87648d3e48a339c8238c57571a08bcc7093bb30f1a6137bead444b8",
+      "bytes": 28389
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation/step_00060000.json": {
+      "sha256": "797b03fe422ae674d962df87c28a28a56762a232252c49582b9048fa9259ef83",
+      "bytes": 28417
+    },
+    "cases/main/jobs/hybrid_ddpg/hybrid_ddpg/validation.csv": {
+      "sha256": "3a0769638387d5e35091462f8b74b7c8b1826f885d1b5c8ea7f63a3d6b9c3a05",
+      "bytes": 2321
+    },
+    "cases/main/jobs/hybrid_ddpg/launcher.log": {
+      "sha256": "9ba0037b5bead70227ccf20775196b34b6fa25a5da9eefbf0a03532e1c996c7f",
+      "bytes": 1441
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/experiment_manifest.json": {
+      "sha256": "ff863c4ca4b637c6dd3374d1b1896816d1df88b343170ff09ed523924728d1da",
+      "bytes": 369
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/best.pt": {
+      "sha256": "32e7c76afea50401cc43d9232fec5788df3b37cab000c45d7769fcf2e7512ad9",
+      "bytes": 1631116
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/best_checkpoints/step_00003000.pt": {
+      "sha256": "4d3f4a73c1b1f4acc347f01e49362dc68fe1174964f5b978b69799f6ade86e04",
+      "bytes": 1631116
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/best_checkpoints/step_00009000.pt": {
+      "sha256": "32e7c76afea50401cc43d9232fec5788df3b37cab000c45d7769fcf2e7512ad9",
+      "bytes": 1631116
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/effective_training.json": {
+      "sha256": "2b92f995584072d2c7e71c3ac2c613e9967c367e0511772ce68b63624be08ccc",
+      "bytes": 1385
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/episodes.csv": {
+      "sha256": "8ddef6e0d31e8a73d71e488b67f21b803a21f6cbee0eec0adddf673944c47595",
+      "bytes": 756020
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/evaluation_best/episodes.csv": {
+      "sha256": "494aeb5dd0ff9adde131c081fd2eb5536ec510dda1656cc65e0003fab8a78539",
+      "bytes": 6695
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/evaluation_best/summary.json": {
+      "sha256": "17a314e678f4bcd5150e2f945563a2baef67f1f978fe59c12e64553a797d6f42",
+      "bytes": 76145
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/evaluation_best/trajectories.jsonl": {
+      "sha256": "7770e33211a38605660cbce0d43affaba69bce4e75937eeaa27f8030d28130b4",
+      "bytes": 9453514
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/evaluation_last/episodes.csv": {
+      "sha256": "00b4160b4a6f144f91adc6624843234160fd9f7daaf047dbc970bb7a43002017",
+      "bytes": 6948
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/evaluation_last/summary.json": {
+      "sha256": "e3dfe92be917d56b3734e65e2db24ad5d4c986d94f3a71ae265a7e19f605c21b",
+      "bytes": 76464
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/evaluation_last/trajectories.jsonl": {
+      "sha256": "c8e691d28a832111c9b3c41f3417d21ce6cfca32065f2c4838c399d2a516ea3c",
+      "bytes": 9446926
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/experiment.json": {
+      "sha256": "0cb99012bd75440bf1cf824c6b5b0e3b7423e3b360e8ea734bce98bdaa84f32b",
+      "bytes": 4436
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/job.done": {
+      "sha256": "2dc01e83739b0ddc4c89dbd12aa40638305cd4d5034d669070fc6bc42875c5d0",
+      "bytes": 136
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/last.pt": {
+      "sha256": "f4a829a49af9410e9cec564c48ac6209926161572d8e5151c7ea609b460062ff",
+      "bytes": 1718535
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/manifest.json": {
+      "sha256": "c156e81f0e146e9adc440cc0765f09852ffe8fcf2199941ad13812fb2657efb9",
+      "bytes": 8653
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/report_metadata.json": {
+      "sha256": "cfad3c7c0c8dfec24a4d1629ad592f44af211e1eb47e4059764a0af992bc84f3",
+      "bytes": 665
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/training_curves.pdf": {
+      "sha256": "03ee5120fc22d8059c28c7c17ed405158030cb0a056fa4ebbdd021368f3c309f",
+      "bytes": 92871
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/training_curves.png": {
+      "sha256": "5c37153c8a7e5daab3dddb4691d5e6b0415a5e81c5193706f1490f07739a6a4f",
+      "bytes": 445953
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/training_curves.svg": {
+      "sha256": "c51a0bcc841d4a671cfca198d160c257835429f00eb104d08c3a1b8e838f011a",
+      "bytes": 261049
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/training_energy.pdf": {
+      "sha256": "4994c4a1d815461552fb01e1709dfaadbb6402eea83d0381ec92db6ac46fa6cc",
+      "bytes": 61258
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/training_energy.png": {
+      "sha256": "c350705e8e8549862287be116c9396ac98d45db032704feafaeaa66d6f441fdc",
+      "bytes": 296103
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/training_energy.svg": {
+      "sha256": "3a4b17a284854bb47e7d9dae3e2bc2c3543cfc464c3ae6ef3f2e4086abf7cdcd",
+      "bytes": 151448
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_best.pdf": {
+      "sha256": "af68ad165576f24987e3e0e9d301e69965e89e63bed13e14ee2e50545d4c79a2",
+      "bytes": 29703
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_best.png": {
+      "sha256": "29b95b21db91d8965ccb165259e3513d42929cf9109481459c1f32ccc4f111d8",
+      "bytes": 87621
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_best.svg": {
+      "sha256": "0f876d2a273659d7a2f9cf531a584e6a4cf29d7ee38bae10664eb899cc673611",
+      "bytes": 61155
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_best_metadata.json": {
+      "sha256": "b0b479264d8e8719dc3bce8f709d9757438db6d519932a1995683350c4258dca",
+      "bytes": 894
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_last.pdf": {
+      "sha256": "b18bd3db1230970eea5061e8047523e9c7cacb58510d66bca73f0ab86c9b7517",
+      "bytes": 29654
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_last.png": {
+      "sha256": "78fd8f6cb4eae17a5e9da6d086c84f79360602ce28c63e0eca4ebe0b992847e1",
+      "bytes": 93116
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_last.svg": {
+      "sha256": "52d76bf55795ef73dea39de30b1a761a4f38c6600a36f6dddd2feb24a3c52389",
+      "bytes": 61136
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/trajectory_last_metadata.json": {
+      "sha256": "79717815f6f4640fad232297548fd7a9a02070d124888f43dbd446c59ba76a44",
+      "bytes": 893
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/validation_curves.pdf": {
+      "sha256": "6fd1218cf9b598ffb2326046a8c3428de36ac86bc0c371d24ecc7ee05408daf4",
+      "bytes": 18117
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/validation_curves.png": {
+      "sha256": "7755d2197142b36f78e576168d47b62cbc91589a0d3b51eec493be8eae63a099",
+      "bytes": 198373
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/plots/validation_curves.svg": {
+      "sha256": "1dcb7f01502fdd86553ec3006ec58eba08cbe2b7a794512716a0bad5ce9665f8",
+      "bytes": 61369
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/status.json": {
+      "sha256": "60fae80c55616f7fc9e7d6a3c30b80b3f1e84a8e25c1ab11f70212ffb93cba4e",
+      "bytes": 791
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/updates.jsonl": {
+      "sha256": "a19ad9d1e74632283df98f78f8bedcbf9b798e8f8d573efc7b227a81c13011b7",
+      "bytes": 250632
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00003000.json": {
+      "sha256": "075c59cfd6026f0f81be6fa0e0fdb929422b5945d72cc9f75fdf0e5e0b026ed1",
+      "bytes": 28159
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00006000.json": {
+      "sha256": "ff89fdfeee8986ea878aab207b24fd164e985810f43e2ceffd3c39fab30d3787",
+      "bytes": 28223
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00009000.json": {
+      "sha256": "a244a3aa257f4b529bd04a78990a04e529c136b72897ed8eea4660f17339ef1b",
+      "bytes": 28198
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00012000.json": {
+      "sha256": "239e42b1e25712d72f403c30cfa463a84d9e29f1a718e35a020ac0bdae4555a5",
+      "bytes": 28205
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00015000.json": {
+      "sha256": "ba56c557cd5b0a8b3b785dc41df2e1851708c8db59a91532b99f0fd8c27bd6c3",
+      "bytes": 28200
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00018000.json": {
+      "sha256": "da626d83cd22424330d6f7409df6ae2913b7c41db75e40f57ff84433b147cc30",
+      "bytes": 28296
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00021000.json": {
+      "sha256": "a496af3eb688b9fe97440b94549e2d2bc76f63b68c1746da36acdc66924d14aa",
+      "bytes": 28308
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00024000.json": {
+      "sha256": "12210b00eef6141cc07f8e7da4c083f812e8eab52126cb39f0eef7fb73a8b025",
+      "bytes": 28204
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00027000.json": {
+      "sha256": "f5a0ee6c5a6fcc128e2b4ea14b9615e3339ce0885b636743e32fcaa95bcc348f",
+      "bytes": 28297
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00030000.json": {
+      "sha256": "760226ddec8a2172a22a00792c2dfb523207a1a146fd47b600bf9c0e4ada2509",
+      "bytes": 28393
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00033000.json": {
+      "sha256": "acdf00cb8f0e9b33baa41bd01a4507999ecb50688617d753f7227c6e2ae2a3f3",
+      "bytes": 28396
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00036000.json": {
+      "sha256": "5dd1f1f6aa0c40ba0248c608564d1e78ba642c065f8f347f1b07375f2c65e894",
+      "bytes": 28392
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00039000.json": {
+      "sha256": "f3fc1be6bad81b5647f8faddf5110aafe3dba9c1b72628f9904e5ffd808ec3d8",
+      "bytes": 28392
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00042000.json": {
+      "sha256": "fd1981f29111fe4f3aa091bc13fadaec8fb678669b38f87d20413607a585a8c9",
+      "bytes": 28399
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00045000.json": {
+      "sha256": "71f331adde68f827ebcece6d5e25437d02d591c77844b1792bd6655b1f669c40",
+      "bytes": 28192
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00048000.json": {
+      "sha256": "dfa2c3303963086a18998a885d8b1a07678a6b69b3bfc74740bdbe630539d138",
+      "bytes": 28201
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00051000.json": {
+      "sha256": "d3fb5a01631bcffa9f8bc87103218d80a0a1063fadc258328f82c1d89756a011",
+      "bytes": 28188
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00054000.json": {
+      "sha256": "1f2849dccbb8c1b8c2e3be3c0ff652261a4fb1c6704e51b47b98c0504783d3a2",
+      "bytes": 28198
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00057000.json": {
+      "sha256": "4509efec84df4c332adc01b893b4c0aa78879ffb28f73604fe4fd81eba14b872",
+      "bytes": 28199
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation/step_00060000.json": {
+      "sha256": "88747b40cb4c96593e5d3e6d879867843c261120d04d248435bf6952f705c05d",
+      "bytes": 28290
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/hybrid_ppo_ar_adaptive/validation.csv": {
+      "sha256": "b526d5ba2b1a0072365f61fdbcedc3b7f95028ca8069ef0c5f8e54b46fb73b5d",
+      "bytes": 2033
+    },
+    "cases/main/jobs/hybrid_ppo_ar_adaptive/launcher.log": {
+      "sha256": "cf2c8adf6eec926d7ff787ee3ba696ebdc7006297691f737598a1726c5946411",
+      "bytes": 1465
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/experiment_manifest.json": {
+      "sha256": "fe168d584192fb31e37c8b672c68ab1881964c1c8c78d07c6b82d05ea61a5968",
+      "bytes": 350
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/best.pt": {
+      "sha256": "0aeec945f89ccb1ef35a0f0e2c492a34079af184d4653019179ad93d2d9daae8",
+      "bytes": 1615196
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/best_checkpoints/step_00003000.pt": {
+      "sha256": "cc00927196f1d5890bbe037ae47ece82f36b67b908d9f791c129740548553798",
+      "bytes": 1615196
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/best_checkpoints/step_00006000.pt": {
+      "sha256": "e31337e8d80cd05c24016cd11968d0526d72f283793a03fdab0fd1b52abc08c7",
+      "bytes": 1615196
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/best_checkpoints/step_00009000.pt": {
+      "sha256": "e4e9d51a7b4637eb06cf8fee5ede657815f68f7f0f343fec4964e43874d3d926",
+      "bytes": 1615196
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/best_checkpoints/step_00012000.pt": {
+      "sha256": "35b64765f51c0479254a05186b295b339faf82062b94a1ce78cae5c273d9636e",
+      "bytes": 1615196
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/best_checkpoints/step_00033000.pt": {
+      "sha256": "08948d2e74eb1835088e44b4e8a62777919a1f63b33e61f887eff4a60f82f817",
+      "bytes": 1615196
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/best_checkpoints/step_00054000.pt": {
+      "sha256": "0aeec945f89ccb1ef35a0f0e2c492a34079af184d4653019179ad93d2d9daae8",
+      "bytes": 1615196
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/effective_environment.json": {
+      "sha256": "b1984cea3f472d232783dd2e0ac095170fe69c22575020d4fee70af748eb68e4",
+      "bytes": 2049
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/effective_protocol.json": {
+      "sha256": "bcda395e88e7806288ce66793dc87cfaa676c31929810cc1cf1cdb164707fbe7",
+      "bytes": 92
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/effective_training.json": {
+      "sha256": "4ec5df92c2311ee3123a010b6bdb6bb32f6adf3f5e23328c8570bff43417236f",
+      "bytes": 1386
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/episodes.csv": {
+      "sha256": "b7f7e1421595eecfc9c609a6a177c37f98d47c20c02632ccc74e61d28536ec0d",
+      "bytes": 744503
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/evaluation_best/episodes.csv": {
+      "sha256": "2170cf7cd18abadae20e4212e3f81d253f29af3a9a13272fdc5f9d9f8a99b1b6",
+      "bytes": 6765
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/evaluation_best/summary.json": {
+      "sha256": "c46c502eceaaa1f865a4b1221b67da6a11d4a2ff58c2ecccc3e3cd1d33fd0e68",
+      "bytes": 76234
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/evaluation_best/trajectories.jsonl": {
+      "sha256": "3c80187097d5cdf6e21d20761708ff9eed9b844f1314245a889cce46057aab0d",
+      "bytes": 9453615
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/evaluation_last/episodes.csv": {
+      "sha256": "f04f6f901456402f28ab2f65c1624f90c708e5fb6768cdf3865c86eae1588442",
+      "bytes": 6805
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/evaluation_last/summary.json": {
+      "sha256": "537e56f985758efd940cb6cb504d2d93627bda41a95251bdc5b77cffdeaeea88",
+      "bytes": 76274
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/evaluation_last/trajectories.jsonl": {
+      "sha256": "52c69fee7bc293a56e2aa78285af4f548b6cfaed3619375f44008dfea6e9ce1f",
+      "bytes": 9452075
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/experiment.json": {
+      "sha256": "756344984e7e5165a5abf69652f68dde4d222711d28eb082e3ff7e41522db08a",
+      "bytes": 4426
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/job.done": {
+      "sha256": "2dc01e83739b0ddc4c89dbd12aa40638305cd4d5034d669070fc6bc42875c5d0",
+      "bytes": 136
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/last.pt": {
+      "sha256": "e383215e7535731545d69fc3c43d8c14ff0d3a57ff3f4e252a536ae8491b8b69",
+      "bytes": 1702815
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/manifest.json": {
+      "sha256": "beb897660a93275949f34f170786a138c59fe6b25f78d48b172a584762fbb4bc",
+      "bytes": 8655
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/report_metadata.json": {
+      "sha256": "34ed78e50736a2c91456a2fdc0fbcb4f5e9de6663e8d08ade55cd9e4180aaca7",
+      "bytes": 651
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/training_curves.pdf": {
+      "sha256": "10f2bcf338e8278e879c849ac164d8ab5c28652ce0fb25b2bb4c69b08b5723fa",
+      "bytes": 81898
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/training_curves.png": {
+      "sha256": "e99f769703a9835fbe0405001927ebe436eba98c068a8f4b94b3aea7ddbaae37",
+      "bytes": 389761
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/training_curves.svg": {
+      "sha256": "c26bf9a41ac788f8b5330d0e27be2b6113fbdc7e4d1be27e8bd92460eb894dd1",
+      "bytes": 221215
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/training_energy.pdf": {
+      "sha256": "2f78333f5416c708c5e53ce61e162047758fad3a7c95588e5d74aa0596065daf",
+      "bytes": 60601
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/training_energy.png": {
+      "sha256": "69c4e81d0c2fad1200838a9fa69dfc6d9540af41207571e51b4f82857cb29836",
+      "bytes": 257762
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/training_energy.svg": {
+      "sha256": "e0dde411381692304adfbe648e2032ed7b295a4e78e00bd252338f11c48a941a",
+      "bytes": 148011
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_best.pdf": {
+      "sha256": "5ad5952d5f5fa8c948e788d6af26eff70d06b11aeaafd69b47accb7c558ef75d",
+      "bytes": 29686
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_best.png": {
+      "sha256": "a1165aef25978242ab31f82e26b5651c7375f35ae46958a5af9eede480c159e5",
+      "bytes": 87530
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_best.svg": {
+      "sha256": "f637b7518d69bd01ae0d0a188f49c65cea724a41b17d8f4bd3fda9f3f9edd17b",
+      "bytes": 61167
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_best_metadata.json": {
+      "sha256": "f163f9360094de6139e23daf03814fc1493d17fb48cf8eb02d0c9478c0a47f02",
+      "bytes": 882
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_last.pdf": {
+      "sha256": "e6a64be384c08fd7b14c1fc5206013c5314569242a90f4e21ab534d42af613a3",
+      "bytes": 29642
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_last.png": {
+      "sha256": "487c623f5f6dccdd6a5dd45c7de8bd9f8422e8f368b6965925afc42933ec7b6b",
+      "bytes": 86317
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_last.svg": {
+      "sha256": "8e535219096aeb3e41b17181eb5222a69b7d4002940398d3d19fc887f3369f21",
+      "bytes": 61160
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/trajectory_last_metadata.json": {
+      "sha256": "d536608e0d07f2a1f13ca2494ccb963f96f649571a845840cc75f2fc9cf1e2c4",
+      "bytes": 881
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/validation_curves.pdf": {
+      "sha256": "0103341f32f9579fecfcfc9fec8127ff0bc301891457ad5fb1c1ebcb88d6ad21",
+      "bytes": 18134
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/validation_curves.png": {
+      "sha256": "67bcfc300e562dfa3034c402ed4b4b2e82e972adcd43be5a0491afa8ee9ca6a6",
+      "bytes": 188268
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/plots/validation_curves.svg": {
+      "sha256": "49f1217d551fe5fd8e3ef9f8293983a84acedd46f011cec1d7a8b5a6043ca6be",
+      "bytes": 62743
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/status.json": {
+      "sha256": "71aef53a23c36fe386ceb473350acaa8e73ea47cbb982089c12259a7d27b9cba",
+      "bytes": 795
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/updates.jsonl": {
+      "sha256": "2540c3bdef8b62c6a286e8ac8d84f8411351072ce5958c9b9a5d43f13fe878e7",
+      "bytes": 220952
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00003000.json": {
+      "sha256": "3f99aae17ea9329a691ff83595e79a8281b7e606870213b30035fea9d7815d3d",
+      "bytes": 28191
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00006000.json": {
+      "sha256": "c7963054b58cc9fe0ab2c7a614393b9134b9b949485c03e4cb38481f6de99f6c",
+      "bytes": 28206
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00009000.json": {
+      "sha256": "67ed95167c11ffb2b0c04e4ae709a5ed8ebb94e26960ea84e4fb291d71bf1e14",
+      "bytes": 28206
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00012000.json": {
+      "sha256": "91272d7f69bfacd45564e49e2c791060d46d8163ef919b174ec0cbef4735c760",
+      "bytes": 28209
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00015000.json": {
+      "sha256": "27915c0f659eac3aa7be3bb94acdecf48e2f90cf0e3730b6b2a28da0b52f23bf",
+      "bytes": 28226
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00018000.json": {
+      "sha256": "e2144bee3b350a5630e2a6ce896302ac9f8211dbcb30fd8622af3d591210fb74",
+      "bytes": 28210
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00021000.json": {
+      "sha256": "da8729c307a34ac74c9b7f9e8ccb246f813db4844832fd1f5a5290500ca9990d",
+      "bytes": 28232
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00024000.json": {
+      "sha256": "9dcff2b6422d98177b83bd37ef332593a4ae9994e016fbfcfcde9f1191db82bd",
+      "bytes": 28224
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00027000.json": {
+      "sha256": "a511e2d23cb6cf0ddf31357c941f8ec83363cc733e20a35df54626349dbc0bf1",
+      "bytes": 28195
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00030000.json": {
+      "sha256": "83589f4ace0a6ccf5ce744f406faf75c140c16b29726e9774de0bb30fdf8dacc",
+      "bytes": 28217
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00033000.json": {
+      "sha256": "628117caf09b0feb25a43b7fdb0fb5e43e7699bca6f8918282ee24d745c16a07",
+      "bytes": 28210
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00036000.json": {
+      "sha256": "4559be032f8239f8df71bc85f2c6e101be330bea1428aababda3240c387238de",
+      "bytes": 28225
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00039000.json": {
+      "sha256": "f48117b1c69f4032ba96e27ba6f80c3dcc0327d8191ac95a04507985aee8a272",
+      "bytes": 28212
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00042000.json": {
+      "sha256": "d055b558e3657425e8659092ab67060318a19b9c32d6c9f2d8fadbcdf695ab3e",
+      "bytes": 28233
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00045000.json": {
+      "sha256": "461a94b0735611e292eda4823d695c0da04ec58b8eafb31166819a002135a932",
+      "bytes": 28197
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00048000.json": {
+      "sha256": "f15420ab0bbecc4110c8be3d64d83d40df79139ed440ac856b0ee3f5e1bcfac4",
+      "bytes": 28215
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00051000.json": {
+      "sha256": "93a4c0b01843daafd8430d9a781979c7ff5af196f909cb1ad1e539cf5bea7ba6",
+      "bytes": 28221
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00054000.json": {
+      "sha256": "472e75b769966fb11ef8be8387dce66d46301284671393b845ff3211c8c6a1c5",
+      "bytes": 28192
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00057000.json": {
+      "sha256": "89f0a2277dedf307ef47f07ffa5c51761047279f8adc4da3d1e8d3a5cf5cee33",
+      "bytes": 28212
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation/step_00060000.json": {
+      "sha256": "d233634116394e9d24efff86aefc8df67df67f5daeaff70fe71de9c165dcc14c",
+      "bytes": 28205
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/hybrid_ppo_ar05/validation.csv": {
+      "sha256": "58c81d21f6055b621397b1df941f94b639952fbf8cedad412b9a10e70697766d",
+      "bytes": 2034
+    },
+    "cases/main/jobs/hybrid_ppo_ar05/launcher.log": {
+      "sha256": "96c1285941bddb6f1de67a8abba59ac5892a5825236238c0efc2b339d2e5cca9",
+      "bytes": 1437
+    }
+  }
+}

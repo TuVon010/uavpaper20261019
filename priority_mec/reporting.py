@@ -17,6 +17,8 @@ from pathlib import Path
 import textwrap
 
 ROLLING_WINDOW = 25
+BASELINE_ALGORITHM_CONFIG_KEYS = frozenset({
+    'greedy_direction_count', 'greedy_speed_levels', 'greedy_refine_rounds'})
 FORMATS = ("png", "svg", "pdf")
 COLORS = ("#377EB8", "#D28438", "#629B80", "#9A70A7", "#696969")
 TRAINING_COLORS = ("#377EB8", "#D28438", "#629B80", "#9A70A7", "#A14B54", "#6F6F6F", "#488C99", "#96723C")
@@ -177,9 +179,14 @@ def _penalty(row):
     direct = _number(row.get("penalty_sum"))
     if direct is not None:
         return direct
+    reward_cost = _number(row.get("delay_reward_cost_sum"))
+    reward = _number(row.get("episode_return"))
+    if reward_cost is not None and reward is not None:
+        return -reward-reward_cost
     reward, frames, delay = (_number(row.get(key)) for key in
                              ("episode_return", "frames", "weighted_delay_mean"))
-    return -reward-frames*delay if all(v is not None for v in (reward, frames, delay)) else None
+    weight = _number(row.get("delay_cost_weight", 1.))
+    return -reward-frames*delay*weight if all(v is not None for v in (reward, frames, delay, weight)) else None
 
 
 def _training_rows(run_dir):
@@ -419,7 +426,12 @@ def _pairing(result):
     if len({r["episode"] for r in pairs}) != len(pairs):
         raise ValueError("Duplicate evaluation episode IDs")
     pairs.sort(key=lambda row: row["episode"])
-    return _canonical(config), _canonical(pairs)
+    # These three fields describe a comparator's search algorithm, not the
+    # physical environment. All physical/reward fields and realized exogenous
+    # scenario arrays still have to match exactly across algorithm versions.
+    physical_config = {key:value for key,value in config.items()
+                       if key not in BASELINE_ALGORITHM_CONFIG_KEYS}
+    return _canonical(physical_config), _canonical(pairs)
 
 
 def _manifest_groups(batch):
@@ -455,6 +467,9 @@ COMPARISON_METRICS = (
     "energy_feasible_episodes", "deadline_feasible_episodes", "collision_attempt_frames",
     "boundary_attempt_frames", "allocation_invalid_rate", "solver_feasible_frame_fraction",
     "fallback_rate", "total_decision_mean_s", "total_decision_p95_s",
+    "service_cutoff_enabled", "service_disabled_uav_frames", "service_disabled_any_frames",
+    "service_disabled_uav_frame_fraction", "service_disabled_any_frame_fraction",
+    "local_task_fraction", "uav_task_fraction", "satellite_task_fraction",
 )
 
 

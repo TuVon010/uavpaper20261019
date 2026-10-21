@@ -1,0 +1,63 @@
+{
+  "release_id": "final_seed17_figures_20261021",
+  "verified_utc": "2026-10-21T09:24:47.007494+00:00",
+  "package_sha256": "e20563c2b2fe7cb4675b8c74303c6324473a5d02a762aa0ec21e066f53d711bf",
+  "managed_manifest_sha256": "deaa6147334831094e0ce3fb5123e930ef580f83be77756ab0612cef40ec0f7c",
+  "local": {
+    "passed": true,
+    "project": "E:/postgraduateLife/paper_code/uav_mec_final_1019",
+    "full_data": true,
+    "checks": {
+      "release": {
+        "files": 1870,
+        "bytes": 342277977,
+        "matched": 1870
+      },
+      "figures": {
+        "files": 1576,
+        "bytes": 297559413,
+        "matched": 1576
+      },
+      "raw_data": {
+        "files": 7368,
+        "bytes": 17110157475,
+        "matched": 7368,
+        "cases": 18,
+        "suite_id": "seed17_sensitivity_20261020_01"
+      }
+    },
+    "errors": [],
+    "policy": "Read-only SHA256/size verification; no training or metadata changes."
+  },
+  "server": {
+    "passed": true,
+    "project": "/home/zhaojunan_25/uav_mec_final",
+    "full_data": true,
+    "checks": {
+      "release": {
+        "files": 1870,
+        "bytes": 342277977,
+        "matched": 1870
+      },
+      "figures": {
+        "files": 1576,
+        "bytes": 297559413,
+        "matched": 1576
+      },
+      "raw_data": {
+        "files": 7368,
+        "bytes": 17110157475,
+        "matched": 7368,
+        "cases": 18,
+        "suite_id": "seed17_sensitivity_20261020_01"
+      }
+    },
+    "errors": [],
+    "policy": "Read-only SHA256/size verification; no training or metadata changes."
+  },
+  "server_reporting_tests": ".................                                                        [100%]\n17 passed in 2.39s",
+  "local_reporting_tests": "17 passed",
+  "raw_data_retained": true,
+  "same_managed_and_raw_files": true,
+  "new_training_started": false
+}

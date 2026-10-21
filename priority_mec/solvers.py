@@ -6,11 +6,13 @@ from .resources import allocate_resources
 
 
 def solve(data_bit, cycles, weights, rho_hz, offset_s,
-          previous_association, cfg, deadline_s=None):
+          previous_association, cfg, deadline_s=None, remote_available=None):
     """Feasible seed repair followed by strictly decreasing potential moves.
 
     Seed repair failure is explicit and is not a global infeasibility proof.
     A late local task stays visible; no task is dropped or freely repaired.
+    ``remote_available`` masks service candidates without changing their CSI
+    or resource subproblem. Local execution remains available at all times.
     """
     started = time.perf_counter()
     data, cycle, weight = [np.asarray(x, float) for x in (data_bit, cycles, weights)]
@@ -25,6 +27,12 @@ def solve(data_bit, cycles, weights, rho_hz, offset_s,
         raise ValueError("positive finite tasks, weights, and deadlines required")
     if int(cfg.solver_max_sweeps) < 1:
         raise ValueError("solver_max_sweeps must be positive")
+    available = np.ones(m+1, dtype=bool) if remote_available is None else np.asarray(remote_available)
+    if available.shape != (m+1,) or available.dtype.kind != "b":
+        raise ValueError("remote_available must be a boolean vector of length num_uavs+1")
+    service_available = np.concatenate(([True], available))
+    remote_nodes = tuple(int(node)+1 for node in np.flatnonzero(available))
+    candidate_nodes = (0,)+remote_nodes
     cache, bounds = {}, {}
     counts = dict(resource_solves=0, cache_hits=0, pruned_candidates=0,
                   unresolved_candidates=0, accepted_moves=0, scans=0,
@@ -104,18 +112,18 @@ def solve(data_bit, cycles, weights, rho_hz, offset_s,
         for user in order:
             if local_ok[user] or current["association"][user] != 0: continue
             selected = None
-            for destination in range(1,m+2):
+            for destination in remote_nodes:
                 a = current["association"].copy(); a[user] = destination
                 result = evaluate(a,repairing=True); counts["repair_trials"] += 1
                 if result["remote_feasible"] and (selected is None or result["value"] < selected["value"]):
                     selected = result
             # Bounded two-user relocation repairs congestion without 5**N search.
             if selected is None and pair_used < budget:
-                for destination in range(1,m+2):
+                for destination in remote_nodes:
                     occupants = np.flatnonzero(current["association"] == destination)
                     occupants = sorted(occupants,key=lambda i:(not local_ok[i],weight[i],int(i)))
                     for other in occupants:
-                        for alternate in range(m+2):
+                        for alternate in candidate_nodes:
                             if alternate == destination or (alternate == 0 and not local_ok[other]): continue
                             if pair_used >= budget: break
                             a = current["association"].copy()
@@ -135,6 +143,11 @@ def solve(data_bit, cycles, weights, rho_hz, offset_s,
     if previous_association is not None:
         previous = np.asarray(previous_association,int)
         if previous.shape == (n,) and np.all((previous>=0)&(previous<=m+1)):
+            # A node may have closed since the preceding slot. Keep the other
+            # assignments as a warm candidate, return its former users to local,
+            # and let the usual feasibility repair provide a separate start.
+            previous = previous.copy()
+            previous[~service_available[previous]] = 0
             warm = evaluate(previous)
             if warm["feasible"]: starts.append(warm)
     repaired = repair()
@@ -149,7 +162,7 @@ def solve(data_bit, cycles, weights, rho_hz, offset_s,
             counts["scans"] += 1
             for user in order:
                 selected = current
-                for destination in range(m+2):
+                for destination in candidate_nodes:
                     if destination == current["association"][user] or (destination==0 and not local_ok[user]): continue
                     a = current["association"].copy(); a[user] = destination
                     candidate = evaluate(a,selected["value"])

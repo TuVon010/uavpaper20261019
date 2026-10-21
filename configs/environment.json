@@ -14,7 +14,7 @@
   "satellite_bandwidth_hz": 100000000.0,
   "data_min_bit": 500000.0,
   "data_max_bit": 2000000.0,
-  "cycles_per_bit": 500.0,
+  "cycles_per_bit": 1000.0,
   "deadline_min_s": 0.5,
   "deadline_max_s": 2.0,
   "user_speed_alpha": 0.6,
@@ -60,10 +60,12 @@
   "feasibility_tol": 1e-07,
   "pure_route_temperature_scale": 5.0,
   "pure_resource_temperature_scale": 2.0,
-  "user_cluster_halfwidth_m": 100.0,
+  "user_cluster_halfwidth_m": 250.0,
   "user_cluster_center_x_fraction": 0.5,
   "user_cluster_center_y_fraction": 0.5,
-  "greedy_direction_count": 72,
-  "greedy_speed_levels": 5,
-  "greedy_refine_rounds": 2
+  "greedy_direction_count": 16,
+  "greedy_speed_levels": 4,
+  "greedy_refine_rounds": 0,
+  "delay_cost_weight": 5.0,
+  "uav_service_cutoff_enabled": true
 }

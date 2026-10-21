@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-10-20T14:20:41.396702+00:00",
+  "root": "E:\\postgraduateLife\\paper_code\\uav_mec_final_1019\\results\\seed17_sensitivity_20261020_01",
+  "scope": "Main 8 only; sensitivity suite may remain running",
+  "passed": true,
+  "verified_jobs": [
+    "main/baseline_priority_greedy",
+    "main/baseline_greedy_solver",
+    "main/pure_ppo",
+    "main/hybrid_ppo",
+    "main/hybrid_sac",
+    "main/hybrid_ddpg",
+    "main/hybrid_ppo_ar_adaptive",
+    "main/hybrid_ppo_ar05"
+  ],
+  "errors": [],
+  "summary": [
+    {
+      "method": "baseline_priority_greedy",
+      "weighted_delay_mean": 0.7046930701623412,
+      "mean_delay_s": 0.7629150861413707,
+      "total_energy_j": 40239.769928894166,
+      "deadline_completion": 0.7836666666666666,
+      "episode_return": -407.79409956938355,
+      "budget_feasible": 0.0,
+      "total_propulsion_energy_j": 39127.86566298149,
+      "total_compute_energy_j": 1111.9042659126792,
+      "service_disabled_uav_frame_fraction": 0.10722222222222222,
+      "total_decision_mean_s": 0.0019788948586210607
+    },
+    {
+      "method": "baseline_greedy_solver",
+      "weighted_delay_mean": 0.44307249211746064,
+      "mean_delay_s": 0.5170365351756161,
+      "total_energy_j": 39788.33641440417,
+      "deadline_completion": 0.9865,
+      "episode_return": -321.15760589394483,
+      "budget_feasible": 0.0,
+      "total_propulsion_energy_j": 39127.86566298149,
+      "total_compute_energy_j": 660.4707514226855,
+      "service_disabled_uav_frame_fraction": 0.095,
+      "total_decision_mean_s": 0.0796585687226616
+    },
+    {
+      "method": "pure_ppo",
+      "weighted_delay_mean": 9.119061790763578,
+      "mean_delay_s": 10.9326329021302,
+      "total_energy_j": 31426.88454137495,
+      "deadline_completion": 0.6763333333333332,
+      "episode_return": -3342.385968782656,
+      "budget_feasible": 1.0,
+      "total_propulsion_energy_j": 30508.99243769689,
+      "total_compute_energy_j": 917.8921036780532,
+      "service_disabled_uav_frame_fraction": 0.0,
+      "total_decision_mean_s": 0.004298512713673214
+    },
+    {
+      "method": "hybrid_ppo",
+      "weighted_delay_mean": 0.4141969199803566,
+      "mean_delay_s": 0.48485480489789723,
+      "total_energy_j": 33578.01860477532,
+      "deadline_completion": 1.0,
+      "episode_return": -131.26085659754335,
+      "budget_feasible": 0.7,
+      "total_propulsion_energy_j": 32865.11807599709,
+      "total_compute_energy_j": 712.900528778236,
+      "service_disabled_uav_frame_fraction": 0.0016666666666666666,
+      "total_decision_mean_s": 0.08995278238939741
+    },
+    {
+      "method": "hybrid_sac",
+      "weighted_delay_mean": 0.4606738153393712,
+      "mean_delay_s": 0.5377692086535313,
+      "total_energy_j": 41746.95995327986,
+      "deadline_completion": 0.9848333333333332,
+      "episode_return": -174.04249747616404,
+      "budget_feasible": 0.0,
+      "total_propulsion_energy_j": 41116.81875747085,
+      "total_compute_energy_j": 630.1411958090084,
+      "service_disabled_uav_frame_fraction": 0.12666666666666665,
+      "total_decision_mean_s": 0.08013338610685121
+    },
+    {
+      "method": "hybrid_ddpg",
+      "weighted_delay_mean": 0.4733808216595909,
+      "mean_delay_s": 0.5516561259889592,
+      "total_energy_j": 42768.61447290368,
+      "deadline_completion": 0.9781666666666666,
+      "episode_return": -183.84219475278724,
+      "budget_feasible": 0.0,
+      "total_propulsion_energy_j": 42159.75096827552,
+      "total_compute_energy_j": 608.8635046281788,
+      "service_disabled_uav_frame_fraction": 0.15444444444444444,
+      "total_decision_mean_s": 0.07867396482344095
+    },
+    {
+      "method": "hybrid_ppo_ar_adaptive",
+      "weighted_delay_mean": 0.4088807462460767,
+      "mean_delay_s": 0.47853894402970487,
+      "total_energy_j": 33001.505203886154,
+      "deadline_completion": 1.0,
+      "episode_return": -143.66422387507112,
+      "budget_feasible": 1.0,
+      "total_propulsion_energy_j": 32278.47345303346,
+      "total_compute_energy_j": 723.0317508526925,
+      "service_disabled_uav_frame_fraction": 0.0,
+      "total_decision_mean_s": 0.09323116338035713
+    },
+    {
+      "method": "hybrid_ppo_ar05",
+      "weighted_delay_mean": 0.4112881727700394,
+      "mean_delay_s": 0.4813493669690024,
+      "total_energy_j": 32841.619491037054,
+      "deadline_completion": 1.0,
+      "episode_return": -134.74864733494226,
+      "budget_feasible": 0.9,
+      "total_propulsion_energy_j": 32121.229114581678,
+      "total_compute_energy_j": 720.3903764553754,
+      "service_disabled_uav_frame_fraction": 0.0,
+      "total_decision_mean_s": 0.08962361165788024
+    }
+  ],
+  "paired_evaluation_episodes": 10,
+  "paired_evaluation_frames_per_protocol": 600,
+  "paired_training_episodes": 1000,
+  "report_row_counts": {
+    "case_summary": 16,
+    "all_episodes": 140,
+    "single_selected_scene17": 14,
+    "main_training": 6000
+  }
+}

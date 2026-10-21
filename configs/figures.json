@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "suite": "results/seed17_sensitivity_20261020_01",
+  "output_tag": "paper",
+  "methods": [
+    {"id": "baseline_priority_greedy", "label": "Priority Greedy", "short_label": "PG", "enabled": true, "color": "#777777", "marker": "o", "linestyle": "--", "hatch": ".."},
+    {"id": "baseline_greedy_solver", "label": "Greedy + Solver", "short_label": "GS", "enabled": true, "color": "#566D7E", "marker": "s", "linestyle": "--", "hatch": "//"},
+    {"id": "pure_ppo", "label": "Pure PPO", "short_label": "Pure PPO", "enabled": true, "color": "#8665A8", "marker": "D", "linestyle": "-.", "hatch": "\\\\"},
+    {"id": "hybrid_ppo", "label": "Hybrid PPO", "short_label": "PPO", "enabled": true, "color": "#0072B2", "marker": "^", "linestyle": "-", "hatch": "xx"},
+    {"id": "hybrid_sac", "label": "Hybrid SAC", "short_label": "SAC", "enabled": true, "color": "#D79519", "marker": "v", "linestyle": "--", "hatch": "++"},
+    {"id": "hybrid_ddpg", "label": "Hybrid DDPG", "short_label": "DDPG", "enabled": true, "color": "#27957A", "marker": "P", "linestyle": "-.", "hatch": "oo"},
+    {"id": "hybrid_ppo_ar_adaptive", "label": "Hybrid PPO AR-adaptive", "short_label": "AR-A", "enabled": true, "color": "#C94E36", "marker": "o", "linestyle": "-", "hatch": "**"},
+    {"id": "hybrid_ppo_ar05", "label": "Hybrid PPO AR=0.5", "short_label": "AR-0.5", "enabled": true, "color": "#CB76A5", "marker": "s", "linestyle": ":", "hatch": "--"}
+  ],
+  "views": {
+    "all": {"label": "All selected methods", "methods": null},
+    "hybrid": {"label": "Hybrid methods only", "methods": ["hybrid_ppo", "hybrid_sac", "hybrid_ddpg", "hybrid_ppo_ar_adaptive", "hybrid_ppo_ar05"]}
+  },
+  "formats": ["png", "svg", "pdf"],
+  "dpi": 220,
+  "workers": 2,
+  "training": {"smoothing_window": 25, "show_raw": true, "raw_alpha": 0.13, "all_symlog_companion": true},
+  "performance": {"checkpoints": ["best", "last"], "error_bars": "range", "selected_scene": true, "annotate_feasibility": true},
+  "sweeps": {"checkpoints": ["best", "last"], "error_bars": "none"},
+  "trajectories": {"episode": 30000, "checkpoints": ["best", "last"], "uav_colors": ["#C94E36", "#27957A", "#0072B2"]},
+  "per_run": {"enabled": true, "checkpoint": "best"}
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hybrid_sac",
+  "label": "Hybrid original SAC",
+  "kind": "train",
+  "control": "hybrid",
+  "training": {
+    "algorithm": "sac",
+    "control": "hybrid"
+  }
+}
